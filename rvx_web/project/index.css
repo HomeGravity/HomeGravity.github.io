@@ -1,0 +1,32 @@
+
+.main-logo > img {
+    width: 200px;
+    width: 200px;
+}
+
+
+/* 메인 제목 설정 */
+.main-title > h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 카테고리 텍스트 설정 */
+#category-id h4 > span {
+    font-size: 20px;
+}
+
+
+/* 설정 텍스트 밑줄 제거 */
+#setting-id li,
+#setting-id li > a {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+#setting-id {
+    margin-left: 30px;
+}
+
