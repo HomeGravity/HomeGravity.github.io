@@ -397,6 +397,31 @@
     </div>
     
     <script>
+        function toggleImages(button) {
+            var parentDiv = button.parentElement;
+            var images = parentDiv.querySelectorAll(".reference-image");
+
+            images.forEach(function(image) {
+                if (image.classList.contains("show")) {
+                    image.classList.remove("show");
+                    setTimeout(function() {
+                        image.style.display = "none"; // 전환 효과 후 이미지를 숨깁니다
+                    }, 500); // 여기서 전환 시간(0.5초)을 맞춥니다
+                    button.textContent = "Show Images";
+                } else {
+                    image.style.display = "block";
+                    setTimeout(function() {
+                        image.classList.add("show");
+                    }, 10); // 약간의 지연 시간 후에 클래스를 추가하여 전환 효과를 적용합니다
+                    button.textContent = "Hide Images";
+                }
+            });
+        }
+    </script>
+
+
+    <!-- 해당 스크립트는 다른 파일에도 적용 -->
+    <script>
         function scrollToHash() {
             var hash = window.location.hash;
             
@@ -415,7 +440,7 @@
         // 페이지 로드 시 해시가 있으면 해당 위치로 스크롤
         document.addEventListener('DOMContentLoaded', function() {
             // DOMContentLoaded 이후 약간의 지연을 주어 스크롤
-            setTimeout(scrollToHash, 1000);
+            setTimeout(scrollToHash, 100);
         });
     </script>
 
