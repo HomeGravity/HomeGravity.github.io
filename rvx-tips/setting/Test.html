@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>테스트 공간</title>
 
     <style>
         html {
@@ -381,9 +381,6 @@
 
 
 
-
-
-
         <!-- 표시선 그리기 -->
         <br>
         <hr>
@@ -400,54 +397,27 @@
     </div>
     
     <script>
-        function toggleImages(button) {
-            var parentDiv = button.parentElement;
-            var images = parentDiv.querySelectorAll(".reference-image");
-
-            images.forEach(function(image) {
-                if (image.classList.contains("show")) {
-                    image.classList.remove("show");
-                    setTimeout(function() {
-                        image.style.display = "none"; // 전환 효과 후 이미지를 숨깁니다
-                    }, 500); // 여기서 전환 시간(0.5초)을 맞춥니다
-                    button.textContent = "Show Images";
-                } else {
-                    image.style.display = "block";
-                    setTimeout(function() {
-                        image.classList.add("show");
-                    }, 10); // 약간의 지연 시간 후에 클래스를 추가하여 전환 효과를 적용합니다
-                    button.textContent = "Hide Images";
-                }
-            });
-        }
-
-    </script>
-
-    <script>
-        // 페이지 로드 시 실행되는 함수
         function scrollToHash() {
-            // 현재 URL에서 해시(#) 부분을 가져옴
             var hash = window.location.hash;
             
-            // 해시에 해당하는 요소가 있는지 확인
             if (hash !== '') {
-                // 해당 요소를 선택
                 var target = document.querySelector(hash);
                 
-                // 해당 요소가 존재하면 그 위치로 부드럽게 스크롤
                 if (target) {
                     target.scrollIntoView({behavior: "smooth"});
                 }
             }
         }
         
-    // 해시 변경 이벤트 감지
-    window.addEventListener('hashchange', scrollToHash);
-    
-    // 페이지 로드 시 해시가 있으면 해당 위치로 스크롤
-    document.addEventListener('DOMContentLoaded', scrollToHash);
+        // 해시 변경 이벤트 감지
+        window.addEventListener('hashchange', scrollToHash);
+        
+        // 페이지 로드 시 해시가 있으면 해당 위치로 스크롤
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOMContentLoaded 이후 약간의 지연을 주어 스크롤
+            setTimeout(scrollToHash, 1000);
+        });
     </script>
-    
 
 </body>
 </html>
