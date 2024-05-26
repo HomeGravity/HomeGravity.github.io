@@ -8,6 +8,9 @@
     <style>
         html {
             background-color: aliceblue;
+            
+            /* 부드러운 스크롤을 위한 CSS */
+            scroll-behavior: smooth;
         }
 
         /* 홈 밑줄 제거 */
@@ -29,10 +32,13 @@
             margin-left: 20px;
         }
 
+
+        /* 여기에도 컬러 적용 */
         .General-layout > ul > li {
             font-size: 16px;
             font-weight: bold;
             margin-bottom: 10px;
+            color: slateblue 
         }
 
         /* 텍스트 밑줄 제거 */
@@ -161,6 +167,20 @@
             opacity: 1; /* 투명도를 1로 설정하여 이미지를 보이게 합니다 */
         }
 
+
+        /* 어드레스 적용 */
+        .contact {
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* 어드레스 링크 컬러 적용 */
+        .contact  a {
+            color: brown;
+            text-decoration: none;
+        }
+
+
     </style>
 </head>
 <body>
@@ -170,7 +190,8 @@
 
     <!-- 리밴스드 로고 설정 -->
     <figure class="main-logo">
-        <img src="../images/main-images/revanced-main-logo.svg" alt="">
+        <img src="../images/main-images/revancify_blue-main-logo.png" alt="">
+        
     </figure>
 
     <h3 class="title">리밴스드 익스텐디드 일반 설정</h3>
@@ -313,8 +334,8 @@
         <!-- 갤러리 주소 -->
         <div class="contact">
             <address>
-                리밴스드 갤러리(DC): <a href="https://gall.dcinside.com/mgallery/board/lists/?id=vanced">리밴스드 갤러리로 이동</a> <br>
-                문의: <a href="https://gall.dcinside.com/vanced/3817">Kotlin</a> <br>
+                리밴스드 갤러리(DC): <a target="_blank" href="https://gall.dcinside.com/vanced">리밴스드 갤러리로 이동</a> <br>
+                문의: <a target="_blank" href="https://gall.dcinside.com/vanced/3817">Kotlin</a> <br>
                 <footer>마지막 수정: <time>2024/05/25 오후 8:10:08</time></footer> <br>
             </address>
         </div>

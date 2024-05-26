@@ -4,6 +4,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 홈 밑줄 제거 */
+.home > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: slateblue
+    
+}
 
 .main-logo > img {
     width: 200px;
@@ -54,4 +61,29 @@ html {
 .contact  a {
     color: brown;
     text-decoration: none;
+}
+
+
+.warning {
+    margin-left: 20px;
+}
+
+
+.warning .warning-title {
+    color: darkred;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.warning ul > li,
+.warning .warning-desc {
+    color: darkolivegreen;
+    font-weight: bold;
+    font-size: 17px;
+    list-style-type: decimal;
+
+}
+
+.warning .warning-desc span {
+    color: darkred;
 }
