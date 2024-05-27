@@ -39,7 +39,7 @@ html = """
                     
 
 new_html = ""
-patches = OpenJson(r"d:\chrome_Downloads\patches (1).json")
+patches = OpenJson(r"d:\chrome_Downloads\patches (2).json")
 idx = 1
 for name_index in range(len(patches)):
     if all(item not in patches[name_index]["compatiblePackages"][0]["name"] for item in ["music", "reddit"]):
@@ -66,4 +66,5 @@ for name_index in range(len(patches)):
         new_html += html % (idx, checked, idx, title, title, desc, versions_str) + "\n\n"
         idx += 1
 
-SaveHTML(r"rvx-tips\rvx-patches\anddea-test.html", new_html)
+# SaveHTML(r"rvx-tips\rvx-patches\anddea-test.html", new_html)
+SaveHTML(r"rvx-tips\rvx-patches\inotia00-test.html", new_html)
