@@ -25,6 +25,12 @@ html = """
                     %s
                 </span>
             </div>
+            
+            <div class="rvx-option-version">
+                <span>
+                    %s
+                </span>
+            </div>
         </div>
         
         <!-- 구분 -->
@@ -33,7 +39,7 @@ html = """
                     
 
 new_html = ""
-patches = OpenJson(r"d:\chrome_Downloads\patches.json")
+patches = OpenJson(r"d:\chrome_Downloads\patches (1).json")
 idx = 1
 for name_index in range(len(patches)):
     if all(item not in patches[name_index]["compatiblePackages"][0]["name"] for item in ["music", "reddit"]):
@@ -42,17 +48,22 @@ for name_index in range(len(patches)):
         desc = patches[name_index]["description"]
         desc = desc.strip()
         use = patches[name_index]["use"]
-        # use = use.strip()
-        print(use)
+
+        versions = patches[name_index]["compatiblePackages"][0]["versions"]
         
-        checked = None
+        if versions is not None:
+            versions_str = "%s ~ %s" % (min(versions), max(versions))
+        
+        else:
+            versions_str = "ALL"
+        
         
         if use == True:
             checked = "checked"
         else:
             checked = "".strip()
         
-        new_html += html % (idx, checked, idx, title, title, desc) + "\n\n"
+        new_html += html % (idx, checked, idx, title, title, desc, versions_str) + "\n\n"
         idx += 1
 
-SaveHTML(r"rvx-tips\test-save-json\test.html", new_html)
+SaveHTML(r"rvx-tips\rvx-patches\anddea-test.html", new_html)

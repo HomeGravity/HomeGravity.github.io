@@ -1,0 +1,109 @@
+html {
+    background: #1A1C1E;
+    /* 부드러운 스크롤을 위한 CSS */
+    scroll-behavior: smooth;
+}
+
+/* 홈 밑줄 제거 */
+.home > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: slateblue
+    
+}
+
+.title {
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.rvx-option {
+    /* height: 100px; */
+    width: 100%;
+    border: 3px solid #252E33;
+    margin-bottom: 30px;
+    background: #252E33;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.rvx-option-title {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.rvx-option-desc {
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #CFE1EE;
+    margin-left: 20px;
+    
+}
+
+.rvx-option-version {
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #127ecb;
+    margin-left: 20px;
+    
+}
+
+
+.button-container {
+    position: fixed;  /*고정 위치 */
+    bottom: 0px;
+    width: 100%; 
+    text-align: center;;
+    padding: 10px 0; /* 상하 패딩 설정 */
+    
+}
+
+.w-btn {
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 20px 10px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    margin-left: 15px;
+}
+
+.w-btn-green {
+    background-color: #4b987e;
+    color: #CFE1EE;
+}
+
+.w-btn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.w-btn:active {
+    transform: scale(1.5);
+}
+
+
+/* 어드레스 적용 */
+.contact {
+    margin-left: 20px;
+    font-weight: bold;
+    color: beige;
+}
+
+/* 어드레스 링크 컬러 적용 */
+.contact  a {
+    color: brown;
+    text-decoration: none;
+}
