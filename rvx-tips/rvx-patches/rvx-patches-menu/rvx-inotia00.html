@@ -1577,10 +1577,11 @@
                     option.addEventListener('click', function(event) {
                         // rvx-option-desc 내부의 span 클릭 이벤트도 처리하도록 조건 추가
                         let isDescSpanClicked = event.target.closest('.rvx-option-desc') && event.target.tagName === "SPAN";
+                        let isVersionSpanClicked = event.target.closest('.rvx-option-version') && event.target.tagName === "SPAN";
 
 
                         // Ignore the event if the checkbox or label is directly clicked to avoid duplication
-                        if (event.target.type === "checkbox" || event.target.tagName === "LABEL" || event.target.tagName === "SPAN" && !isDescSpanClicked) {
+                        if (event.target.type === "checkbox" || event.target.tagName === "LABEL" || event.target.tagName === "SPAN" && !isDescSpanClicked && !isVersionSpanClicked) {
                             return;
                         }
 

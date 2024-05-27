@@ -20,13 +20,16 @@ html {
 
 .rvx-option {
     /* height: 100px; */
-    width: 100%;
+    width: auto;
     border: 3px solid #252E33;
     margin-bottom: 30px;
     background: #252E33;
     border-radius: 20px;
     cursor: pointer;
     padding: 5px;
+    /* overflow: hidden; */
+    word-wrap: break-word; 
+    white-space: normal;
 }
 
 .rvx-option-title {
