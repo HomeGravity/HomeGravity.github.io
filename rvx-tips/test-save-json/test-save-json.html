@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="./test-save-json.css">
 </head>
 <body>
+    <div class="home">
+        <a href="../index.html">홈</a>
+    </div>
+
     <div class="title">
         <h3>
-            RVX 매니저 패치 JSON으로 저장
+            RVX 매니저 패치 JSON으로 저장 (inotia00) Bata
         </h3>
     </div>
 
 
     <div>
-
         <div class="rvx-option">
             <div class="rvx-option-title">
                 <input type="checkbox" name="rvx-option-title" id="rvx-option-id1" checked>
@@ -1151,9 +1154,23 @@
             </div>
         </div>
         
-        <!-- 구분 -->
-        <!-- 구분 -->
+
+        <!-- 이 밑은 건드리지 말 것 -->
+        <!-- 이 밑은 건드리지 말 것 -->
+        <hr><hr><br>
+
+        <!-- 갤러리 주소 -->
+        <div class="contact">
+            <address>
+                리밴스드 갤러리(DC): <a target="_blank" href="https://gall.dcinside.com/vanced">리밴스드 갤러리로 이동</a> <br>
+                문의: <a target="_blank" href="https://gall.dcinside.com/vanced/3817">Kotlin</a> <br>
+                <footer>마지막 수정: <time>2024/05/25 오후 8:10:08</time></footer> <br>
+            </address>
+        </div>
         
+        <!-- 구분 -->
+        <!-- 구분 -->
+        <br><br><br><br>
 
 
     
@@ -1163,16 +1180,19 @@
         <button id="download-button" type="button" class="w-btn w-btn-green">
             JSON으로 저장하기
         </button>
+        <button id="checked-none" type="button" class="w-btn w-btn-green">
+            모든 체크 해제
+        </button>
+        
     </div>
     
     
-    
     <script>
-
         document.addEventListener('DOMContentLoaded', (event) => {
                 document.querySelectorAll('input[type="checkbox"][name="rvx-option-title"]').forEach((checkbox) => {
                     checkbox.addEventListener('change', function() {
                         saveCheckedLabelsToJson(); // 체크박스 상태가 변경될 때마다 실행
+                        updateButtonWithCheckedCount(); // 체크된 체크박스 개수로 버튼 텍스트 업데이트
                     });
                 });
 
@@ -1180,10 +1200,18 @@
                     saveCheckedLabelsToJson(true); // 다운로드 버튼 클릭 시 실행
                 });
 
+                document.getElementById('checked-none').addEventListener('click', function() {
+                    uncheckAllCheckboxes(); // 모든 체크박스를 해제하는 함수 호출
+                });
+
                 document.querySelectorAll('.rvx-option').forEach(option => {
                     option.addEventListener('click', function(event) {
+                        // rvx-option-desc 내부의 span 클릭 이벤트도 처리하도록 조건 추가
+                        let isDescSpanClicked = event.target.closest('.rvx-option-desc') && event.target.tagName === "SPAN";
+
+
                         // Ignore the event if the checkbox or label is directly clicked to avoid duplication
-                        if (event.target.type === "checkbox" || event.target.tagName === "LABEL" || event.target.tagName === "SPAN") {
+                        if (event.target.type === "checkbox" || event.target.tagName === "LABEL" || event.target.tagName === "SPAN" && !isDescSpanClicked) {
                             return;
                         }
 
@@ -1194,6 +1222,10 @@
                         checkbox.dispatchEvent(changeEvent);
                     });
                 });
+
+                // 초기 로딩 시 버튼 텍스트 업데이트
+                updateButtonWithCheckedCount();
+                
             });
 
             function saveCheckedLabelsToJson(download = false) {
@@ -1224,6 +1256,23 @@
                     console.log(json);
                 }
             }
+        
+        // 모든 checkked 개수
+        function updateButtonWithCheckedCount() {
+            const checkedCount = document.querySelectorAll('input[type="checkbox"][name="rvx-option-title"]:checked').length;
+            document.getElementById('download-button').innerText = `JSON으로 저장하기 (${checkedCount})`;
+        }
+
+
+        // 모든 체크 해제
+        function uncheckAllCheckboxes() {
+            document.querySelectorAll('input[type="checkbox"][name="rvx-option-title"]').forEach((checkbox) => {
+                checkbox.checked = false;
+                // 체크박스의 change 이벤트 트리거
+                const changeEvent = new Event('change');
+                checkbox.dispatchEvent(changeEvent);
+            });
+        }
 
     </script>
     
