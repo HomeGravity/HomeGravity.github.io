@@ -12,7 +12,7 @@ def SaveHTML(filename, data):
         f.write(data)
         
 html = """
-        <div class="rvx-option">
+        <div class="rvx-option" id="%s">
             <div class="rvx-option-title">
                 <input type="checkbox" name="rvx-option-title" id="rvx-option-id%s" %s>
                 <label for="rvx-option-id%s" data-original-text="%s">
@@ -63,7 +63,7 @@ for name_index in range(len(patches)):
         else:
             checked = "".strip()
         
-        new_html += html % (idx, checked, idx, title, title, desc, versions_str) + "\n\n"
+        new_html += html % (f"main-{idx}", idx, checked, idx, title, f"#main-{idx}" + " " + title, desc, versions_str) + "\n\n"
         idx += 1
 
 # SaveHTML(r"rvx-tips\rvx-patches\anddea-test.html", new_html)

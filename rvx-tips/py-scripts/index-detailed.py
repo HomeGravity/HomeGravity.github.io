@@ -12,7 +12,7 @@ def SaveHTML(filename, data):
         f.write(data)
 
 html = """
-        <div class="rvx-option">
+        <div class="rvx-option" id="%s">
             <div class="rvx-option-title">
                 <input type="checkbox" name="rvx-option-title" id="rvx-option-id%s" %s>
                 <label for="rvx-option-id%s" data-original-text="%s">
@@ -52,7 +52,7 @@ insert_html = """
 
 new_html = ""
 new_insert_html = ""
-patches = OpenJson(r"d:\chrome_Downloads\patches (2).json")
+patches = OpenJson(r"d:\chrome_Downloads\patches (1).json")
 idx = 1
 for name_index in range(len(patches)):
     if all(item not in patches[name_index]["compatiblePackages"][0]["name"] for item in ["music", "reddit"]):
@@ -82,6 +82,7 @@ for name_index in range(len(patches)):
             print(desc)
             print(use)
             print(versions_str)
+            print(len(options))
 
             for i in range(len(options)):
                 try:
@@ -110,14 +111,15 @@ for name_index in range(len(patches)):
             
                 
                 except Exception as e:
-                    pass
+                    print("오류 발생: %s" % e)
             print('\n', "%s" % '-'*100, '\n')
-            new_html += html % (idx, checked, idx, title, title, desc, versions_str, new_insert_html) + "\n\n"            
+            
+            new_html += html % (f"main-{idx}", idx, checked, idx, title, f"#main-{idx}" + " " + title, desc, versions_str, new_insert_html) + "\n\n"            
             idx += 1
             new_insert_html = ""
 
 # SaveHTML(r"rvx-tips\rvx-patches\anddea-Detailed-test.html", new_html)
-SaveHTML(r"rvx-tips\rvx-patches\inotia00-Detailed-test.html", new_html)
+# SaveHTML(r"rvx-tips\rvx-patches\inotia00-Detailed-test.html", new_html)
 
 
 # pprint(new_html)
