@@ -2,7 +2,7 @@
     "main-1": {
         "title": "화면 위쪽에 방패모양이 생겼어요.",
         "description": [
-            "Revanced Extended > variable > 구간 추가 버튼 표시하기 > 비활성화"
+            "Revanced Extended > SponsorBlock > 구간 추가 버튼 표시하기 > 비활성화"
         ],
         "image-url": [
             "../bird-8763079_1280.jpg"
@@ -11,7 +11,7 @@
     "main-2": {
         "title": "\"SponsorBlock을 일시적으로 사용할 수 없습니다\" 메시지가 계속 떠요.",
         "description": [
-            "Revanced Extended > variable > API를 사용할 수 없을 때 팝업 메시지 표시하기 > 비활성화"
+            "Revanced Extended > SponsorBlock > API를 사용할 수 없을 때 팝업 메시지 표시하기 > 비활성화"
         ],
         "image-url": [
             "../bird-8763079_1280.jpg"
