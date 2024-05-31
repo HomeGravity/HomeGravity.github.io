@@ -1,0 +1,24 @@
+{
+    "main-1": {
+        "title": "플레이어 매개변수가 없어요.",
+        "description": [
+            "플레이어 매개변수는 더 이상 사용되지 않아요.",
+            "플레이어 매개변수를 활성화하면 \"Video Not Available\"이가 표시돼요."
+        ],
+        "image-url": [
+            "../images/Others-images/RVX-Others-1.jpg"
+        ]
+    },
+    "main-2": {
+        "title": "무한 로딩(버퍼링)이 발생해요.",
+        "description": [
+            "Revanced Extended > 기타 > 실험적인 기능 > 클라이언트 변경하기 > 활성화",
+            "Revanced Extended > 기타 > 실험적인 기능 > iOS 클라이언트로 변경하기 > 활성화",
+            "해당 기능을 활성화하면 일부 기능을 사용할 수 없어요.",
+            "알려진 문제점을 참고하세요."
+        ],
+        "image-url": [
+            "../images/Others-images/RVX-Others-2.png"
+        ]
+    }
+}
