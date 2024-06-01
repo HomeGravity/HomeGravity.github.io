@@ -28,6 +28,9 @@ html {
     /* margin-left: 0px; */
 }
 
+#category-id h4 :hover{
+    color: darkolivegreen;
+}
 
 /* 설정 텍스트 밑줄 제거 */
 #setting-id li,
@@ -38,13 +41,18 @@ html {
     text-decoration: none;
     color: slateblue
             
-    
 }
 
 #setting-id li:hover,
 #setting-id li > a:hover {
+    /* 마우스 오버 시 색상을 변경합니다. */
     color: tomato;
 }
+
+#setting-id li > a {
+    color: inherit;
+}
+
 
 /* 설정 */
 #setting-id {
@@ -67,6 +75,10 @@ html {
 #Revanced-Tips-id li:hover,
 #Revanced-Tips-id li > a:hover {
     color: tomato;
+}
+
+#Revanced-Tips-id  li > a {
+    color: inherit;
 }
 
 /* 설정 */

@@ -59,6 +59,9 @@ html {
     color: tomato;
 }
 
+.variable > ul > li > a {
+    color: inherit;
+}
 
 .category {
     margin-left: 20px;

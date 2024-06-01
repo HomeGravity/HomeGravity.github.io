@@ -40,6 +40,10 @@ html {
     /* margin-left: 20px; */
 }
 
+#category-id h4 :hover{
+    color: darkolivegreen;
+}
+
 
 /* 설정 텍스트 밑줄 제거 */
 #setting-id li,
@@ -56,6 +60,10 @@ html {
 #setting-id li:hover,
 #setting-id li > a:hover {
     color: tomato;
+}
+
+#setting-id li > a {
+    color: inherit;
 }
 
 /* 설정 */
