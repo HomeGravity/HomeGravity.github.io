@@ -17,11 +17,44 @@ html {
     color: tomato;
 }
 
-.title {
+
+/* 타이틀 영역 */
+.main-content > .title {
     color: white;
     margin-left: 20px;
     font-weight: bold;
 }
+
+.main-content > .patches-web > h4 span > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: slateblue;
+    margin-left: 20px;
+}
+
+.main-content > .patches-web > h4 > span > a:hover {
+    color: tomato;
+}
+
+
+
+/* 해당 패치 개발자 이름 */
+.patch-developer-name {
+    color: skyblue;
+}
+
+/* 패치 버전 */
+.main-content > .patches-web > h4 span > .patches-version {
+    text-decoration: none;
+    font-weight: bold;
+    color: skyblue;
+    margin-left: 20px;
+}
+
+.main-content > .patches-web > h4 > span > .patches-version:hover {
+    color: tomato;
+}
+
 
 .rvx-option {
     /* height: 100px; */
@@ -61,7 +94,7 @@ html {
 .rvx-option-version {
     margin-bottom: 18px;
     font-weight: bold;
-    color: #0eeacd;
+    color: lightyellow;
     margin-left: 20px;
     font-size: 14px;
 
@@ -147,7 +180,6 @@ html {
 .rvx-option > .rvx-option-title .id-copy-selection a:hover {
     color: #db1b81;
 }
-
 
 /* 어드레스 적용 */
 .contact {

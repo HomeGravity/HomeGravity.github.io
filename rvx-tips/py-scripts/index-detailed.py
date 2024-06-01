@@ -15,10 +15,20 @@ def init_html():
         <a href="../../rvx-patches-main.html">홈</a>
     </div>
 
-    <div class="title">
-        <h3>
-            RVX Manager 패치 JSON으로 저장 ({name}) Bata
-        </h3>
+    <div class="main-content">
+        <div class="title">
+            <h3>
+                RVX Manager 패치 JSON으로 저장 (<span class="patch-developer-name">{name}</span>) Bata
+            </h3>
+        </div>
+        <div class="patches-web">
+            <h4>
+                <span>
+                    <a href="{Patches_website}">패치 내역 확인</a>
+                    <span class="patches-version">{patches_version}</span>
+                </span>
+            </h4>
+        </div>
     </div>
 
     <div>
@@ -103,18 +113,26 @@ def generate_html(patches):
             versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
             checked = "checked" if use else ""
             options = patch.get("options", [])
-
+            
             if options is not None and len(options) != 0:
                 options_html = ""
-                for option in options:
+                for index, option in enumerate(options):
                     for key, value in option.items():
                         if key != "values":
                             key_value = f"{key} : {value}"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
+                        
                         else:
                             values_html = "<br>".join(f"{k} : {v}" for k, v in value.items()) if value else "None"
                             key_value = f"values▼<br>{values_html}"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
+                        
+                        if len(options) >= 2 and \
+                            key == "required" and \
+                                len(options) > index + 1:
+
+                            # 줄 관리
+                            options_html += "\n\t\t\t\t\t<br><hr><br>\n"
 
                 new_html += html_template.format(
                     main_id=f"main-{idx}",
@@ -134,7 +152,18 @@ def generate_html(patches):
 def StartHTML(FileName, UserName):
     patches = OpenJSON(f"{FileName}")
     new_html = generate_html(patches)
-    SaveHTML(rf"rvx-tips\rvx-patches\rvx-patches-menu\detailed\rvx-{UserName}-detailed.html", init_html().format(name=UserName, insert_html=new_html, time=CurrentTime()))
+    SaveHTML(
+        rf"rvx-tips\rvx-patches\rvx-patches-menu\detailed\rvx-{UserName}-detailed.html", 
+        init_html().format(
+            Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
+            patches_version=GetPatchesVersion(FileName),
+            name=UserName, 
+            insert_html=new_html, 
+            time=CurrentTime()
+            )
+    
+    )
+    
     print(f"{UserName} 완료!")
 
 StartHTML(rf"{InitResponse('https://github.com/anddea/revanced-patches/releases')}", "anddea")

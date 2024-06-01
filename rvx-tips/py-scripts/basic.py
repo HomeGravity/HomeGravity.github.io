@@ -1,5 +1,6 @@
 import json
 import datetime
+import re
 
 def OpenJSON(filename):
     with open(filename, "r", encoding="utf-8") as f:
@@ -23,3 +24,7 @@ def CurrentTime():
         hour = 12
     
     return dt.strftime(f"%Y/%m/%d {meridiem} {hour}:%M:%S")
+
+def GetPatchesVersion(text):
+    r = re.search(r"v[\d.]+(?:-dev\.\d+)?", text).group()
+    return r

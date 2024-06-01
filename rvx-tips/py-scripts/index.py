@@ -15,10 +15,20 @@ def init_html():
         <a href="../../rvx-patches-main.html">홈</a>
     </div>
 
-    <div class="title">
-        <h3>
-            RVX Manager 패치 JSON으로 저장 ({name}) Bata
-        </h3>
+    <div class="main-content">
+        <div class="title">
+            <h3>
+                RVX Manager 패치 JSON으로 저장 (<span class="patch-developer-name">{name}</span>) Bata
+            </h3>
+        </div>
+        <div class="patches-web">
+            <h4>
+                <span>
+                    <a href="{Patches_website}">패치 내역 확인</a>
+                    <span class="patches-version">{patches_version}</span>
+                </span>
+            </h4>
+        </div>
     </div>
 
     <div>
@@ -94,6 +104,7 @@ def generate_html(patches):
             versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
             checked = "checked" if patch["use"] else ""
 
+            # NEW_HTML에 신규 생성된 HTML을 추가
             new_html += html_template.format(
                 idx=idx, 
                 checked=checked, 
@@ -108,9 +119,19 @@ def generate_html(patches):
 def StartHTML(FileName, UserName):
     patches = OpenJSON(f"{FileName}")
     new_html = generate_html(patches)
-    SaveHTML(rf"rvx-tips\rvx-patches\rvx-patches-menu\normal\rvx-{UserName}.html", init_html().format(name=UserName, insert_html=new_html, time=CurrentTime()))
-    print(f"{UserName} 완료!")
+    SaveHTML(
+        rf"rvx-tips\rvx-patches\rvx-patches-menu\normal\rvx-{UserName}.html", 
+        init_html().format(
+            Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
+            patches_version=GetPatchesVersion(FileName),
+            name=UserName, 
+            insert_html=new_html, 
+            time=CurrentTime()
+            )
+    )
     
+    print(f"{UserName} 완료!")
+
 
 StartHTML(rf"{InitResponse('https://github.com/anddea/revanced-patches/releases')}", "anddea")
 StartHTML(rf"{InitResponse('https://github.com/inotia00/revanced-patches/releases')}", "inotia00")
