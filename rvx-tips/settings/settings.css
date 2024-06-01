@@ -16,6 +16,10 @@ html {
     
 }
 
+.home > a:hover {
+    color: tomato;
+}
+
 .title {
     font-size: 20px;
     margin-left: 20px;
@@ -23,6 +27,10 @@ html {
 
 .title > .main-title {
     color: slateblue;
+}
+
+.title > .main-title:hover {
+    color: tomato;
 }
 
 .main-logo > img {
@@ -46,6 +54,11 @@ html {
     
 }
 
+.variable > ul > li:hover,
+.variable > ul > li > a:hover {
+    color: tomato;
+}
+
 
 .category {
     margin-left: 20px;
@@ -60,6 +73,10 @@ html {
     margin-bottom: 5px;
     color: slateblue
     
+}
+
+.variable-title:hover {
+    color: tomato;
 }
 
 /* 질문 설명 */

@@ -12,6 +12,10 @@ html {
     
 }
 
+.home > a:hover {
+    color: tomato;
+}
+
 .title {
     color: white;
     margin-left: 20px;
@@ -30,6 +34,10 @@ html {
     /* overflow: hidden; */
     word-wrap: break-word; 
     white-space: normal;
+}
+
+.rvx-option:hover {
+    background-color: #d8e6e943;
 }
 
 .rvx-option-title {
@@ -96,6 +104,17 @@ html {
 
 .w-btn:active {
     transform: scale(1.5);
+}
+
+
+.rvx-option > .rvx-option-title .id-copy-selection a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(144, 212, 119)
+}
+
+.rvx-option > .rvx-option-title .id-copy-selection a:hover {
+    color: #db1b81;
 }
 
 

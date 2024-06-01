@@ -107,3 +107,22 @@ document.addEventListener('DOMContentLoaded', function() {
 // DOMContentLoaded 이후 약간의 지연을 주어 스크롤
 setTimeout(scrollToHash, 1000);
 });
+
+
+
+
+// 페이지의 hash가 변경될 때 실행될 함수를 정의합니다.
+window.addEventListener('hashchange', async function() {
+    try {
+        // 현재 페이지의 URL을 가져옵니다.
+        const url = window.location.href;
+        
+        // 클립보드에 복사합니다.
+        await navigator.clipboard.writeText(url);
+        
+        // 사용자에게 알림 (선택적)
+        alert("URL이 클립보드에 복사되었습니다.");
+    } catch (err) {
+        console.error('클립보드에 복사를 실패하였습니다: ', err);
+    }
+});

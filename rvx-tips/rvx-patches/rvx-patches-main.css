@@ -16,6 +16,10 @@ html {
     
 }
 
+.home > a:hover {
+    color: tomato;
+}
+
 .main-logo > img {
     width: 200px;
     width: 200px;
@@ -47,6 +51,11 @@ html {
     color: slateblue
             
     
+}
+
+#setting-id li:hover,
+#setting-id li > a:hover {
+    color: tomato;
 }
 
 /* 설정 */

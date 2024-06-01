@@ -65,7 +65,8 @@ def generate_html(patches):
             <div class="rvx-option-title">
                 <input type="checkbox" name="rvx-option-title" id="rvx-option-id{idx}" {checked}>
                 <label for="rvx-option-id{idx}" data-original-text="{title}">
-                    <span>#main-{idx} {title}</span>
+                    <span class="id-copy-selection"><a href="#main-{idx}">#main-{idx}</a></span> 
+                    <span>{title}</span>
                 </label>
             </div>
 
