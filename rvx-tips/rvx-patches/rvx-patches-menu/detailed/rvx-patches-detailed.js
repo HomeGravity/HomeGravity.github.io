@@ -19,12 +19,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // rvx-option-desc 내부의 span 클릭 이벤트도 처리하도록 조건 추가
             let isDescSpanClicked = event.target.closest('.rvx-option-desc') && event.target.tagName === "SPAN";
             let isVersionSpanClicked = event.target.closest('.rvx-option-version') && event.target.tagName === "SPAN";
+            let isOptionsSpanClicked = event.target.closest('.rvx-Detailed-options') && event.target.tagName === "SPAN";
+            let isLabelTextSpanClicked = event.target.closest('.Label-Text') && event.target.tagName === "SPAN";
 
 
-            // Ignore the event if the checkbox or label is directly clicked to avoid duplication
-            if (event.target.type === "checkbox" || event.target.tagName === "LABEL" || event.target.tagName === "SPAN" && !isDescSpanClicked && !isVersionSpanClicked) {
+            // Ignore the event if the checkbox is directly clicked to avoid duplication
+            if (event.target.type === "checkbox" && !isDescSpanClicked && !isVersionSpanClicked && !isOptionsSpanClicked && !isLabelTextSpanClicked) {
                 return;
             }
+
 
             const checkbox = this.querySelector('input[type="checkbox"]');
             checkbox.checked = !checkbox.checked;
@@ -42,7 +45,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function saveCheckedLabelsToJson(download = false) {
     const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"][name="rvx-option-title"]:checked');
     const checkedLabels = Array.from(checkedCheckboxes).map(checkedCheckbox => {
-        let label = document.querySelector(`label[for="${checkedCheckbox.id}"]`);
+        let label = document.querySelector(`span[for="${checkedCheckbox.id}"]`);
         return label.dataset.originalText; // 'data-original-text' 속성 사용
     });
 
@@ -110,7 +113,6 @@ setTimeout(scrollToHash, 1000);
 
 
 
-
 // 페이지의 hash가 변경될 때 실행될 함수를 정의합니다.
 window.addEventListener('hashchange', async function() {
     try {
@@ -126,3 +128,5 @@ window.addEventListener('hashchange', async function() {
         console.error('클립보드에 복사를 실패하였습니다: ', err);
     }
 });
+
+
