@@ -39,6 +39,19 @@ html {
     margin-left: 20px;
 }
 
+.variable {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    height: auto;
+    background-color: #e0ecec;
+    border-radius: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* 여기에도 컬러 적용 */
 .variable > ul > li {
     font-size: 16px;
@@ -63,10 +76,23 @@ html {
     color: inherit;
 }
 
+
 .category {
     margin-left: 20px;
 }
 
+.Full-Spaces {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    height: auto;
+    width: auto;
+    background-color: #e0ecec;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 
 /* 질문 */
 .variable-title {
@@ -94,14 +120,17 @@ html {
 
 /* 버튼 꾸미기 */
 .images-open {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     border: none;
     min-width: 250px;
     min-height: 50px;
     background: linear-gradient(
         90deg,
-        rgb(13, 120, 214) 0%,
-        rgb(47, 193, 134) 100%
+        rgb(110, 103, 207) 0%,
+        rgb(21, 198, 207) 100%
     );
     border-radius: 1000px;
     color: darkslategray;
@@ -109,8 +138,7 @@ html {
     box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
     font-weight: 700;
     transition: 0.3s;
-    margin-top: 20px;
-    margin-left: 60px;
+    margin-top: 30px;
 }
 
 .images-open:hover {
@@ -170,19 +198,29 @@ html {
 }
 
 
-.reference-image {
-    display: none; /* 기본적으로 이미지를 숨깁니다 */
+/* 사진 */
+.Reference > .reference-image {
+    visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */
     opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
-    width: 250px;
-    /* height: 600px; */
-    margin-top: 50px;
-    margin-left: 60px;
-    transition: opacity 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
-    border-radius: 15px;
+    width: 350px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
+    border-radius: 30px;
     
 }
-.reference-image.show {
-    display: block; /* 이미지를 보이게 합니다 */
+
+/* 사진을 숨김처리 */
+.Reference > .reference-image {
+    display: none;
+}
+
+.Reference > .reference-image.show {
+    visibility: visible; /* 이미지를 보이게 합니다 */
     opacity: 1; /* 투명도를 1로 설정하여 이미지를 보이게 합니다 */
 }
 
@@ -198,4 +236,21 @@ html {
 .contact  a {
     color: brown;
     text-decoration: none;
+}
+
+
+/* 사진 줄 바꿈*/
+.image-line-wrap {
+    width: 80%;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+hr {
+    width: 95%;
+    height: 10px;
+    background-color: darkcyan;
+    border-radius: 10px;
 }

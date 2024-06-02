@@ -24,14 +24,12 @@ def InitHTML():
     <!-- 표시선 그리기 -->
     <br>
     <hr>
-    <hr>
     <br>
 
     {category}
 
     <!-- 표시선 그리기 -->
     <br>
-    <hr>
     <hr>
     <br>
     
@@ -78,16 +76,19 @@ def TemplateTitleAndDesc():
 
         <!-- 여기서 질문 & 설명 -->
         
-        <div class="variable-main" id="{id_values}">
-            <ol>
-                {title}
-                    <ul>
-                        <br>
-                        {desc}
-                    </ul>
-                </li>
-            </ol>
-        </div>"""
+        <!-- Full-Spaces 클래스는 여기부터 -->
+        <div class="Full-Spaces">
+            <div class="variable-main" id="{id_values}">
+                <ol>
+                    {title}
+                            <ul>
+                            <br>
+                            {desc}
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        """
 
 
 def TitleInsert():
@@ -104,18 +105,21 @@ def DescInsert():
 def TemplateImages():
     return """
         
-        
-        <div class="Reference">
-            {images}
-            <button class="images-open" onclick="toggleImages(this)">
-                Show Images
-            </button>
+            <br>
+            <hr class="image-line-wrap">
+            <br>
+            
+            <div class="Reference">
+                {images}
+                <button class="images-open" onclick="toggleImages(this)">
+                    Show Images
+                </button>
+            </div>
         </div>
-        
+        <!-- Full-Spaces 클래스는 여기 바로위에 div 까지 -->
 
         <!-- 표시선 그리기 -->
         <br>
-        <hr>
         <hr>
         <br>"""
 

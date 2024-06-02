@@ -22,6 +22,26 @@ html {
     margin-left: 20px;
 }
 
+.main-setting-list {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: #e0ecec;
+}
+
 /* 카테고리 텍스트 설정 */
 #category-id h4 > span {
     font-size: 20px;
@@ -59,6 +79,26 @@ html {
     margin-left: 20px;
 }
 
+
+.main-Revanced-Tips-list {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: #e0ecec;
+}
 
 /* 리밴스드 팁 텍스트 밑줄 제거 */
 #Revanced-Tips-id li,
@@ -99,4 +139,9 @@ html {
     text-decoration: none;
 }
 
-
+hr {
+    width: 95%;
+    height: 10px;
+    background-color: darkcyan;
+    border-radius: 10px;
+}
