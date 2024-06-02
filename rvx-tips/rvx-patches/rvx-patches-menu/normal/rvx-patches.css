@@ -54,11 +54,28 @@ html {
     color: tomato;
 }
 
+/* 전체공간 */
+.Full-Spaces {
+    width: auto;
+    border: 3px solid #69abd7;
+    margin-bottom: 30px;
+    background: #0d233243;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    word-wrap: break-word; 
+    white-space: normal;
+}
 
+.Full-Spaces:hover {
+    background-color: #93c7ea43;
+}
+
+/* 체크박스 공간 */
 .rvx-option {
     /* height: 100px; */
     width: auto;
-    border: 3px solid #252E33;
+    border: 3px solid #d6d9db;
     margin-bottom: 30px;
     background: #252E33;
     border-radius: 20px;
@@ -103,7 +120,7 @@ html {
     position: fixed;  /*고정 위치 */
     bottom: 0px;
     width: 100%; 
-    text-align: center;;
+    text-align: center;
     padding: 10px 0; /* 상하 패딩 설정 */
     
 }
@@ -162,4 +179,63 @@ html {
 .contact  a {
     color: brown;
     text-decoration: none;
+}
+
+
+
+
+/* 버튼 */
+.Reference > .images-open {
+    display: block;
+    color: #127ecb;
+    background-color: rgb(199, 224, 252);
+    border-radius: 30px;
+    border: 3px solid #5710e3;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+    
+
+}
+
+.Reference > .images-open:hover {
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.Reference > .images-open:active {
+    transform: scale(1.5);
+}
+
+
+/* 사진 */
+.Reference > .reference-image {
+    visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */
+    opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
+    width: 350px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
+    border-radius: 30px;
+    
+}
+
+/* 사진을 숨김처리 */
+.Reference > .reference-image {
+    display: none;
+}
+
+.Reference > .reference-image.show {
+    visibility: visible; /* 이미지를 보이게 합니다 */
+    opacity: 1; /* 투명도를 1로 설정하여 이미지를 보이게 합니다 */
 }

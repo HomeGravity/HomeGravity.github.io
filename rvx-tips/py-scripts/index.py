@@ -71,31 +71,46 @@ def init_html():
 
 def generate_html(patches):
     html_template = """
-        <div class="rvx-option" id="main-{idx}">
-            <div class="rvx-option-title">
-                <input type="checkbox" name="rvx-option-title" id="rvx-option-id{idx}" {checked}>
-                <span for="rvx-option-id{idx}" data-original-text="{title}">
-                    <span class="id-copy-selection"><a href="#main-{idx}">#main-{idx}</a></span> 
-                    <span class="Label-Text">{title}</span>
-                </span>
-            </div>
+        <div class="Full-Spaces">
+            <div class="rvx-option" id="main-{idx}">
+                <div class="rvx-option-title">
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id{idx}" {checked}>
+                    <span for="rvx-option-id{idx}" data-original-text="{title}">
+                        <span class="id-copy-selection"><a href="#main-{idx}">#main-{idx}</a></span> 
+                        <span class="Label-Text">{title}</span>
+                    </span>
+                </div>
 
-            <div class="rvx-option-desc">
-                <span>
-                    {desc}
-                </span>
+                <div class="rvx-option-desc">
+                    <span>
+                        {desc}
+                    </span>
+                </div>
+                
+                <div class="rvx-option-version">
+                    <span>
+                        {versions_str}
+                    </span>
+                </div>
             </div>
+                
+            <!-- 사진 공간 -->
             
-            <div class="rvx-option-version">
-                <span>
-                    {versions_str}
-                </span>
+            <hr>
+
+            <div class="Reference">
+                <img class="reference-image" src="../../../bird-8763079_1280.jpg" alt="">
+                <button class="images-open" onclick="toggleImages(this)">
+                    Show Images
+                </button>
             </div>
         </div>
+    
+        <!-- 구분 -->
+        <!-- 구분 -->
+        """
         
-        <!-- 구분 -->
-        <!-- 구분 -->
-    """
+        
     new_html = ""
     idx = 1
     for patch in patches:
