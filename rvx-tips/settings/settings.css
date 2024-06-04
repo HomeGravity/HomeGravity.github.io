@@ -8,16 +8,16 @@ html {
     white-space: normal;
 }
 
-/* 홈 밑줄 제거 */
-.home > a{
-    text-decoration: none;
-    font-weight: bold;
-    color: slateblue
+/* 홈 아이콘 적용 */
+.home > .set-img-svg {
+    width: 30px;
+    height: 30px;
+    font: 100;
     
 }
 
-.home > a:hover {
-    color: tomato;
+.home > .set-img-svg > .path-svg > svg {
+    fill: #000000;
 }
 
 /* 사진 & 제목 부분 */
@@ -60,10 +60,14 @@ html {
 
 .variable {
     display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     width: auto;
     height: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     border: 3px solid black;
     background-color: #e0ecec;
@@ -71,10 +75,12 @@ html {
 
     margin-left: auto;
     margin-right: auto;
+
+    text-align: center;
 }
 
 /* 여기에도 컬러 적용 */
-.variable > ul > li {
+.variable > div > li {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -82,18 +88,18 @@ html {
 }
 
 /* 텍스트 밑줄 제거 */
-.variable > ul > li > a {
+.variable > div > li > a {
     text-decoration: none;
     color: slateblue
     
 }
 
-.variable > ul > li:hover,
-.variable > ul > li > a:hover {
+.variable > div > li:hover,
+.variable > div > li > a:hover {
     color: tomato;
 }
 
-.variable > ul > li > a {
+.variable > div > li > a {
     color: inherit;
 }
 
@@ -109,6 +115,11 @@ html {
 
     height: auto;
     width: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     border: 3px solid black;
     background-color: #e0ecec;
@@ -127,9 +138,9 @@ html {
 
 /* 질문 */
 .variable-title {
+
     margin-top: 10px;
     margin-bottom: 5px;
-    list-style-type: disc;
     font-size: 14px;
     font-weight: bold;
     color: slateblue

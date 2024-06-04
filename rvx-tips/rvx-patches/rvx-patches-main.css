@@ -8,17 +8,18 @@ html {
     white-space: normal;
 }
 
-/* 홈 밑줄 제거 */
-.home > a{
-    text-decoration: none;
-    font-weight: bold;
-    color: slateblue
+/* 홈 아이콘 적용 */
+.home > .set-img-svg {
+    width: 30px;
+    height: 30px;
+    font: 100;
     
 }
 
-.home > a:hover {
-    color: tomato;
+.home > .set-img-svg > .path-svg > svg {
+    fill: #000000;
 }
+
 
 
 .main-top {
@@ -61,11 +62,20 @@ html {
 /* 카테고리 텍스트 설정 */
 #category-id h4 > span {
     font-size: 20px;
-    /* margin-left: 20px; */
+    /* margin-left: 0px; */
+    display: inline-flex;
+    align-items: center;
 }
 
-#category-id h4 :hover{
+#category-id h4 :hover {
     color: darkolivegreen;
+}
+
+#category-id h4 > span > svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 15px; /* 텍스트와 아이콘 사이의 간격 조절 */
 }
 
 

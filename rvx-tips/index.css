@@ -73,11 +73,22 @@ html {
 #category-id h4 > span {
     font-size: 20px;
     /* margin-left: 0px; */
+    display: inline-flex;
+    align-items: center;
 }
 
-#category-id h4 :hover{
+#category-id h4 :hover {
     color: darkolivegreen;
 }
+
+#category-id h4 > span > svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 15px; /* 텍스트와 아이콘 사이의 간격 조절 */
+}
+
+
 
 /* 설정 텍스트 밑줄 제거 */
 #setting-id li,
