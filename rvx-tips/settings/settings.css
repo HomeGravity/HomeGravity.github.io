@@ -1,0 +1,367 @@
+html {
+    background-color: aliceblue;
+    
+    /* 부드러운 스크롤을 위한 CSS */
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+    word-wrap: break-word; 
+    white-space: normal;
+}
+
+/* 홈 아이콘 적용 */
+.home > .set-img-svg {
+    width: 30px;
+    height: 30px;
+    font: 100;
+    
+}
+
+.home > .set-img-svg > .path-svg > svg {
+    fill: #000000;
+    flex-shrink: 0;
+}
+
+/* 사진 & 제목 부분 */
+.main-top {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    width: auto;
+    height: auto;
+
+    background-color: #b3d5ed;
+
+    border: 3px solid black;
+    border-radius: 30px;
+
+    text-align: center;
+
+}
+
+.title {
+    font-size: 20px;
+}
+
+.title > .main-title {
+    color: slateblue;
+}
+
+.title > .main-title:hover {
+    color: tomato;
+}
+
+
+.main-logo > img {
+    width: 200px;
+    width: 200px;
+}
+
+.variable {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border: 3px solid black;
+    background-color: #e0ecec;
+    border-radius: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+/* 여기에도 컬러 적용 */
+.variable > div > li {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: slateblue;
+    list-style-type: none;
+    display: flex; /* flex box를 사용 */
+    justify-content: center;
+    align-items: center; /* 수직 방향으로 중앙 정렬 */
+}
+
+.variable > div > li svg {
+    margin-right: 10px;
+    fill: rgb(0, 0, 0); /* SVG 색상 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
+    position: relative;
+}
+
+
+/* 텍스트 밑줄 제거 */
+.variable > div > li > a {
+    text-decoration: none;
+    
+    color: slateblue;
+    /* transition: color 1.0s ease;  */
+    /* 부드러운 색상 전환 효과 */
+    
+}
+
+.variable > div > li:hover,
+.variable > div > li > a:hover {
+    color: tomato;
+    
+}
+
+.variable > div > li > a {
+    color: inherit;
+}
+
+
+.category {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.Full-Spaces {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    height: auto;
+    width: auto;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border: 3px solid black;
+    background-color: #e0ecec;
+
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+}
+
+.Full-Spaces:hover {
+    background-color: #c4bebe6c;
+}
+
+/* 질문 */
+.variable-title {
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: slateblue;
+    /* transition: color 1.0s ease;  */
+    /* 부드러운 색상 전환 효과 */
+    list-style-type: none;
+    display: flex; /* flex box를 사용 */
+    justify-content: center;
+    align-items: center; /* 수직 방향으로 중앙 정렬 */
+
+
+    
+}
+
+.variable-title svg {
+    margin-right: 10px;
+    fill: rgb(0, 0, 0); /* SVG 색상 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
+    position: relative;
+    flex-shrink: 0;
+}
+
+.variable-title:hover {
+    color: tomato;
+}
+
+/* 질문 설명 */
+.variable-desc {
+    list-style-type: decimal;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: darkolivegreen;
+    
+}
+
+
+/* 버튼 꾸미기 | 이 CSs 버튼은 사용 안 함 */
+/* .images-open {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: none;
+    min-width: 250px;
+    min-height: 50px;
+    background: linear-gradient(
+        90deg,
+        rgb(110, 103, 207) 0%,
+        rgb(21, 198, 207) 100%
+    );
+    border-radius: 1000px;
+    color: darkslategray;
+    cursor: pointer;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+    font-weight: 700;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+.images-open:hover {
+    transform: scale(1.2);
+}
+
+.images-open:hover::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #5d12de;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+} */
+
+/* 버튼 링 표시 | 이것도 사용 안 함 */
+/* @keyframes gradient1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient2 {
+    0% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+} */
+
+
+/* 버튼 */
+.Reference > .images-open {
+    display: block;
+    color: #294253;
+    background-color: rgb(100, 177, 184);
+    border-radius: 30px;
+    border: 3px solid #000000;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.25s;
+    
+    
+
+}
+
+.Reference > .images-open:hover {
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.Reference > .images-open:active {
+    transform: scale(1.5);
+}
+
+
+/* 사진 */
+.Reference > .reference-image {
+    visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */
+    opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
+    width: 320px;
+
+    border: 3px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
+    border-radius: 15px;
+    
+}
+
+/* 사진을 숨김처리 */
+.Reference > .reference-image {
+    display: none;
+}
+
+.Reference > .reference-image.show {
+    visibility: visible; /* 이미지를 보이게 합니다 */
+    opacity: 1; /* 투명도를 1로 설정하여 이미지를 보이게 합니다 */
+}
+
+
+
+/* 어드레스 적용 */
+.contact {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* 어드레스 링크 컬러 적용 */
+.contact  a {
+    color: brown;
+    text-decoration: none;
+}
+
+
+/* 사진 줄 바꿈*/
+.image-line-wrap {
+    width: 80%;
+    height: 5px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+hr {
+    width: 95%;
+    height: 10px;
+    background-color: darkcyan;
+    border-radius: 10px;
+}
