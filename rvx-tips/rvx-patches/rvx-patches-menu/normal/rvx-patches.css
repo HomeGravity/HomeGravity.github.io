@@ -265,7 +265,7 @@ html {
 .Reference > .reference-image {
     visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */
     opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
-    width: 350px;
+    width: 320px;
 
     border: 3px solid black;
     
