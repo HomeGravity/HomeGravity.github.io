@@ -48,14 +48,25 @@ html {
 .main-content > .patches-web > h4 span > a {
     text-decoration: none;
     font-weight: bold;
-    color: slateblue;
-    /* margin-left: 20px; */
+    color: rgb(255, 255, 255);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .main-content > .patches-web > h4 > span > a:hover {
     color: tomato;
 }
 
+/* 브라우저 열기 아이콘 */
+.patches-web > h4 > span > a > svg {
+    margin-right: 10px;
+    fill: rgb(255, 255, 255); /* SVG 색상 설정 */
+    width: 25px; /* SVG 크기 설정 */
+    height: 25px; /* SVG 크기 설정 */
+    position: relative;
+}
 
 
 /* 해당 패치 개발자 이름 */
@@ -67,8 +78,22 @@ html {
 .main-content > .patches-web > h4 span > .patches-version {
     text-decoration: none;
     font-weight: bold;
-    color: skyblue;
-    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* (버전) 정보 아이콘 */
+.patches-web > h4 > span > .patches-version > svg {
+    margin-right: 10px;
+    margin-top: 0;
+    fill: rgb(255, 255, 255); /* SVG 색상 설정 */
+    width: 25px; /* SVG 크기 설정 */
+    height: 25px; /* SVG 크기 설정 */
+    position: relative;
 }
 
 .main-content > .patches-web > h4 > span > .patches-version:hover {
@@ -166,7 +191,7 @@ html {
 .rvx-Detailed-options .rvx-option-Detailed-key {
     margin-bottom: 18px;
     font-weight: bold;
-    color: #15cb12;
+    color: #92e191;
     /* margin-left: 20px; */
     font-size: 14px;
 
@@ -178,7 +203,7 @@ html {
 .rvx-option-Detailed-required {
     margin-bottom: 18px;
     font-weight: bold;
-    color: #479cd8;
+    color: #83bee8;
     /* margin-left: 50px; */
     font-size: 14px;
 
@@ -187,7 +212,7 @@ html {
 .rvx-Detailed-options .rvx-option-Detailed-values {
     margin-bottom: 18px;
     font-weight: bold;
-    color: #cb127e;
+    color: #e374b5;
     /* margin-left: 50px; */
     font-size: 14px;
 
@@ -233,15 +258,26 @@ html {
     transform: scale(1.5);
 }
 
-
-.rvx-option > .rvx-option-title .id-copy-selection a {
+/* 복사 아이콘 */
+.Full-Spaces a {
     text-decoration: none;
     font-weight: bold;
-    color: rgb(144, 212, 119)
+    color: rgb(144, 212, 119);
+    display: block;
+    justify-content: center;
+    align-items: center; 
 }
 
-.rvx-option > .rvx-option-title .id-copy-selection a:hover {
-    color: #db1b81;
+.Full-Spaces svg {
+    width: 25px;
+    height: 25px;
+
+    fill: white;
+    margin-bottom: 10px;
+}
+
+.Full-Spaces svg:hover {
+    fill: #5e6ed9;
 }
 
 /* 어드레스 적용 */

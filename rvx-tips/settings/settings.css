@@ -84,19 +84,36 @@ html {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: slateblue 
+    color: slateblue;
+    list-style-type: none;
+    display: flex; /* flex box를 사용 */
+    justify-content: center;
+    align-items: center; /* 수직 방향으로 중앙 정렬 */
 }
+
+.variable > div > li svg {
+    margin-right: 10px;
+    fill: rgb(0, 0, 0); /* SVG 색상 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
+    position: relative;
+}
+
 
 /* 텍스트 밑줄 제거 */
 .variable > div > li > a {
     text-decoration: none;
-    color: slateblue
+    
+    color: slateblue;
+    /* transition: color 1.0s ease;  */
+    /* 부드러운 색상 전환 효과 */
     
 }
 
 .variable > div > li:hover,
 .variable > div > li > a:hover {
     color: tomato;
+    
 }
 
 .variable > div > li > a {
@@ -143,8 +160,24 @@ html {
     margin-bottom: 5px;
     font-size: 14px;
     font-weight: bold;
-    color: slateblue
+    color: slateblue;
+    /* transition: color 1.0s ease;  */
+    /* 부드러운 색상 전환 효과 */
+    list-style-type: none;
+    display: flex; /* flex box를 사용 */
+    justify-content: center;
+    align-items: center; /* 수직 방향으로 중앙 정렬 */
+
+
     
+}
+
+.variable-title svg {
+    margin-right: 10px;
+    fill: rgb(0, 0, 0); /* SVG 색상 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
+    position: relative;
 }
 
 .variable-title:hover {
@@ -257,6 +290,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     transition: 0.25s;
+    
     
 
 }

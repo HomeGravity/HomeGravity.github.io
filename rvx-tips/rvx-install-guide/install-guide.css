@@ -99,15 +99,32 @@ html {
 
 
 /* 설정 텍스트 밑줄 제거 */
-#setting-id li,
 #setting-id li > a {
+    text-decoration: none;
+            
+}
+
+#setting-id li {
     font-weight: bold;
     font-size: 17px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: slateblue
-            
-    
+    color: slateblue;
+    list-style-type: none;
+    position: relative; /* 상대 위치 설정 */
+    list-style-type: none;
+    display: flex; 
+    /* justify-content: center; */
+    align-items: center; /* 수직 방향으로 중앙 정렬 */
+
+}
+
+#setting-id li > svg {
+    margin-right: 10px;
+    fill: rgb(0, 0, 0); /* SVG 색상 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
+    position: relative;
 }
 
 #setting-id li:hover,
