@@ -2,16 +2,35 @@ html {
     background-color: aliceblue;
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
-    /* overflow: hidden; */
+    /* overflow: auto; */
     word-wrap: break-word; 
     white-space: normal;
+}
+
+.main-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    width: auto;
+    height: auto;
+
+    background-color: #b3d5ed;
+
+    border: 3px solid black;
+    border-radius: 30px;
+
+    text-align: center;
+    
+
 }
 
 
 .main-logo > img {
     width: 200px;
     width: 200px;
-    margin-left: 20px;
+
 }
 
 
@@ -19,8 +38,13 @@ html {
 .main-title > h3 {
     font-size: 20px;
     font-weight: bold;
-    margin-left: 20px;
+
 }
+
+.main-title > h3 > .main-title-subject {
+    color: slateblue;
+}
+
 
 .main-setting-list {
     display: block;
@@ -40,6 +64,9 @@ html {
     border: 3px solid black;
     border-radius: 30px;
     background-color: #e0ecec;
+
+    /* text-align: center; */
+    
 }
 
 /* 카테고리 텍스트 설정 */
@@ -129,7 +156,7 @@ html {
 
 /* 어드레스 적용 */
 .contact {
-    /* margin-left: 20px; */
+    margin-left: 20px;
     font-weight: bold;
 }
 

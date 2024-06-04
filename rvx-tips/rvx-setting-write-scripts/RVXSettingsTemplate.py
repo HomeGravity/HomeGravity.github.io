@@ -13,14 +13,16 @@ def InitHTML():
         <a href="../index.html">홈</a>
     </div>
 
-    <!-- 리밴스드 로고 설정 -->
-    <figure class="main-logo">
-        <img src="../images/main-images/revancify_blue-main-logo.png" alt="">
-        
-    </figure>
+    <div class="main-top">
+        <!-- 리밴스드 로고 설정 -->
+        <figure class="main-logo">
+            <img src="../images/main-images/revancify_blue-main-logo.png" alt="">
+        </figure>
 
-    <h3 class="title">ReVanced Extended <span class="main-title">{title}</span> 설정</h3>
+        <h3 class="title">ReVanced Extended <span class="main-title">{title}</span> 설정</h3>
 
+    </div>
+    
     <!-- 표시선 그리기 -->
     <br>
     <hr>
@@ -79,25 +81,21 @@ def TemplateTitleAndDesc():
         <!-- Full-Spaces 클래스는 여기부터 -->
         <div class="Full-Spaces">
             <div class="variable-main" id="{id_values}">
-                <ol>
-                    {title}
-                            <ul>
-                            <br>
-                            {desc}
-                        </ul>
-                    </li>
-                </ol>
+                {title}
+                <div class="main-variable-desc">
+                    {desc}
+                </div>
             </div>
         """
 
 
 def TitleInsert():
     return """
-                <li class="variable-title">{title_text}"""
+                <li class="variable-title">{title_text}</li>"""
 
 def DescInsert():
     return """
-                        <li class="variable-desc">{desc_text}</li>"""
+                    <li class="variable-desc">{desc_text}</li>"""
 
 
 """ 버튼 & 사진 탬플렛 """

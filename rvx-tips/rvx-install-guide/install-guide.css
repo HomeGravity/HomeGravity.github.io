@@ -21,10 +21,29 @@ html {
     color: tomato;
 }
 
+.main-top {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    width: auto;
+    height: auto;
+
+    background-color: #b3d5ed;
+    
+
+    border: 3px solid black;
+    border-radius: 30px;
+
+    text-align: center;
+
+}
+
 .main-logo > img {
     width: 200px;
     width: 200px;
-    margin-left: 20px;
 }
 
 
@@ -32,9 +51,11 @@ html {
 .main-title > h3 {
     font-size: 20px;
     font-weight: bold;
-    margin-left: 20px;
 }
 
+.main-title > h3 > .main-title-subject {
+    color: slateblue;
+}
 
 .main-setting-list {
     display: block;
@@ -55,6 +76,7 @@ html {
     border-radius: 30px;
     background-color: #e0ecec;
 }
+
 
 /* 카테고리 텍스트 설정 */
 #category-id h4 > span {
@@ -97,7 +119,7 @@ html {
 
 /* 어드레스 적용 */
 .contact {
-    /* margin-left: 20px; */
+    margin-left: 20px;
     font-weight: bold;
 }
 
@@ -107,6 +129,7 @@ html {
     text-decoration: none;
 }
 
+/* 경고 css */
 
 .warning {
     display: block;
@@ -126,6 +149,9 @@ html {
     border: 3px solid black;
     border-radius: 30px;
     background-color: #e0ecec;
+
+    text-align: center;
+
 }
 
 
@@ -133,18 +159,22 @@ html {
     color: darkred;
     font-weight: bold;
     font-size: 20px;
+
 }
 
-.warning ul > li,
+
+.warning div > li,
 .warning .warning-desc {
     color: darkolivegreen;
     font-weight: bold;
     font-size: 17px;
     list-style-type: decimal;
+    
+    margin-bottom: 20px;
 
 }
 
-.warning .warning-desc span {
+.warning .warning-desc > span > .warning-desc-span {
     color: darkred;
 }
 

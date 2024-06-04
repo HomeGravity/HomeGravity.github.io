@@ -69,7 +69,16 @@ def init_html():
 </html>"""
 
 
-def generate_html(patches):
+def ImagesInsert():
+    return """<img class="reference-image" src="{img_path}" alt="">
+                """
+
+
+
+def generate_html(patches, UserName):
+    ImgData = OpenJSON(rf"rvx-tips\py-scripts\PatchesSave\{UserName}Patches\{UserName}AddPatchesImage.json")
+
+
     html_template = """
         <div class="Full-Spaces">
             <div class="rvx-option" id="{main_id}">
@@ -99,7 +108,7 @@ def generate_html(patches):
             <hr>
 
             <div class="Reference">
-                <img class="reference-image" src="../../../bird-8763079_1280.jpg" alt="">
+                {images}
                 <button class="images-open" onclick="toggleImages(this)">
                     Show Images
                 </button>
@@ -120,29 +129,40 @@ def generate_html(patches):
     new_html = ""
     idx = 1
     for patch in patches:
-        compatible_name = patch["compatiblePackages"][0]["name"]
-        if all(item not in compatible_name for item in ["music", "reddit"]):
-            title = patch["name"].strip()
-            desc = patch["description"].strip()
-            use = patch["use"]
+        imagesHTML = ""
+
+        if all(item not in patch["compatiblePackages"][0]["name"] for item in ["music", "reddit"]):
             versions = patch["compatiblePackages"][0]["versions"]
             versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
-            checked = "checked" if use else ""
+            checked = "checked" if patch["use"] else ""
+
+            # 옵션 & 사진 처리
             options = patch.get("options", [])
-            
             if options is not None and len(options) != 0:
+
+                # 사진 처리
+                for key, imgList in ImgData.items():
+                    if key == patch["name"].strip():
+                        for img in imgList:
+                            imagesHTML += ImagesInsert().format(img_path = img)
+
+
+                # 여기서부터 옵션 처리
                 options_html = ""
                 for index, option in enumerate(options):
                     for key, value in option.items():
+
                         if key != "values":
                             key_value = f"{key} : {value}"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
                         
+
                         else:
                             values_html = "<br>".join(f"{k} : {v}" for k, v in value.items()) if value else "None"
                             key_value = f"values▼<br>{values_html}"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
                         
+
                         if len(options) >= 2 and \
                             key == "required" and \
                                 len(options) > index + 1:
@@ -150,15 +170,20 @@ def generate_html(patches):
                             # 줄 관리
                             options_html += "\n\t\t\t\t\t<br><hr><br>\n"
 
+
+                # NEW_HTML에 신규 생성된 HTML을 추가
                 new_html += html_template.format(
                     main_id=f"main-{idx}",
                     idx=idx,
                     checked=checked,
-                    title=title,
-                    desc=desc,
+                    title=patch["name"].strip(),
+                    desc=patch["description"].strip(),
                     versions_str=versions_str,
-                    options_html=options_html
+                    options_html=options_html,
+                    images = imagesHTML
                 )
+
+                
                 idx += 1
         
     return new_html
@@ -167,7 +192,7 @@ def generate_html(patches):
 
 def StartHTML(FileName, UserName):
     patches = OpenJSON(f"{FileName}")
-    new_html = generate_html(patches)
+    new_html = generate_html(patches, UserName)
     SaveHTML(
         rf"rvx-tips\rvx-patches\rvx-patches-menu\detailed\rvx-{UserName}-detailed.html", 
         init_html().format(

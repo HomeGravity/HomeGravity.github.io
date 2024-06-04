@@ -69,7 +69,14 @@ def init_html():
 </html>"""
 
 
-def generate_html(patches):
+def ImagesInsert():
+    return """<img class="reference-image" src="{img_path}" alt="">
+                """
+
+
+def generate_html(patches, UserName):
+    ImgData = OpenJSON(rf"rvx-tips\py-scripts\PatchesSave\{UserName}Patches\{UserName}AddPatchesImage.json")
+
     html_template = """
         <div class="Full-Spaces">
             <div class="rvx-option" id="main-{idx}">
@@ -99,7 +106,7 @@ def generate_html(patches):
             <hr>
 
             <div class="Reference">
-                <img class="reference-image" src="../../../bird-8763079_1280.jpg" alt="">
+                {images}
                 <button class="images-open" onclick="toggleImages(this)">
                     Show Images
                 </button>
@@ -114,10 +121,17 @@ def generate_html(patches):
     new_html = ""
     idx = 1
     for patch in patches:
+        imagesHTML = ""
+
         if not any(x in patch["compatiblePackages"][0]["name"] for x in ["music", "reddit"]):
             versions = patch["compatiblePackages"][0]["versions"]
             versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
             checked = "checked" if patch["use"] else ""
+
+            for key, imgList in ImgData.items():
+                if key == patch["name"].strip():
+                    for img in imgList:
+                        imagesHTML += ImagesInsert().format(img_path = img)
 
             # NEW_HTML에 신규 생성된 HTML을 추가
             new_html += html_template.format(
@@ -125,7 +139,11 @@ def generate_html(patches):
                 checked=checked, 
                 title=patch["name"].strip(), 
                 desc=patch["description"].strip(), 
-                versions_str=versions_str) + "\n\n"
+                versions_str=versions_str,
+                images=imagesHTML
+                ) + "\n\n"
+            
+            
             idx += 1
     
     return new_html
@@ -133,7 +151,8 @@ def generate_html(patches):
 
 def StartHTML(FileName, UserName):
     patches = OpenJSON(f"{FileName}")
-    new_html = generate_html(patches)
+    new_html = generate_html(patches, UserName)
+
     SaveHTML(
         rf"rvx-tips\rvx-patches\rvx-patches-menu\normal\rvx-{UserName}.html", 
         init_html().format(
