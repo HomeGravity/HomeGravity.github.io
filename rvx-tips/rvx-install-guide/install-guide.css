@@ -64,10 +64,9 @@ html {
     width: auto;
     height: auto;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+ 
+    padding: 10px;
+    
     
     margin-left: auto;
     margin-right: auto;
@@ -148,8 +147,30 @@ html {
 
 /* 어드레스 적용 */
 .contact {
-    margin-left: 20px;
     font-weight: bold;
+
+    border-radius: 15px;
+    border: 3px solid black;
+
+    width: auto;
+    height: auto;
+
+    padding: 10px;
+
+    margin-left: auto;
+    margin-top: auto;
+
+    text-align: center;
+    
+    background-color: #b3d5ed;
+}
+
+/* 문의 svg 정의 */
+.contact svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* 어드레스 링크 컬러 적용 */
@@ -166,10 +187,9 @@ html {
     width: auto;
     height: auto;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+   
+    padding: 10px;
+    
     
     margin-left: auto;
     margin-right: auto;
@@ -205,12 +225,4 @@ html {
 
 .warning .warning-desc > span > .warning-desc-span {
     color: darkred;
-}
-
-
-hr {
-    width: 95%;
-    height: 10px;
-    background-color: darkcyan;
-    border-radius: 10px;
 }

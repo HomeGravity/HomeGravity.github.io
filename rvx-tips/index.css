@@ -52,10 +52,9 @@ html {
     width: auto;
     height: auto;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+    padding: 10px;
+    
     
     margin-left: auto;
     margin-right: auto;
@@ -116,8 +115,8 @@ html {
 #setting-id li > svg {
     margin-right: 10px;
     fill: rgb(0, 0, 0); /* SVG 색상 설정 */
-    width: 20px; /* SVG 크기 설정 */
-    height: 20px; /* SVG 크기 설정 */
+    width: 25px; /* SVG 크기 설정 */
+    height: 25px; /* SVG 크기 설정 */
     position: relative;
     flex-shrink: 0;
 }
@@ -146,10 +145,7 @@ html {
     width: auto;
     height: auto;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     
     margin-left: auto;
     margin-right: auto;
@@ -184,8 +180,8 @@ html {
 #Revanced-Tips-id li > svg {
     margin-right: 10px;
     fill: rgb(0, 0, 0); /* SVG 색상 설정 */
-    width: 20px; /* SVG 크기 설정 */
-    height: 20px; /* SVG 크기 설정 */
+    width: 25px; /* SVG 크기 설정 */
+    height: 25px; /* SVG 크기 설정 */
     position: relative;
     flex-shrink: 0;
 }
@@ -209,19 +205,34 @@ html {
 
 /* 어드레스 적용 */
 .contact {
-    margin-left: 20px;
     font-weight: bold;
+
+    border-radius: 15px;
+    border: 3px solid black;
+
+    width: auto;
+    height: auto;
+
+    padding: 10px;
+
+    margin-left: auto;
+    margin-top: auto;
+
+    text-align: center;
+    
+    background-color: #b3d5ed;
+}
+
+/* 문의 svg 정의 */
+.contact svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* 어드레스 링크 컬러 적용 */
 .contact  a {
     color: brown;
     text-decoration: none;
-}
-
-hr {
-    width: 95%;
-    height: 10px;
-    background-color: darkcyan;
-    border-radius: 10px;
 }
