@@ -89,8 +89,8 @@ def generate_html(patches, UserName):
     ImgData = OpenJSON(rf"rvx-tips\py-scripts\PatchesSave\{UserName}Patches\{UserName}AddPatchesImage.json")
 
     html_template = """
-        <div class="Full-Spaces">
-            <div class="rvx-option" id="main-{idx}">
+        <div class="Full-Spaces" id="main-{idx}">
+            <div class="rvx-option">
                 <div class="rvx-option-title">
                     <input type="checkbox" name="rvx-option-title" id="rvx-option-id{idx}" {checked}>
                     <span for="rvx-option-id{idx}" data-original-text="{title}">

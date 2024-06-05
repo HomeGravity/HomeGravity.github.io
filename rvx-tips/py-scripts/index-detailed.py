@@ -90,8 +90,8 @@ def generate_html(patches, UserName):
 
 
     html_template = """
-        <div class="Full-Spaces">
-            <div class="rvx-option" id="{main_id}">
+        <div class="Full-Spaces" id="{main_id}">
+            <div class="rvx-option">
                 <div class="rvx-option-title">
                     <input type="checkbox" name="rvx-option-title" id="rvx-option-id{idx}" {checked}>
                     <span for="rvx-option-id{idx}" data-original-text="{title}">
