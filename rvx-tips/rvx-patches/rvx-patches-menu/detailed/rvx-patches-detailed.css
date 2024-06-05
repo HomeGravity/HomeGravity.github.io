@@ -125,7 +125,8 @@ html {
 .rvx-option input[type='checkbox'] {
     display: inline-block; /* 영역적용가능해짐 */
     width: 20px; height: 20px;
-    position: relative; top: 4px;}
+    position: relative; top: 4px;
+}
 
 
 /* 니중에 체크박스를 사진으로 변경할 것 */
@@ -190,35 +191,64 @@ html {
 
 }
 
-.rvx-Detailed-options .rvx-option-Detailed-key {
-    margin-bottom: 18px;
-    font-weight: bold;
-    color: #92e191;
-    /* margin-left: 20px; */
-    font-size: 14px;
 
+.rvx-Detailed-options {
+    width: auto;
+    height: auto;
+
+    background-color: #44555d;
+    border-radius: 15px;
+    border: 3px solid lightblue;
 }
 
+.rvx-Detailed-options .rvx-option-Detailed-key,
 .rvx-Detailed-options .rvx-option-Detailed-default,
 .rvx-option-Detailed-title,
 .rvx-option-Detailed-description,
-.rvx-option-Detailed-required {
-    margin-bottom: 18px;
-    font-weight: bold;
-    color: #83bee8;
-    /* margin-left: 50px; */
-    font-size: 14px;
-
-}
-
+.rvx-option-Detailed-required,
 .rvx-Detailed-options .rvx-option-Detailed-values {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     font-weight: bold;
-    color: #e374b5;
-    /* margin-left: 50px; */
     font-size: 14px;
-
 }
+
+/* 키 */
+.rvx-Detailed-options .rvx-option-Detailed-key {
+    color:  white;
+    margin-top: 20px;
+}
+
+
+/* 기본값 */
+.rvx-Detailed-options .rvx-option-Detailed-default {
+    color: lightyellow;
+}
+
+/* 값 */
+.rvx-Detailed-options .rvx-option-Detailed-values {
+    color: white;
+}
+
+/* 제목 */
+.rvx-Detailed-options .rvx-option-Detailed-title {
+    color: lightyellow;
+}
+
+/* 설명 */
+.rvx-Detailed-options .rvx-option-Detailed-description {
+    color: white;
+}
+
+/* 설명 줄바꿈 */
+.pre-like {
+    white-space: pre-wrap;
+}
+
+/* 필수 */
+.rvx-Detailed-options .rvx-option-Detailed-required {
+    color: lightyellow
+}
+
 
 .button-container {
     position: fixed;
@@ -241,7 +271,8 @@ html {
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
+    
     transition: 0.25s;
 }
 
@@ -319,7 +350,7 @@ html {
     color: #127ecb;
     background-color: rgb(199, 224, 252);
     border-radius: 30px;
-    border: 3px solid #5710e3;
+    border: 3px solid lightskyblue;
     width: 250px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -328,6 +359,9 @@ html {
     margin-left: auto;
     margin-right: auto;
     transition: 0.25s;
+
+    font-weight: bold;
+    
     
 
 }
@@ -374,6 +408,6 @@ html {
 hr {
     width: 95%;
     height: 10px;
-    background-color: darkcyan;
+    background-color: lightskyblue;
     border-radius: 10px;
 }

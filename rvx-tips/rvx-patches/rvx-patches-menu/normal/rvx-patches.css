@@ -212,7 +212,8 @@ html {
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
+    
     transition: 0.25s;
 }
 
@@ -294,7 +295,7 @@ html {
     color: #127ecb;
     background-color: rgb(199, 224, 252);
     border-radius: 30px;
-    border: 3px solid #5710e3;
+    border: 3px solid lightskyblue;
     width: 250px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -303,6 +304,9 @@ html {
     margin-left: auto;
     margin-right: auto;
     transition: 0.25s;
+
+    font-weight: bold;
+    
     
 
 }
@@ -350,6 +354,6 @@ html {
 hr {
     width: 95%;
     height: 10px;
-    background-color: darkcyan;
+    background-color: lightskyblue;
     border-radius: 10px;
 }

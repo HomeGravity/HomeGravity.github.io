@@ -169,14 +169,17 @@ def generate_html(patches, UserName):
                 for index, option in enumerate(options):
                     for key, value in option.items():
 
-                        if key != "values":
-                            key_value = f"{key} : {value}"
+                        if key != "values" and key != "description":
+                            key_value = f"{key}▼ <div>{value}</div>"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
                         
+                        elif key == "description":
+                            key_value = f"{key}▼ <div class = \"pre-like\">{value}</div>"
+                            options_html += insert_html_template.format(key=key, key_value=key_value)
 
                         else:
-                            values_html = "<br>".join(f"{k} : {v}" for k, v in value.items()) if value else "None"
-                            key_value = f"values▼<br>{values_html}"
+                            values_html = "".join(f"<div>{k} : {v}</div>" for k, v in value.items()) if value else "None"
+                            key_value = f"values▼ <div>{values_html}</div>"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
                         
 
@@ -185,7 +188,7 @@ def generate_html(patches, UserName):
                                 len(options) > index + 1:
 
                             # 줄 관리
-                            options_html += "\n\t\t\t\t\t<br><hr><br>\n"
+                            options_html += "\n\t\t\t\t\t<hr>\n"
 
 
                 # NEW_HTML에 신규 생성된 HTML을 추가
