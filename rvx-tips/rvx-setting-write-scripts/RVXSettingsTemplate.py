@@ -79,8 +79,8 @@ def TemplateTitleAndDesc():
         <!-- 여기서 질문 & 설명 -->
         
         <!-- Full-Spaces 클래스는 여기부터 -->
-        <div class="Full-Spaces">
-            <div class="variable-main" id="{id_values}">
+        <div class="Full-Spaces" id="{id_values}">
+            <div class="variable-main">
                 {title}
                 <div class="main-variable-desc">
                     {desc}
