@@ -1,5 +1,5 @@
 html {
-    background-color: aliceblue;
+    background-color:  #181725;
     
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
@@ -18,7 +18,7 @@ html {
 }
 
 .home > .set-img-svg > .path-svg > svg {
-    fill: #000000;
+    fill: white;
     flex-shrink: 0;
 }
 
@@ -32,11 +32,11 @@ html {
     width: auto;
     height: auto;
 
-    background-color: #b3d5ed;
+    background-color: #93c7ea43;
     
 
-    border: 3px solid black;
-    border-radius: 30px;
+    border: 3px solid lightskyblue;
+    border-radius: 15px;
 
     text-align: center;
 
@@ -50,12 +50,13 @@ html {
 
 /* 메인 제목 설정 */
 .main-title > h3 {
+    color: white;
     font-size: 20px;
     font-weight: bold;
 }
 
 .main-title > h3 > .main-title-subject {
-    color: slateblue;
+    color: lightskyblue;
 }
 
 .main-setting-list {
@@ -64,7 +65,6 @@ html {
     width: auto;
     height: auto;
 
- 
     padding: 10px;
     
     
@@ -72,9 +72,9 @@ html {
     margin-right: auto;
     margin-bottom: 20px;
 
-    border: 3px solid black;
-    border-radius: 30px;
-    background-color: #e0ecec;
+    border: 3px solid lightskyblue;
+    border-radius: 15px;
+    background-color: #93c7ea43;
 }
 
 
@@ -84,6 +84,7 @@ html {
     /* margin-left: 0px; */
     display: inline-flex;
     align-items: center;
+    color: white;
 }
 
 #category-id h4 :hover {
@@ -96,6 +97,8 @@ html {
     vertical-align: middle;
     margin-right: 15px; /* 텍스트와 아이콘 사이의 간격 조절 */
     flex-shrink: 0;
+
+    fill: white;
 }
 
 
@@ -110,7 +113,7 @@ html {
     font-size: 17px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: slateblue;
+    color: lightyellow;
     list-style-type: none;
     position: relative; /* 상대 위치 설정 */
     list-style-type: none;
@@ -122,9 +125,9 @@ html {
 
 #setting-id li > svg {
     margin-right: 10px;
-    fill: rgb(0, 0, 0); /* SVG 색상 설정 */
-    width: 20px; /* SVG 크기 설정 */
-    height: 20px; /* SVG 크기 설정 */
+    fill: white; /* SVG 색상 설정 */
+    width: 25px; /* SVG 크기 설정 */
+    height: 25px; /* SVG 크기 설정 */
     position: relative;
     flex-shrink: 0;
 }
@@ -150,7 +153,7 @@ html {
     font-weight: bold;
 
     border-radius: 15px;
-    border: 3px solid black;
+    border: 3px solid lightskyblue;
 
     width: auto;
     height: auto;
@@ -162,7 +165,8 @@ html {
 
     text-align: center;
     
-    background-color: #b3d5ed;
+    background-color: #93c7ea43;
+    color: white;
 }
 
 /* 문의 svg 정의 */
@@ -171,11 +175,12 @@ html {
     height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
+    fill: white;
 }
 
 /* 어드레스 링크 컬러 적용 */
 .contact  a {
-    color: brown;
+    color: lightyellow;
     text-decoration: none;
 }
 
@@ -187,7 +192,6 @@ html {
     width: auto;
     height: auto;
 
-   
     padding: 10px;
     
     
@@ -195,9 +199,9 @@ html {
     margin-right: auto;
     margin-bottom: 20px;
 
-    border: 3px solid black;
-    border-radius: 30px;
-    background-color: #e0ecec;
+    border: 3px solid lightskyblue;
+    border-radius: 15px;
+    background-color: #93c7ea43;
 
     text-align: center;
 
@@ -205,7 +209,7 @@ html {
 
 
 .warning .warning-title {
-    color: darkred;
+    color: lightgreen;
     font-weight: bold;
     font-size: 20px;
 
@@ -214,7 +218,7 @@ html {
 
 .warning div > li,
 .warning .warning-desc {
-    color: darkolivegreen;
+    color: lightyellow;
     font-weight: bold;
     font-size: 17px;
     list-style-type: decimal;
@@ -224,5 +228,5 @@ html {
 }
 
 .warning .warning-desc > span > .warning-desc-span {
-    color: darkred;
+    color: lightgreen;
 }

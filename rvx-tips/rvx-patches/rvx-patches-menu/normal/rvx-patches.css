@@ -1,5 +1,5 @@
 html {
-    background: #1A1C1E;
+    background: #181725;
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
 }
@@ -106,12 +106,11 @@ html {
     border: 3px solid lightskyblue;
     margin-bottom: 30px;
     background: #9ba4ab43;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
     padding: 5px;
     word-wrap: break-word; 
     white-space: normal;
-
     text-align: center;
 }
 
@@ -124,7 +123,8 @@ html {
 .rvx-option input[type='checkbox'] {
     display: inline-block; /* 영역적용가능해짐 */
     width: 20px; height: 20px;
-    position: relative; top: 4px;}
+    position: relative; top: 4px;
+}
 
 
 /* 니중에 체크박스를 사진으로 변경할 것 */
@@ -150,9 +150,9 @@ html {
     /* height: 100px; */
     width: auto;
     border: 3px solid #d6d9db;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     background: #252E33;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
     padding: 5px;
     /* overflow: hidden; */
@@ -192,28 +192,28 @@ html {
 
 
 .button-container {
-    position: fixed;  /*고정 위치 */
-    bottom: 0px;
-    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     padding: 10px 0; /* 상하 패딩 설정 */
-    
+    display: flex;
+    justify-content: center; /* 가로 방향에서 중앙 정렬 */
+    align-items: center; /* 세로 방향에서 중앙 정렬 */
 }
 
 .w-btn {
-    margin-bottom: 20px;
+    margin: 0 5px; /* 버튼 사이의 간격 */
     cursor: pointer;
     position: relative;
     border: none;
-    display: inline-block;
     padding: 20px 10px;
-    border-radius: 15px;
-    font-family: "paybooc-Light", sans-serif;
+    border-radius: 30px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     font-weight: 600;
     transition: 0.25s;
-    margin-left: 15px;
 }
 
 .w-btn-green {
@@ -231,17 +231,7 @@ html {
     transform: scale(1.5);
 }
 
-
 /* 복사 아이콘 */
-.Full-Spaces a {
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(144, 212, 119);
-    display: block;
-    justify-content: center;
-    align-items: center; 
-}
-
 .Full-Spaces svg {
     width: 25px;
     height: 25px;
@@ -249,6 +239,9 @@ html {
     fill: white;
     margin-bottom: 10px;
     flex-shrink: 0;
+
+    /* margin: 0; */
+
 }
 
 .Full-Spaces svg:hover {
@@ -262,7 +255,7 @@ html {
     font-weight: bold;
 
     border-radius: 15px;
-    border: 3px solid lightyellow;
+    border: 3px solid lightskyblue;
 
     width: auto;
     height: auto;
@@ -274,7 +267,8 @@ html {
 
     text-align: center;
     
-    background-color: #b3d5ed;
+    background-color: #93c7ea43;
+    color: white;
 }
 
 /* 문의 svg 정의 */
@@ -283,11 +277,12 @@ html {
     height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
+    fill: white;
 }
 
 /* 어드레스 링크 컬러 적용 */
 .contact  a {
-    color: brown;
+    color: lightyellow;
     text-decoration: none;
 }
 
@@ -329,7 +324,7 @@ html {
     opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
     width: 320px;
 
-    border: 3px solid black;
+    border: 3px solid lightskyblue;
     
     margin-top: 20px;
     margin-bottom: 20px;
@@ -337,7 +332,7 @@ html {
     margin-right: auto;
 
     transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
-    border-radius: 30px;
+    border-radius: 15px;
     
 }
 
