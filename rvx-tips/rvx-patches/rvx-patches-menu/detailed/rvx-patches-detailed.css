@@ -109,7 +109,6 @@ html {
     margin-bottom: 30px;
     background: #9ba4ab43;
     border-radius: 15px;
-    cursor: pointer;
     padding: 5px;
     word-wrap: break-word; 
     white-space: normal;
@@ -405,9 +404,9 @@ html {
     border: 3px solid lightskyblue;
 
     margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 
     transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
     border-radius: 15px;

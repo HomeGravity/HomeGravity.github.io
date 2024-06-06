@@ -4,8 +4,10 @@ html {
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
     /* overflow: hidden; */
+
     word-wrap: break-word; 
     white-space: normal;
+
 }
 
 /* 홈 아이콘 적용 */
@@ -131,26 +133,21 @@ html {
 }
 
 .Full-Spaces {
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     height: auto;
     width: auto;
 
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
     border: 3px solid lightskyblue;
     background-color: #93c7ea43;
 
     border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
+
     margin-top: 20px;
     margin-bottom: 20px;
 
     text-align: center;
-
-
 }
 
 .Full-Spaces:hover {
@@ -255,7 +252,6 @@ html {
 
     flex-wrap: nowrap; /* 한 줄로 배치 */
     overflow: auto;
-
 }
 
 .reference-image {
@@ -268,8 +264,8 @@ html {
 
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 
     transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
     border-radius: 15px;
