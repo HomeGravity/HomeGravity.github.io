@@ -177,7 +177,6 @@ html {
     margin-bottom: 18px;
     font-weight: bold;
     color: #CFE1EE;
-    /* margin-left: 20px; */
     font-size: 14px;
     
 }
@@ -186,70 +185,72 @@ html {
     margin-bottom: 18px;
     font-weight: bold;
     color: lightyellow;
-    /* margin-left: 20px; */
     font-size: 14px;
 
 }
 
-
+/* 옵션 설정 CSS */
 .rvx-Detailed-options {
     width: auto;
     height: auto;
 
-    background-color: #44555d;
+    background-color: #2c393e;
     border-radius: 15px;
-    border: 3px solid lightblue;
+    border: 3px solid lightyellow;
 }
 
 .rvx-Detailed-options .rvx-option-Detailed-key,
-.rvx-Detailed-options .rvx-option-Detailed-default,
+.rvx-option-Detailed-default,
 .rvx-option-Detailed-title,
 .rvx-option-Detailed-description,
 .rvx-option-Detailed-required,
-.rvx-Detailed-options .rvx-option-Detailed-values {
+.rvx-option-Detailed-values {
     margin-bottom: 20px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* 키 */
 .rvx-Detailed-options .rvx-option-Detailed-key {
-    color:  white;
+    color: white;
     margin-top: 20px;
 }
 
 
 /* 기본값 */
 .rvx-Detailed-options .rvx-option-Detailed-default {
-    color: lightyellow;
+    color: #CFE1EE;
 }
 
 /* 값 */
 .rvx-Detailed-options .rvx-option-Detailed-values {
-    color: white;
+    color:white;
 }
 
 /* 제목 */
 .rvx-Detailed-options .rvx-option-Detailed-title {
-    color: lightyellow;
+    color: #CFE1EE;
 }
 
 /* 설명 */
 .rvx-Detailed-options .rvx-option-Detailed-description {
-    color: white;
-}
-
-/* 설명 줄바꿈 */
-.pre-like {
-    white-space: pre-wrap;
+    color:white;
 }
 
 /* 필수 */
 .rvx-Detailed-options .rvx-option-Detailed-required {
-    color: lightyellow
+    color: #CFE1EE
 }
 
+/* 옵션 줄바꿈 */
+.text-indent {
+    white-space: pre-wrap;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
+/* 고정 버튼 */
 .button-container {
     position: fixed;
     bottom: 0;

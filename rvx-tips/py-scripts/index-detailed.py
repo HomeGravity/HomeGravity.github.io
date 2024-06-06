@@ -22,7 +22,7 @@ def init_html():
     <div class="main-content">
         <div class="title">
             <h3>
-                RVX Manager 패치 JSON으로 저장 (<span class="patch-developer-name">{name}</span>) Bata
+                RVX Manager 패치 세부적인 확인 (<span class="patch-developer-name">{name}</span>) Bata
             </h3>
         </div>
         <div class="patches-web">
@@ -170,16 +170,16 @@ def generate_html(patches, UserName):
                     for key, value in option.items():
 
                         if key != "values" and key != "description":
-                            key_value = f"{key}▼ <div>{value}</div>"
+                            key_value = f"{key}▼ <div class = \"text-indent\">{value}</div>"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
                         
                         elif key == "description":
-                            key_value = f"{key}▼ <div class = \"pre-like\">{value}</div>"
+                            key_value = f"{key}▼ <div class = \"text-indent\">{value}</div>"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
 
                         else:
-                            values_html = "".join(f"<div>{k} : {v}</div>" for k, v in value.items()) if value else "None"
-                            key_value = f"values▼ <div>{values_html}</div>"
+                            values_html = "".join(f"<div class = \"text-indent\">{k} : {v}</div>" for k, v in value.items()) if value else None
+                            key_value = f"values▼ <div class = \"text-indent\">{values_html}</div>"
                             options_html += insert_html_template.format(key=key, key_value=key_value)
                         
 
