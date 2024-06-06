@@ -125,7 +125,13 @@ def generate_html(patches, UserName):
             <hr>
 
             <div class="Reference">
-                {images}
+                <div class="Reference-Flex">
+                    <div>
+                        {images}
+                    </div>
+                </div>
+                
+                
                 <button class="images-open" onclick="toggleImages(this)">
                     Show Images
                 </button>

@@ -108,7 +108,13 @@ def TemplateImages():
             <hr class="image-line-wrap">
             
             <div class="Reference">
-                {images}
+                <div class="Reference-Flex">
+                    <div>
+                        {images}
+                    </div>
+                </div>
+                
+                
                 <button class="images-open" onclick="toggleImages(this)">
                     Show Images
                 </button>
@@ -120,4 +126,4 @@ def TemplateImages():
 
 def ImagesInsert():
     return """
-                <img class="reference-image" src="{image_url}" alt="">"""
+                        <img class="reference-image" src="{image_url}" alt="">"""

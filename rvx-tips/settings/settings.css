@@ -241,30 +241,46 @@ html {
 
 
 /* 사진 */
-.Reference > .reference-image {
+.Reference-Flex  {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.Reference-Flex div  {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+
+    flex-wrap: nowrap; /* 한 줄로 배치 */
+    overflow: auto;
+
+}
+
+.reference-image {
+    display: none;
     visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */
     opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
     width: 320px;
 
     border: 3px solid lightskyblue;
+
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
 
     transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
     border-radius: 15px;
     
 }
 
-/* 사진을 숨김처리 */
-.Reference > .reference-image {
-    display: none;
-}
 
-.Reference > .reference-image.show {
+.reference-image.show {
     visibility: visible; /* 이미지를 보이게 합니다 */
     opacity: 1; /* 투명도를 1로 설정하여 이미지를 보이게 합니다 */
+    
 }
 
 
