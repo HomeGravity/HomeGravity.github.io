@@ -191,4 +191,4 @@ def StartHTML(FileName, UserName):
 
 
 StartHTML(rf"{InitResponse('https://github.com/anddea/revanced-patches/releases')}", "anddea")
-StartHTML(rf"{InitResponse('https://github.com/inotia00/revanced-patches/releases')}", "inotia00")
+# StartHTML(rf"{InitResponse('https://github.com/inotia00/revanced-patches/releases')}", "inotia00")
