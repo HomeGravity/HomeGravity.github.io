@@ -126,4 +126,4 @@ def TemplateImages():
 
 def ImagesInsert():
     return """
-                        <img class="reference-image" src="{image_url}" alt="">"""
+                        <img class="reference-image" src="{image_url}" onclick="window.open(this.src)" alt="">"""

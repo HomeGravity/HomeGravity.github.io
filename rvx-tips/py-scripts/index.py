@@ -80,7 +80,7 @@ def init_html():
 
 
 def ImagesInsert():
-    return """<img class="reference-image" src="{img_path}" alt="">
+    return """<img class="reference-image" src="{img_path}" onclick="window.open(this.src)" alt="">
                 """
 
 
