@@ -401,8 +401,8 @@ html {
     opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
     width: auto;
     height: auto;
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 330px;
+    max-height: 400px;
     
 
     border: 3px solid lightskyblue;
