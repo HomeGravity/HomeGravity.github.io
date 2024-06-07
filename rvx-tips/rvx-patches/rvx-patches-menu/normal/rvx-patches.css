@@ -346,20 +346,27 @@ html {
     display: none;
     visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */
     opacity: 0; /* 투명도를 0으로 설정하여 보이지 않게 합니다 */
-    width: 320px;
+    /* width: 350px; */
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+    
 
     border: 3px solid lightskyblue;
 
     margin-top: 20px;
     margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 15px;
 
     transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
     border-radius: 15px;
     
 }
 
+.reference-image:first-child {
+    margin-left: 15px;
+}
 
 .reference-image.show {
     visibility: visible; /* 이미지를 보이게 합니다 */
