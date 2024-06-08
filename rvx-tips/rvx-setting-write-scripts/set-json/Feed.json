@@ -1,11 +1,15 @@
 {
     "main-1": {
-        "title": "추가 예정",
+        "title": "조회수가 낮은/높은 영상을 숨기고 싶어요.",
         "description": [
-            "추가 예정"
+            "Revanced Extended > 피드 > 동영상 필터 > 조회수 필터 > 조회수를 기준으로 동영상 숨기기 > 활성화",
+            "Revanced Extended > 피드 > 동영상 필터 > 조회수 필터 > 조회수가 낮은 동영상 숨기기 > 원하는 값 입력",
+            "Revanced Extended > 피드 > 동영상 필터 > 조회수 필터 > 조회수가 높은 동영상 숨기기 > 원하는 값 입력"
         ],
         "image-url": [
-            "../bird-8763079_1280.jpg"
+            "../images/Feed-images/RVX-Feed-1.png",
+            "../images/Feed-images/RVX-Feed-2.png",
+            "../images/Feed-images/RVX-Feed-3.png"
         ]
     },
     "main-2": {

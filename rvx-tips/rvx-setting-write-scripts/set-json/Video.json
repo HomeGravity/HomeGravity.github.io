@@ -1,11 +1,16 @@
 {
     "main-1": {
-        "title": "추가 예정",
+        "title": "영상의 화질을 최고 화질로 고정하고 싶어요.",
         "description": [
-            "추가 예정"
+            "Revanced Extended > 동영상 > Wi-Fi 이용 시 기본 동영상 화질 > 원하는 값 선택",
+            "Revanced Extended > 동영상 > 모바일 네트워크 이용 시 기본 동영상 화질 > 원하는 값 선택",
+            "Revanced Extended > 동영상 > 동영상 화질 저장 활성화하기 > 비활성화 (권장함.)"
+            
         ],
         "image-url": [
-            "../bird-8763079_1280.jpg"
+            "../images/Video-images/RVX-Video-1-1.png",
+            "../images/Video-images/RVX-Video-1-2.png",
+            "../images/Video-images/RVX-Video-1-3.png"
         ]
     },
     "main-2": {
