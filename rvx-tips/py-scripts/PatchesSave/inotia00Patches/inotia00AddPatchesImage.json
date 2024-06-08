@@ -115,16 +115,17 @@
         "../PatchesImages/ImageIntegration/Hide ads/Hide ads-2.png"
     ],
     "Hide animated button background": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Hide animated button background/Hide animated button background-1.png"
     ],
     "Hide comments components": [
         "../../../bird-8763079_1280.jpg"
     ],
     "Hide double tap overlay filter": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Hide double tap overlay filter/Hide double tap overlay filter-1.png",
+        "../PatchesImages/ImageIntegration/Hide double tap overlay filter/Hide double tap overlay filter-2.png"
     ],
     "Hide double tap to like animations": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Hide double tap to like animations/Hide double tap to like animations-1.png"
     ],
     "Hide feed components": [
         "../../../bird-8763079_1280.jpg"
@@ -175,13 +176,16 @@
         "../PatchesImages/ImageIntegration/Sanitize sharing links/Sanitize sharing links-2.png"
     ],
     "Seekbar components": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Seekbar components/Seekbar components-1.png",
+        "../PatchesImages/ImageIntegration/Seekbar components/Seekbar components-2.png",
+        "../PatchesImages/ImageIntegration/Seekbar components/Seekbar components-3.png"
     ],
     "Settings": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Settings/Settings-1.png"
     ],
     "Shorts components": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Shorts components/Shorts components-1.png",
+        "../PatchesImages/ImageIntegration/Shorts components/Shorts components-2.png"
     ],
     "Shorts outline button": [
         "../../../bird-8763079_1280.jpg"
@@ -195,7 +199,9 @@
         "../PatchesImages/ImageIntegration/SponsorBlock/SponsorBlock-6.png"
     ],
     "Spoof app version": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/ImageIntegration/Spoof app version/Spoof app version-1.png",
+        "../PatchesImages/ImageIntegration/Spoof app version/Spoof app version-2.png",
+        "../PatchesImages/ImageIntegration/Spoof app version/Spoof app version-3.png"
     ],
     "Spoof client": [
         "../PatchesImages/ImageIntegration/Spoof client/Spoof client-1.png",
