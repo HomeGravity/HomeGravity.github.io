@@ -38,6 +38,7 @@ def RVXHTMLWrite(SettingsTitle, JsonPath):
     print(rf"rvx-tips\settings\{SettingsTitle.replace('.json', '')}.html Saved!")
 
 
+
 def main():
     path = os.listdir(r"rvx-tips\rvx-setting-write-scripts\set-json")
     FileList = [file for file in path if file.endswith('.json')]

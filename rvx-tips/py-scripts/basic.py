@@ -30,6 +30,7 @@ def GetPatchesVersion(text):
     return r
 
 
+
 def JSONSave(data, FileName):
     print("%s saved!" % FileName)
     with open(FileName, "w", encoding="utf-8") as f:
