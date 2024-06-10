@@ -6,6 +6,7 @@ def OpenJson(filename):
         return json.load(f)
 
 def SaveHTML(filename, data):
+    print("%s saved!" % filename)
     with open(filename, "w", encoding='utf-8') as f:
         f.write(data)
         

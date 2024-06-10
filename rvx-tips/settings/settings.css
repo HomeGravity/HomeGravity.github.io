@@ -5,7 +5,7 @@ html {
     scroll-behavior: smooth;
     /* overflow: hidden; */
 
-    word-wrap: break-word; 
+    word-break: keep-all; 
     white-space: normal;
 
 }
@@ -203,10 +203,16 @@ html {
     
 }
 
-.variable-desc:hover {
-    color: lightcyan;
+
+/* 기능 이름 */
+.Feature-name {
+    color: lightgreen;
+    cursor: pointer;
 }
 
+.Feature-name:hover {
+    color: lightcoral;
+}
 
 /* 버튼 */
 .Reference > .images-open {
@@ -228,8 +234,6 @@ html {
     transition: 0.25s;
 
     font-weight: bold;
-    
-    
 
 }
 

@@ -48,6 +48,7 @@ def FeatureComparisonWrite(data, icondata):
         ALL
         )
 
+
 FeatureComparisonWrite(
     OpenJson(r"rvx-tips\Feature Comparison\Feature Comparison.json"),
     OpenJson(r"rvx-tips\Feature Comparison\Feature Comparison icon.json")

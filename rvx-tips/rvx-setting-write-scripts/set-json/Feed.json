@@ -2,9 +2,9 @@
     "main-1": {
         "title": "조회수가 낮은/높은 영상을 숨기고 싶어요.",
         "description": [
-            "피드 > 동영상 필터 > 조회수 필터 > 조회수를 기준으로 동영상 숨기기 > 활성화",
-            "피드 > 동영상 필터 > 조회수 필터 > 조회수가 낮은 동영상 숨기기 > 원하는 값 입력",
-            "피드 > 동영상 필터 > 조회수 필터 > 조회수가 높은 동영상 숨기기 > 원하는 값 입력"
+            "피드 > 동영상 필터 > 조회수 필터 > <span class=\"Feature-name\" onclick=\"copyText()\">조회수를 기준으로 동영상 숨기기</span> > 활성화",
+            "피드 > 동영상 필터 > 조회수 필터 > <span class=\"Feature-name\" onclick=\"copyText()\">조회수가 낮은 동영상 숨기기</span> > 원하는 값 입력",
+            "피드 > 동영상 필터 > 조회수 필터 > <span class=\"Feature-name\" onclick=\"copyText()\">조회수가 높은 동영상 숨기기</span> > 원하는 값 입력"
         ],
         "image-url": [
             "../images/Feed-images/RVX-Feed-1.png",

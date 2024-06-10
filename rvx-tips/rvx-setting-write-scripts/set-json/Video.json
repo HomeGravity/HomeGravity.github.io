@@ -2,9 +2,9 @@
     "main-1": {
         "title": "영상의 화질을 최고 화질로 고정하고 싶어요.",
         "description": [
-            "동영상 > Wi-Fi 이용 시 기본 동영상 화질 > 원하는 값 선택",
-            "동영상 > 모바일 네트워크 이용 시 기본 동영상 화질 > 원하는 값 선택",
-            "동영상 > 동영상 화질 저장 활성화하기 > 비활성화 (권장함.)"
+            "동영상 > <span class=\"Feature-name\" onclick=\"copyText()\">Wi-Fi 이용 시 기본 동영상 화질</span> > 원하는 값 선택",
+            "동영상 > <span class=\"Feature-name\" onclick=\"copyText()\">모바일 네트워크 이용 시 기본 동영상 화질</span> > 원하는 값 선택",
+            "동영상 > <span class=\"Feature-name\" onclick=\"copyText()\">동영상 화질 저장 활성화하기</span> > 비활성화 (권장함.)"
             
         ],
         "image-url": [
