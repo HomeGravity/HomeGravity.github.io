@@ -1,0 +1,37 @@
+{
+    "광고" : {  
+        "광고 차단" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "Shorts 광고 차단" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
+
+
+    "플레이어" : {  
+        "재생바 색상 변경" : {
+            "YouTube": "✕",
+            "Revanced Extended": "✓"
+        },
+        "재생바에 타임스탬프 추가" : {
+            "YouTube": "✕",
+            "Revanced Extended": "✓"
+        }
+    },
+
+
+    "동영상" : {  
+        "동영상 화질 고정" : {
+            "YouTube": "✕",
+            "Revanced Extended": "✓"
+        },
+        "동영상 재생 속도 변경" : {
+            "YouTube": "✕",
+            "Revanced Extended": "✓"
+        }
+    }
+    
+}
