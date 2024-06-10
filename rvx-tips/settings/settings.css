@@ -5,7 +5,7 @@ html {
     scroll-behavior: smooth;
     /* overflow: hidden; */
 
-    word-break: keep-all; 
+    word-wrap: break-word;
     white-space: normal;
 
 }
@@ -171,9 +171,6 @@ html {
     padding-left: 10px;
     padding-right: 10px;
 
-
-
-    
 }
 
 .variable-title svg {
@@ -199,6 +196,9 @@ html {
 
     padding-left: 10px;
     padding-right: 10px;
+
+    /* 단어 단위로 줄바꿈 적용 */
+    word-break: keep-all;
     
     
 }
