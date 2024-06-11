@@ -1,5 +1,6 @@
 from basic import *
 from PatchesDownload import *
+import json
 
 def init_html():
     return """<!DOCTYPE html>
@@ -146,41 +147,45 @@ def generate_html(patches, UserName):
     for patch in patches:
         imagesHTML = ""
 
-        if not any(x in patch["compatiblePackages"][0]["name"] for x in ["music", "reddit"]):
-            versions = patch["compatiblePackages"][0]["versions"]
-            versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
-            checked = "checked" if patch["use"] else ""
+        if list(patch.keys())[0] != "patches-version":
+            if not any(x in patch["compatiblePackages"][0]["name"] for x in ["music", "reddit"]):
+                versions = patch["compatiblePackages"][0]["versions"]
+                versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
+                checked = "checked" if patch["use"] else ""
 
-            for key, imgList in ImgData.items():
-                if key == patch["name"].strip():
-                    for img in imgList:
-                        imagesHTML += ImagesInsert().format(img_path = img)
+                for key, imgList in ImgData.items():
+                    if key == patch["name"].strip():
+                        for img in imgList:
+                            imagesHTML += ImagesInsert().format(img_path = img)
 
-            # NEW_HTML에 신규 생성된 HTML을 추가
-            new_html += html_template.format(
-                idx=idx, 
-                checked=checked, 
-                title=patch["name"].strip(), 
-                desc=patch["description"].strip(), 
-                versions_str=versions_str,
-                images=imagesHTML
-                ) + "\n\n"
-            
-            
-            idx += 1
+                # NEW_HTML에 신규 생성된 HTML을 추가
+                new_html += html_template.format(
+                    idx=idx, 
+                    checked=checked, 
+                    title=patch["name"].strip(), 
+                    desc=patch["description"].strip(), 
+                    versions_str=versions_str,
+                    images=imagesHTML
+                    ) + "\n\n"
+                
+                
+                idx += 1
     
     return new_html
 
 
-def StartHTML(FileName, UserName):
-    patches = OpenJSON(f"{FileName}")
-    new_html = generate_html(patches, UserName)
+def StartHTML(UserName, RepoName):
+    PatchesData = InitResponse(f'https://github.com/{UserName}/{RepoName}/releases')
+    PatchesData = json.dumps(PatchesData)
+    PatchesData = json.loads(PatchesData)
+    
+    new_html = generate_html(PatchesData, UserName)
 
     SaveHTML(
         rf"rvx-tips\rvx-patches\rvx-patches-menu\normal\rvx-{UserName}.html", 
         init_html().format(
             Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
-            patches_version=GetPatchesVersion(FileName),
+            patches_version=PatchesData[len(PatchesData) - 1]["patches-version"],
             name=UserName, 
             insert_html=new_html, 
             time=CurrentTime()
@@ -191,5 +196,6 @@ def StartHTML(FileName, UserName):
 
 
 
-StartHTML(rf"{InitResponse('https://github.com/anddea/revanced-patches/releases')}", "anddea")
-StartHTML(rf"{InitResponse('https://github.com/inotia00/revanced-patches/releases')}", "inotia00")
+StartHTML("anddea", "revanced-patches")
+StartHTML("inotia00", "revanced-patches")
+

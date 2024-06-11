@@ -25,6 +25,9 @@
         "../PatchesImages/ImageIntegration/Change start page/Change start page-2.png",
         "../PatchesImages/ImageIntegration/Change start page/Change start page-3.png"
     ],
+    "Custom Shorts action buttons": [
+        "../../../bird-8763079_1280.jpg"
+    ],
     "Custom branding icon YouTube": [
         "../PatchesImages/ImageIntegration/Custom branding icon YouTube/Custom branding icon YouTube-1.png",
         "../PatchesImages/ImageIntegration/Custom branding icon YouTube/Custom branding icon YouTube-2.png"
@@ -65,6 +68,9 @@
         "../PatchesImages/ImageIntegration/Disable resuming Shorts on startup/Disable resuming Shorts on startup-2.png"
     ],
     "Disable splash animation": [
+        "../../../bird-8763079_1280.jpg"
+    ],
+    "Enable OPUS codec": [
         "../../../bird-8763079_1280.jpg"
     ],
     "Enable debug logging": [
@@ -219,9 +225,6 @@
         "../PatchesImages/ImageIntegration/Shorts components/Shorts components-1.png",
         "../PatchesImages/ImageIntegration/Shorts components/Shorts components-2.png"
     ],
-    "Shorts outline button": [
-        "../../../bird-8763079_1280.jpg"
-    ],
     "SponsorBlock": [
         "../PatchesImages/ImageIntegration/SponsorBlock/SponsorBlock-1.png",
         "../PatchesImages/ImageIntegration/SponsorBlock/SponsorBlock-2.png",
@@ -251,11 +254,14 @@
     "Toolbar components": [
         "../../../bird-8763079_1280.jpg"
     ],
-    "Translations": [
-        "../PatchesImages/ImageIntegration/Translations/Translations-1.png",
-        "../PatchesImages/ImageIntegration/Translations/Translations-2.png"
+    "Translations YouTube": [
+        "../../../bird-8763079_1280.jpg"
     ],
     "Video playback": [
         "../../../bird-8763079_1280.jpg"
+    ],
+    "Visual preferences icons": [
+        "../PatchesImages/ImageIntegration/Visual preferences icons/Visual preferences icons-1.png",
+        "../PatchesImages/ImageIntegration/Visual preferences icons/Visual preferences icons-2.png"
     ]
 }

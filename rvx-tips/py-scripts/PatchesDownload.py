@@ -2,19 +2,19 @@ import requests
 from requests import exceptions
 from bs4 import BeautifulSoup
 from GetHeaders import *
-import os
+import json
 
 def InitResponse(URL):
     response = requests.get(URL, headers=request_headers, timeout=10)
     response.raise_for_status()
     
     if response.status_code == 200:
-        File = ResponseParse(response.text, URL)
+        data = ResponseParse(response.text, URL)
     
     else:
         print("Response code: %s", response.status_code)
 
-    return File
+    return data
 
 def ResponseParse(source, URL):
     soup = BeautifulSoup(source, "lxml")
@@ -24,31 +24,36 @@ def ResponseParse(source, URL):
     
     repo = URL.split("/")[4]
     PatchesJSON = f"https://github.com/{user}/{repo}/releases/download/{LastReleses.text.strip()}/patches.json"
-    FileSaveName = rf"rvx-tips\py-scripts\PatchesSave\{user}Patches\{user} - {LastReleses.text.strip()} - patches.json"    
-    DownloadJSON(PatchesJSON, FileSaveName)
-    
-    return FileSaveName
-    
-def DownloadJSON(URL, FileSaveName):
-    if os.path.isfile(FileSaveName):
-        print(f"{FileSaveName} 파일이 이미 존재합니다. 저장을 취소합니다.")
-        return
+    JSONData = json.loads(JSONDownloadBytes(PatchesJSON))
 
+
+    if isinstance(JSONData, list):
+        JSONData.append({"patches-version" : LastReleses.text.strip()})
+
+        return JSONData
+    
+    # 위 JSONDatas에서 아무것도 반환되지 않으면 리턴 값을 None로 지정
+    return None
+    
+
+def JSONDownloadBytes(URL):
     try:
         response = requests.get(URL, headers=request_headers, timeout=10)
         response.raise_for_status()
-        
-        with open(FileSaveName, "w") as File:
-            File.write(response.text)
-        print(f"{FileSaveName} 저장에 성공했습니다.")
+
+        return response.text
         
     except exceptions.HTTPError as err:
         print(f"HTTP 에러가 발생했습니다: {err}")
         
     except Exception as err:
         print(f"다운로드 중 예외가 발생했습니다: {err}")
+        
+    return None
 
 if __name__ == "__main__":
     a = InitResponse("https://github.com/anddea/revanced-patches/releases")
     # InitResponse("https://github.com/inotia00/revanced-patches/releases")
     print(a)
+    print(type(a))
+    print(a[len(a)-1]["patches-version"])

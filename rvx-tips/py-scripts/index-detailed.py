@@ -1,5 +1,6 @@
 from basic import *
 from PatchesDownload import *
+import json
 
 def init_html():
     return """<!DOCTYPE html>
@@ -154,85 +155,90 @@ def generate_html(patches, UserName):
     for patch in patches:
         imagesHTML = ""
 
-        if all(item not in patch["compatiblePackages"][0]["name"] for item in ["music", "reddit"]):
-            versions = patch["compatiblePackages"][0]["versions"]
-            versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
-            checked = "checked" if patch["use"] else ""
+        if list(patch.keys())[0] != "patches-version":
+            if all(item not in patch["compatiblePackages"][0]["name"] for item in ["music", "reddit"]):
+                versions = patch["compatiblePackages"][0]["versions"]
+                versions_str = f"{min(versions)} ~ {max(versions)}" if versions else "ALL"
+                checked = "checked" if patch["use"] else ""
 
-            # 옵션 & 사진 처리
-            options = patch.get("options", [])
-            if options is not None and len(options) != 0:
+                # 옵션 & 사진 처리
+                options = patch.get("options", [])
+                if options is not None and len(options) != 0:
 
-                # 사진 처리
-                for key, imgList in ImgData.items():
-                    if key == patch["name"].strip():
-                        for img in imgList:
-                            imagesHTML += ImagesInsert().format(img_path = img)
-
-
-                # 여기서부터 옵션 처리
-                options_html = ""
-                for index, option in enumerate(options):
-                    for key, value in option.items():
-
-                        if key != "values" and key != "description":
-                            key_value = f"{key}▼ <div class = \"text-indent\">{value}</div>"
-                            options_html += insert_html_template.format(key=key, key_value=key_value)
-                        
-                        elif key == "description":
-                            key_value = f"{key}▼ <div class = \"text-indent\">{value}</div>"
-                            options_html += insert_html_template.format(key=key, key_value=key_value)
-
-                        else:
-                            values_html = "".join(f"<div class = \"text-indent\">{k} : {v}</div>" for k, v in value.items()) if value else None
-                            key_value = f"values▼ <div class = \"text-indent\">{values_html}</div>"
-                            options_html += insert_html_template.format(key=key, key_value=key_value)
-                        
-
-                        if len(options) >= 2 and \
-                            key == "required" and \
-                                len(options) > index + 1:
-
-                            # 줄 관리
-                            options_html += "\n\t\t\t\t\t<hr>\n"
+                    # 사진 처리
+                    for key, imgList in ImgData.items():
+                        if key == patch["name"].strip():
+                            for img in imgList:
+                                imagesHTML += ImagesInsert().format(img_path = img)
 
 
-                # NEW_HTML에 신규 생성된 HTML을 추가
-                new_html += html_template.format(
-                    main_id=f"main-{idx}",
-                    idx=idx,
-                    checked=checked,
-                    title=patch["name"].strip(),
-                    desc=patch["description"].strip(),
-                    versions_str=versions_str,
-                    options_html=options_html,
-                    images = imagesHTML
-                )
+                    # 여기서부터 옵션 처리
+                    options_html = ""
+                    for index, option in enumerate(options):
+                        for key, value in option.items():
 
-                
-                idx += 1
+                            if key != "values" and key != "description":
+                                key_value = f"{key}▼ <div class = \"text-indent\">{value}</div>"
+                                options_html += insert_html_template.format(key=key, key_value=key_value)
+                            
+                            elif key == "description":
+                                key_value = f"{key}▼ <div class = \"text-indent\">{value}</div>"
+                                options_html += insert_html_template.format(key=key, key_value=key_value)
+
+                            else:
+                                values_html = "".join(f"<div class = \"text-indent\">{k} : {v}</div>" for k, v in value.items()) if value else None
+                                key_value = f"values▼ <div class = \"text-indent\">{values_html}</div>"
+                                options_html += insert_html_template.format(key=key, key_value=key_value)
+                            
+
+                            if len(options) >= 2 and \
+                                key == "required" and \
+                                    len(options) > index + 1:
+
+                                # 줄 관리
+                                options_html += "\n\t\t\t\t\t<hr>\n"
+
+
+                    # NEW_HTML에 신규 생성된 HTML을 추가
+                    new_html += html_template.format(
+                        main_id=f"main-{idx}",
+                        idx=idx,
+                        checked=checked,
+                        title=patch["name"].strip(),
+                        desc=patch["description"].strip(),
+                        versions_str=versions_str,
+                        options_html=options_html,
+                        images = imagesHTML
+                    )
+
+                    
+                    idx += 1
         
     return new_html
 
 
 
-def StartHTML(FileName, UserName):
-    patches = OpenJSON(f"{FileName}")
-    new_html = generate_html(patches, UserName)
+def StartHTML(UserName, RepoName):
+    PatchesData = InitResponse(f'https://github.com/{UserName}/{RepoName}/releases')
+    PatchesData = json.dumps(PatchesData)
+    PatchesData = json.loads(PatchesData)
+    
+    new_html = generate_html(PatchesData, UserName)
+
     SaveHTML(
         rf"rvx-tips\rvx-patches\rvx-patches-menu\detailed\rvx-{UserName}-detailed.html", 
         init_html().format(
             Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
-            patches_version=GetPatchesVersion(FileName),
+            patches_version=PatchesData[len(PatchesData) - 1]["patches-version"],
             name=UserName, 
             insert_html=new_html, 
             time=CurrentTime()
             )
-    
     )
     
     print(f"{UserName} 완료!")
 
 
-StartHTML(rf"{InitResponse('https://github.com/anddea/revanced-patches/releases')}", "anddea")
-StartHTML(rf"{InitResponse('https://github.com/inotia00/revanced-patches/releases')}", "inotia00")
+
+StartHTML("anddea", "revanced-patches")
+StartHTML("inotia00", "revanced-patches")

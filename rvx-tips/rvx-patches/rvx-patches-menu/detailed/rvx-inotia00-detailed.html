@@ -31,7 +31,7 @@
                     <br>
                     <span class="patches-version">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32H96c17.7 0 32 14.3 32 32V448h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H64V256H32c-17.7 0-32-14.3-32-32z"/></svg>
-                        v4.8.6
+                        v4.9.1-dev.1
                     </span>
                 </span>
             </h4>
@@ -44,52 +44,39 @@
             <div class="rvx-option">
                 <div class="rvx-option-title">
                     <input type="checkbox" name="rvx-option-title" id="rvx-option-id1" checked>
-                    <span for="rvx-option-id1" data-original-text="Custom branding icon YouTube">
-                        <span class="Label-Text">1. Custom branding icon YouTube</span>
+                    <span for="rvx-option-id1" data-original-text="Custom Shorts action buttons">
+                        <span class="Label-Text">1. Custom Shorts action buttons</span>
                     </span>
                 </div>
                 
                 <div class="rvx-option-desc">
-                    <span>Changes the YouTube app icon to the icon specified in options.json.</span>
+                    <span>Changes, at compile time, the icon of the action buttons of the Shorts player.</span>
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
                     
                     <div class="rvx-option-Detailed-key">
-                        <span>key▼ <div class = "text-indent">AppIcon</div></span>
+                        <span>key▼ <div class = "text-indent">IconType</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-default">
-                        <span>default▼ <div class = "text-indent">Revancify Blue</div></span>
+                        <span>default▼ <div class = "text-indent">Round</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-values">
-                        <span>values▼ <div class = "text-indent"><div class = "text-indent">MMT : mmt</div><div class = "text-indent">Revancify Blue : revancify_blue</div><div class = "text-indent">Revancify Red : revancify_red</div></div></span>
+                        <span>values▼ <div class = "text-indent"><div class = "text-indent">Outline : outline</div><div class = "text-indent">OutlineCircle : outlinecircle</div><div class = "text-indent">Round : round</div></div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-title">
-                        <span>title▼ <div class = "text-indent">App icon</div></span>
+                        <span>title▼ <div class = "text-indent">Shorts icon style </div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">The path to a folder containing the following folders:
-
-- mipmap-xxxhdpi
-- mipmap-xxhdpi
-- mipmap-xhdpi
-- mipmap-hdpi
-- mipmap-mdpi
-
-Each of these folders has to have the following files:
-
-- adaptiveproduct_youtube_background_color_108.png
-- adaptiveproduct_youtube_foreground_color_108.png
-- ic_launcher.png
-- ic_launcher_round.png</div></span>
+                        <span>description▼ <div class = "text-indent">The style of the icons for the action buttons in the Shorts player.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -103,6 +90,223 @@ Each of these folders has to have the following files:
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
                 <a href="#main-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
+                </a>
+            </span> 
+            
+            <!-- 사진 공간 -->
+                
+            <hr>
+
+            <div class="Reference">
+                <div class="Reference-Flex">
+                    <div>
+                        <img class="reference-image" src="../../../bird-8763079_1280.jpg" onclick="window.open(this.src)" alt="">
+                
+                    </div>
+                </div>
+                
+                
+                <button class="images-open" onclick="toggleImages(this)">
+                    Show Images
+                </button>
+            </div>
+        </div>
+        
+        <!-- 구분 -->
+        <!-- 구분 -->
+        
+        <div class="Full-Spaces" id="main-2">
+            <div class="rvx-option">
+                <div class="rvx-option-title">
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id2" checked>
+                    <span for="rvx-option-id2" data-original-text="Custom branding icon YouTube">
+                        <span class="Label-Text">2. Custom branding icon YouTube</span>
+                    </span>
+                </div>
+                
+                <div class="rvx-option-desc">
+                    <span>Changes the YouTube app icon to the icon specified in options.json.</span>
+                </div>
+                
+                <div class="rvx-option-version">
+                    <span>18.29.38 ~ 19.20.35</span>
+                </div>
+                
+                <div class="rvx-Detailed-options">
+                    
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">AppIcon</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">Revancify Blue</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent"><div class = "text-indent">AFN Blue : afn_blue</div><div class = "text-indent">AFN Red : afn_red</div><div class = "text-indent">MMT : mmt</div><div class = "text-indent">Revancify Blue : revancify_blue</div><div class = "text-indent">Revancify Red : revancify_red</div><div class = "text-indent">YouTube : youtube</div></div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">App icon</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">The icon to apply to the app.
+
+If a path to a folder is provided, the folder must contain the following folders:
+
+- mipmap-xxxhdpi
+- mipmap-xxhdpi
+- mipmap-xhdpi
+- mipmap-hdpi
+- mipmap-mdpi
+
+Each of these folders must contain the following files:
+
+- adaptiveproduct_youtube_background_color_108.png
+- adaptiveproduct_youtube_foreground_color_108.png
+- ic_launcher.png
+- ic_launcher_round.png</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">ChangeHeader</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Change header</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">Apply the custom branding icon to the header.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">CustomHeader</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent"></div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Custom header</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">The header to apply to the app.
+
+If a path to a folder is provided, the folder must contain one or more of the following folders, depending on the DPI of the device:
+
+- drawable-xxxhdpi
+- drawable-xxhdpi
+- drawable-xhdpi
+- drawable-hdpi
+- drawable-mdpi
+
+Each of the folders must contain all of the following files:
+
+- yt_premium_wordmark_header_dark.png
+- yt_premium_wordmark_header_light.png
+- yt_wordmark_header_dark.png
+- yt_wordmark_header_light.png
+
+The image dimensions must be as follows:
+- drawable-xxxhdpi: 512px x 192px
+- drawable-xxhdpi: 387px x 144px
+- drawable-xhdpi: 258px x 96px
+- drawable-hdpi: 194px x 72px
+- drawable-mdpi: 129px x 48px</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">ChangeSplashIcon</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">True</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Change splash icons</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">Apply the custom branding icon to the splash screen.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">RestoreOldSplashAnimation</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Restore old splash animation</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">Restores old style splash animation.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+                </div>
+            </div>
+            
+            
+            <!-- 복사 아이콘 공간 -->
+            <span class="id-copy-selection">
+                <a href="#main-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -130,12 +334,12 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-2">
+        <div class="Full-Spaces" id="main-3">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id2" checked>
-                    <span for="rvx-option-id2" data-original-text="Custom branding name YouTube">
-                        <span class="Label-Text">2. Custom branding name YouTube</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id3" checked>
+                    <span for="rvx-option-id3" data-original-text="Custom branding name YouTube">
+                        <span class="Label-Text">3. Custom branding name YouTube</span>
                     </span>
                 </div>
                 
@@ -144,7 +348,7 @@ Each of these folders has to have the following files:
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
@@ -158,7 +362,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-values">
-                        <span>values▼ <div class = "text-indent"><div class = "text-indent">Full name : ReVanced Extended</div><div class = "text-indent">Short name : RVX</div></div></span>
+                        <span>values▼ <div class = "text-indent"><div class = "text-indent">ReVanced Extended : ReVanced Extended</div><div class = "text-indent">RVX : RVX</div><div class = "text-indent">YouTube RVX : YouTube RVX</div><div class = "text-indent">YouTube : YouTube</div></div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-title">
@@ -170,7 +374,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-required">
-                        <span>required▼ <div class = "text-indent">True</div></span>
+                        <span>required▼ <div class = "text-indent">False</div></span>
                     </div>
     
                 </div>
@@ -179,7 +383,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-2">
+                <a href="#main-3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -207,12 +411,12 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-3">
+        <div class="Full-Spaces" id="main-4">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id3" checked>
-                    <span for="rvx-option-id3" data-original-text="Custom double tap length">
-                        <span class="Label-Text">3. Custom double tap length</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id4" checked>
+                    <span for="rvx-option-id4" data-original-text="Custom double tap length">
+                        <span class="Label-Text">4. Custom double tap length</span>
                     </span>
                 </div>
                 
@@ -221,7 +425,7 @@ Each of these folders has to have the following files:
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
@@ -243,7 +447,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">A list of custom double-tap to seek lengths. Be sure to separate them with commas (,).</div></span>
+                        <span>description▼ <div class = "text-indent">A list of custom double-tap to seek lengths to be added, separated by commas.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -256,7 +460,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-3">
+                <a href="#main-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -286,12 +490,12 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-4">
+        <div class="Full-Spaces" id="main-5">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id4" checked>
-                    <span for="rvx-option-id4" data-original-text="Custom package name">
-                        <span class="Label-Text">4. Custom package name</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id5" checked>
+                    <span for="rvx-option-id5" data-original-text="Custom package name">
+                        <span class="Label-Text">5. Custom package name</span>
                     </span>
                 </div>
                 
@@ -322,7 +526,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">The name of the package to use in MicroG support</div></span>
+                        <span>description▼ <div class = "text-indent">The name of the package to use in GmsCore support.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -348,7 +552,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">The name of the package to use in MicroG support</div></span>
+                        <span>description▼ <div class = "text-indent">The name of the package to use in GmsCore support.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -361,7 +565,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-4">
+                <a href="#main-5">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -388,12 +592,12 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-5">
+        <div class="Full-Spaces" id="main-6">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id5" checked>
-                    <span for="rvx-option-id5" data-original-text="Overlay buttons">
-                        <span class="Label-Text">5. Overlay buttons</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id6" checked>
+                    <span for="rvx-option-id6" data-original-text="Overlay buttons">
+                        <span class="Label-Text">6. Overlay buttons</span>
                     </span>
                 </div>
                 
@@ -402,7 +606,7 @@ Each of these folders has to have the following files:
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
@@ -424,7 +628,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">Apply icon type</div></span>
+                        <span>description▼ <div class = "text-indent">The icon type.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -450,7 +654,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">Apply bottom margin to Overlay buttons and Timestamp</div></span>
+                        <span>description▼ <div class = "text-indent">The bottom margin for the overlay buttons and timestamp.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -463,7 +667,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-5">
+                <a href="#main-6">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -493,12 +697,114 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-6">
+        <div class="Full-Spaces" id="main-7">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id6" checked>
-                    <span for="rvx-option-id6" data-original-text="SponsorBlock">
-                        <span class="Label-Text">6. SponsorBlock</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id7" checked>
+                    <span for="rvx-option-id7" data-original-text="Settings">
+                        <span class="Label-Text">7. Settings</span>
+                    </span>
+                </div>
+                
+                <div class="rvx-option-desc">
+                    <span>Applies mandatory patches to implement ReVanced Extended settings into the application.</span>
+                </div>
+                
+                <div class="rvx-option-version">
+                    <span>18.29.38 ~ 19.20.35</span>
+                </div>
+                
+                <div class="rvx-Detailed-options">
+                    
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">InsertPosition</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">About</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent"><div class = "text-indent">Parent settings : @string/parent_tools_key</div><div class = "text-indent">General : @string/general_key</div><div class = "text-indent">Account : @string/account_switcher_key</div><div class = "text-indent">Data saving : @string/data_saving_settings_key</div><div class = "text-indent">Autoplay : @string/auto_play_key</div><div class = "text-indent">Video quality preferences : @string/video_quality_settings_key</div><div class = "text-indent">Background : @string/offline_key</div><div class = "text-indent">Watch on TV : @string/pair_with_tv_key</div><div class = "text-indent">Manage all history : @string/history_key</div><div class = "text-indent">Your data in YouTube : @string/your_data_key</div><div class = "text-indent">Privacy : @string/privacy_key</div><div class = "text-indent">History & privacy : @string/privacy_key</div><div class = "text-indent">Try experimental new features : @string/premium_early_access_browse_page_key</div><div class = "text-indent">Purchases and memberships : @string/subscription_product_setting_key</div><div class = "text-indent">Billing & payments : @string/billing_and_payment_key</div><div class = "text-indent">Billing and payments : @string/billing_and_payment_key</div><div class = "text-indent">Notifications : @string/notification_key</div><div class = "text-indent">Connected apps : @string/connected_accounts_browse_page_key</div><div class = "text-indent">Live chat : @string/live_chat_key</div><div class = "text-indent">Captions : @string/captions_key</div><div class = "text-indent">Accessibility : @string/accessibility_settings_key</div><div class = "text-indent">About : @string/about_key</div></div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Insert position</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">The settings menu name that the RVX settings menu should be above.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">RVXSettingsMenuName</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">ReVanced Extended</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">RVX settings menu name</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">The name of the RVX settings menu.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+                </div>
+            </div>
+            
+            
+            <!-- 복사 아이콘 공간 -->
+            <span class="id-copy-selection">
+                <a href="#main-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
+                </a>
+            </span> 
+            
+            <!-- 사진 공간 -->
+                
+            <hr>
+
+            <div class="Reference">
+                <div class="Reference-Flex">
+                    <div>
+                        <img class="reference-image" src="../PatchesImages/ImageIntegration/Settings/Settings-1.png" onclick="window.open(this.src)" alt="">
+                
+                    </div>
+                </div>
+                
+                
+                <button class="images-open" onclick="toggleImages(this)">
+                    Show Images
+                </button>
+            </div>
+        </div>
+        
+        <!-- 구분 -->
+        <!-- 구분 -->
+        
+        <div class="Full-Spaces" id="main-8">
+            <div class="rvx-option">
+                <div class="rvx-option-title">
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id8" checked>
+                    <span for="rvx-option-id8" data-original-text="SponsorBlock">
+                        <span class="Label-Text">8. SponsorBlock</span>
                     </span>
                 </div>
                 
@@ -507,7 +813,7 @@ Each of these folders has to have the following files:
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
@@ -529,7 +835,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">Apply the outline icon</div></span>
+                        <span>description▼ <div class = "text-indent">Apply the outline icon.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -542,7 +848,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-6">
+                <a href="#main-8">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -574,12 +880,12 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-7">
+        <div class="Full-Spaces" id="main-9">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id7" checked>
-                    <span for="rvx-option-id7" data-original-text="Theme">
-                        <span class="Label-Text">7. Theme</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id9" checked>
+                    <span for="rvx-option-id9" data-original-text="Theme">
+                        <span class="Label-Text">9. Theme</span>
                     </span>
                 </div>
                 
@@ -588,7 +894,7 @@ Each of these folders has to have the following files:
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
@@ -649,7 +955,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-7">
+                <a href="#main-9">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -676,12 +982,12 @@ Each of these folders has to have the following files:
         <!-- 구분 -->
         <!-- 구분 -->
         
-        <div class="Full-Spaces" id="main-8">
+        <div class="Full-Spaces" id="main-10">
             <div class="rvx-option">
                 <div class="rvx-option-title">
-                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id8" checked>
-                    <span for="rvx-option-id8" data-original-text="Toolbar components">
-                        <span class="Label-Text">8. Toolbar components</span>
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id10" checked>
+                    <span for="rvx-option-id10" data-original-text="Toolbar components">
+                        <span class="Label-Text">10. Toolbar components</span>
                     </span>
                 </div>
                 
@@ -690,7 +996,7 @@ Each of these folders has to have the following files:
                 </div>
                 
                 <div class="rvx-option-version">
-                    <span>18.29.38 ~ 19.20.34</span>
+                    <span>18.29.38 ~ 19.20.35</span>
                 </div>
                 
                 <div class="rvx-Detailed-options">
@@ -712,7 +1018,7 @@ Each of these folders has to have the following files:
                     </div>
     
                     <div class="rvx-option-Detailed-description">
-                        <span>description▼ <div class = "text-indent">Hide voice search button with legacy method, button will always be hidden.</div></span>
+                        <span>description▼ <div class = "text-indent">Permanently hide the voice search button with the legacy method.</div></span>
                     </div>
     
                     <div class="rvx-option-Detailed-required">
@@ -725,7 +1031,7 @@ Each of these folders has to have the following files:
             
             <!-- 복사 아이콘 공간 -->
             <span class="id-copy-selection">
-                <a href="#main-8">
+                <a href="#main-10">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
                 </a>
             </span> 
@@ -738,6 +1044,215 @@ Each of these folders has to have the following files:
                 <div class="Reference-Flex">
                     <div>
                         <img class="reference-image" src="../../../bird-8763079_1280.jpg" onclick="window.open(this.src)" alt="">
+                
+                    </div>
+                </div>
+                
+                
+                <button class="images-open" onclick="toggleImages(this)">
+                    Show Images
+                </button>
+            </div>
+        </div>
+        
+        <!-- 구분 -->
+        <!-- 구분 -->
+        
+        <div class="Full-Spaces" id="main-11">
+            <div class="rvx-option">
+                <div class="rvx-option-title">
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id11" checked>
+                    <span for="rvx-option-id11" data-original-text="Translations YouTube">
+                        <span class="Label-Text">11. Translations YouTube</span>
+                    </span>
+                </div>
+                
+                <div class="rvx-option-desc">
+                    <span>Add translations or remove string resources.</span>
+                </div>
+                
+                <div class="rvx-option-version">
+                    <span>18.29.38 ~ 19.20.35</span>
+                </div>
+                
+                <div class="rvx-Detailed-options">
+                    
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">CustomTranslations</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent"></div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Custom translations</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">The path to the 'strings.xml' file.
+Please note that applying the 'strings.xml' file will overwrite all existing translations.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">SelectedTranslations</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">ar, el-rGR, es-rES, fr-rFR, hu-rHU, it-rIT, ja-rJP, ko-rKR, pl-rPL, pt-rBR, ru-rRU, tr-rTR, uk-rUA, vi-rVN, zh-rCN, zh-rTW</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">Translations to add</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">A list of translations to be added for the RVX settings, separated by commas.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+					<hr>
+
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">SelectedStringResources</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">af, am, ar, ar-rXB, as, az, b+es+419, b+sr+Latn, be, bg, bn, bs, ca, cs, da, de, el, en-rAU, en-rCA, en-rGB, en-rIN, en-rXA, en-rXC, es, es-rUS, et, eu, fa, fi, fr, fr-rCA, gl, gu, hi, hr, hu, hy, id, in, is, it, iw, ja, ka, kk, km, kn, ko, ky, lo, lt, lv, mk, ml, mn, mr, ms, my, nb, ne, nl, no, or, pa, pl, pt, pt-rBR, pt-rPT, ro, ru, si, sk, sl, sq, sr, sv, sw, ta, te, th, tl, tr, uk, ur, uz, vi, zh, zh-rCN, zh-rHK, zh-rTW, zu</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent">None</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">String resources to keep</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">A list of string resources to be kept, separated by commas.
+String resources not in the list will be removed from the app.
+
+Default string resource, English, is not removed.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+                </div>
+            </div>
+            
+            
+            <!-- 복사 아이콘 공간 -->
+            <span class="id-copy-selection">
+                <a href="#main-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
+                </a>
+            </span> 
+            
+            <!-- 사진 공간 -->
+                
+            <hr>
+
+            <div class="Reference">
+                <div class="Reference-Flex">
+                    <div>
+                        <img class="reference-image" src="../../../bird-8763079_1280.jpg" onclick="window.open(this.src)" alt="">
+                
+                    </div>
+                </div>
+                
+                
+                <button class="images-open" onclick="toggleImages(this)">
+                    Show Images
+                </button>
+            </div>
+        </div>
+        
+        <!-- 구분 -->
+        <!-- 구분 -->
+        
+        <div class="Full-Spaces" id="main-12">
+            <div class="rvx-option">
+                <div class="rvx-option-title">
+                    <input type="checkbox" name="rvx-option-title" id="rvx-option-id12" >
+                    <span for="rvx-option-id12" data-original-text="Visual preferences icons">
+                        <span class="Label-Text">12. Visual preferences icons</span>
+                    </span>
+                </div>
+                
+                <div class="rvx-option-desc">
+                    <span>Adds icons to specific preferences in the settings.</span>
+                </div>
+                
+                <div class="rvx-option-version">
+                    <span>18.29.38 ~ 19.20.35</span>
+                </div>
+                
+                <div class="rvx-Detailed-options">
+                    
+                    <div class="rvx-option-Detailed-key">
+                        <span>key▼ <div class = "text-indent">RVXSettingsMenuIcon</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-default">
+                        <span>default▼ <div class = "text-indent">Extension</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-values">
+                        <span>values▼ <div class = "text-indent"><div class = "text-indent">Custom branding icon : custom_branding_icon</div><div class = "text-indent">Extension : extension</div><div class = "text-indent">Gear : gear</div><div class = "text-indent">ReVanced : revanced</div><div class = "text-indent">ReVanced Colored : revanced_colored</div></div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-title">
+                        <span>title▼ <div class = "text-indent">RVX settings menu icon</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-description">
+                        <span>description▼ <div class = "text-indent">Apply different icons for RVX settings menu.</div></span>
+                    </div>
+    
+                    <div class="rvx-option-Detailed-required">
+                        <span>required▼ <div class = "text-indent">False</div></span>
+                    </div>
+    
+                </div>
+            </div>
+            
+            
+            <!-- 복사 아이콘 공간 -->
+            <span class="id-copy-selection">
+                <a href="#main-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
+                </a>
+            </span> 
+            
+            <!-- 사진 공간 -->
+                
+            <hr>
+
+            <div class="Reference">
+                <div class="Reference-Flex">
+                    <div>
+                        <img class="reference-image" src="../PatchesImages/ImageIntegration/Visual preferences icons/Visual preferences icons-1.png" onclick="window.open(this.src)" alt="">
+                <img class="reference-image" src="../PatchesImages/ImageIntegration/Visual preferences icons/Visual preferences icons-2.png" onclick="window.open(this.src)" alt="">
                 
                     </div>
                 </div>
@@ -762,7 +1277,7 @@ Each of these folders has to have the following files:
             <address>
                 리밴스드 갤러리(DC): <a target="_blank" href="https://gall.dcinside.com/vanced">리밴스드 갤러리로 이동</a> <br>
                 문의: <a target="_blank" href="https://gall.dcinside.com/vanced/3817">Kotlin</a> <br>
-                <footer>마지막 수정: <time>2024/06/10 오후 11:23:41</time></footer>
+                <footer>마지막 수정: <time>2024/06/11 오후 6:30:25</time></footer>
             </address>
         </div>
         

@@ -97,4 +97,5 @@ def main():
         JSONSave(JSonData, x)
 
 
-main()
+# HTML 구조가 변경되서 호환이 안됨.
+# main()
