@@ -1,8 +1,4 @@
 {
-    "Add splash animation": [
-        "../PatchesImages/ImageIntegration/Add splash animation/Add splash animation-1.png",
-        "../PatchesImages/ImageIntegration/Add splash animation/Add splash animation-2.png"
-    ],
     "Alternative thumbnails": [
         "../PatchesImages/ImageIntegration/Alternative thumbnails/Alternative thumbnails-1.png",
         "../PatchesImages/ImageIntegration/Alternative thumbnails/Alternative thumbnails-2.png",
@@ -69,6 +65,9 @@
         "../PatchesImages/ImageIntegration/Disable resuming Shorts on startup/Disable resuming Shorts on startup-2.png"
     ],
     "Disable splash animation": [
+        "../../../bird-8763079_1280.jpg"
+    ],
+    "Enable OPUS codec": [
         "../../../bird-8763079_1280.jpg"
     ],
     "Enable debug logging": [

@@ -1,4 +1,16 @@
-{
+{   
+    "일반" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
+
+
     "광고" : {  
         "광고 차단" : {
             "YouTube": "✓",
@@ -10,6 +22,27 @@
         }
     },
 
+    "대체 썸네일" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
+
+    "피드" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
 
     "플레이어" : {  
         "재생바 색상 변경" : {
@@ -22,6 +55,27 @@
         }
     },
 
+    "Shorts" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
+
+    "스와이프 제스처" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
 
     "동영상" : {  
         "동영상 화질 고정" : {
@@ -29,9 +83,45 @@
             "Revanced Extended": "✓"
         },
         "동영상 재생 속도 변경" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "더 세부적인 재생 속도 변경" : {
             "YouTube": "✕",
             "Revanced Extended": "✓"
         }
-    }
+    },
+
+    "Return YouTube Dislike" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
     
+    "SponsorBlock" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    },
+
+    "기타" : {  
+        "초기 구조1" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        },
+        "초기 구조2" : {
+            "YouTube": "✓",
+            "Revanced Extended": "✓"
+        }
+    }
 }

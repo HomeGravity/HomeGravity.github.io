@@ -20,8 +20,8 @@ def AddImage(UserName, RepoName):
                 else:
                     ImgDataJSON[patch["name"]] = ["../../../bird-8763079_1280.jpg"]
 
-    pprint(ImgDataJSON)
-    
+
+    print(UserName, "완료!")
 
     JSONSave(ImgDataJSON, rf"rvx-tips\py-scripts\PatchesSave\{UserName}Patches\{UserName}AddPatchesImage.json")
 
