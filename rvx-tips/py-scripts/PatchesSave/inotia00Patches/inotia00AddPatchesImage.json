@@ -28,11 +28,11 @@
     "Custom Shorts action buttons": [
         "../PatchesImages/ImageIntegration/Custom Shorts action buttons/Custom Shorts action buttons-1.png"
     ],
-    "Custom branding icon YouTube": [
+    "Custom branding icon for YouTube": [
         "../PatchesImages/ImageIntegration/Custom branding icon YouTube/Custom branding icon YouTube-1.png",
         "../PatchesImages/ImageIntegration/Custom branding icon YouTube/Custom branding icon YouTube-2.png"
     ],
-    "Custom branding name YouTube": [
+    "Custom branding name for YouTube": [
         "../PatchesImages/ImageIntegration/Custom branding name YouTube/Custom branding name YouTube-1.png",
         "../PatchesImages/ImageIntegration/Custom branding name YouTube/Custom branding name YouTube-2.png"
     ],
@@ -41,6 +41,9 @@
         "../PatchesImages/ImageIntegration/Custom double tap length/Custom double tap length-2.png",
         "../PatchesImages/ImageIntegration/Custom double tap length/Custom double tap length-3.png",
         "../PatchesImages/ImageIntegration/Custom double tap length/Custom double tap length-4.png"
+    ],
+    "Custom header for YouTube": [
+        "../../../bird-8763079_1280.jpg"
     ],
     "Custom package name": [
         "../../../bird-8763079_1280.jpg"
@@ -86,17 +89,9 @@
         "../PatchesImages/ImageIntegration/Enable gradient loading screen/Enable gradient loading screen-2.png",
         "../PatchesImages/ImageIntegration/Enable gradient loading screen/Enable gradient loading screen-3.png"
     ],
-    "Enable minimized playback": [
-        "../../../bird-8763079_1280.jpg"
-    ],
     "Enable open links directly": [
         "../PatchesImages/ImageIntegration/Enable open links directly/Enable open links directly-1.png",
         "../PatchesImages/ImageIntegration/Enable open links directly/Enable open links directly-2.png"
-    ],
-    "Enable tablet mini player": [
-        "../PatchesImages/ImageIntegration/Enable tablet mini player/Enable tablet mini player-1.png",
-        "../PatchesImages/ImageIntegration/Enable tablet mini player/Enable tablet mini player-2.png",
-        "../PatchesImages/ImageIntegration/Enable tablet mini player/Enable tablet mini player-3.png"
     ],
     "Force hide player buttons background": [
         "../PatchesImages/ImageIntegration/Force hide player buttons background/Force hide player buttons background-1.png"
@@ -185,6 +180,9 @@
     "MaterialYou": [
         "../../../bird-8763079_1280.jpg"
     ],
+    "Miniplayer": [
+        "../../../bird-8763079_1280.jpg"
+    ],
     "Navigation bar components": [
         "../PatchesImages/ImageIntegration/Navigation bar components/Navigation bar components-1.png",
         "../PatchesImages/ImageIntegration/Navigation bar components/Navigation bar components-2.png",
@@ -199,6 +197,9 @@
         "../PatchesImages/ImageIntegration/Overlay buttons/Overlay buttons-4.png"
     ],
     "Player components": [
+        "../../../bird-8763079_1280.jpg"
+    ],
+    "Remove background playback restrictions": [
         "../../../bird-8763079_1280.jpg"
     ],
     "Remove viewer discretion dialog": [
@@ -218,7 +219,7 @@
         "../PatchesImages/ImageIntegration/Seekbar components/Seekbar components-2.png",
         "../PatchesImages/ImageIntegration/Seekbar components/Seekbar components-3.png"
     ],
-    "Settings": [
+    "Settings for YouTube": [
         "../PatchesImages/ImageIntegration/Settings/Settings-1.png"
     ],
     "Shorts components": [
@@ -254,9 +255,9 @@
     "Toolbar components": [
         "../../../bird-8763079_1280.jpg"
     ],
-    "Translations YouTube": [
-        "../PatchesImages/ImageIntegration/Translations YouTube/Translations YouTube-1.png",
-        "../PatchesImages/ImageIntegration/Translations YouTube/Translations YouTube-2.png"
+    "Translations for YouTube": [
+        "../PatchesImages/ImageIntegration/Translations/Translations-1.png",
+        "../PatchesImages/ImageIntegration/Translations/Translations-2.png"
     ],
     "Video playback": [
         "../../../bird-8763079_1280.jpg"
