@@ -25,8 +25,8 @@ def FeatureComparisonWrite(data, icondata):
             
             # 생성된 FeatureSupportTemp를 tbodyTemp에 추가
             tbody += tbodyTemp().format(
-                Feature_name=FeatureName, 
-                Feature_desc=FeatureSupport["기능 설명"],
+                Feature_name=FeatureName.strip(), 
+                Feature_desc=FeatureSupport["기능 설명"].strip(),
                 Supported_insert=FeatureSupportTemp
                 )
         

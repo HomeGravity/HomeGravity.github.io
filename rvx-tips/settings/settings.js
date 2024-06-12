@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target.classList.contains('Feature-name')) {
             var textToCopy = event.target.innerText;
             navigator.clipboard.writeText(textToCopy).then(function() {
-                alert('텍스트가 복사됨: ' + `"${textToCopy}"` + "\n\n텍스트를 붙여넣기 하여 리밴스드의 검색기능을 사용해봅시다.");
+                alert('텍스트가 복사됨: ' + `"${textToCopy}"` + "\n\n텍스트를 붙여넣기 하여 Revanced Extended의 검색 기능을 사용해 보아요.");
             }).catch(function(error) {
                 console.error('텍스트 복사 실패:', error);
             });

@@ -2,7 +2,7 @@
     "main-1": {
         "title": "\"Return YouTube Dislike을 일시적으로 사용할 수 없습니다\" 메시지가 계속 떠요.",
         "description": [
-            "Return YouTube Dislike > <span class=\"Feature-name\" onclick=\"copyText()\">API를 사용할 수 없을 때 팝업 메시지 표시하기</span> > 비활성화"
+            "Return YouTube Dislike - <span class=\"Feature-name\" onclick=\"copyText()\">API를 사용할 수 없을 때 팝업 메시지 표시하기</span> - 비활성화"
         ],
         "image-url": [
             "../images/Return-YouTube-Dislike-images/RVX-Return-YouTube-Dislike-1.png"
