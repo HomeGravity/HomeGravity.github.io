@@ -5,7 +5,8 @@ html {
     scroll-behavior: smooth;
     /* overflow: hidden; */
 
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
+    word-break: keep-all;
     white-space: normal;
 
 }
@@ -86,7 +87,7 @@ html {
 .variable > div > li {
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: lightyellow;
     list-style-type: none;
     display: flex; /* flex box를 사용 */
@@ -99,7 +100,7 @@ html {
     fill: white; /* SVG 색상 설정 */
     width: 25px; /* SVG 크기 설정 */
     height: 25px; /* SVG 크기 설정 */
-    position: relative;
+    /* position: relative; */
     flex-shrink: 0;
     
 }
@@ -178,7 +179,7 @@ html {
     fill: white; /* SVG 색상 설정 */
     width: 25px; /* SVG 크기 설정 */
     height: 25px; /* SVG 크기 설정 */
-    position: relative;
+    /* position: relative; */
     flex-shrink: 0;
 }
 
@@ -198,7 +199,7 @@ html {
     padding-right: 10px;
 
     /* 단어 단위로 줄바꿈 적용 */
-    word-break: keep-all;
+    /* word-break: keep-all; */
     
     
 }
