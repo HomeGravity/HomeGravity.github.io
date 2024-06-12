@@ -3,7 +3,7 @@ html {
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
     /* overflow: auto; */
-    word-wrap: break-word;
+    word-break: keep-all;
     white-space: normal;
 }
 
