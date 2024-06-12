@@ -12,19 +12,21 @@ def FeatureComparisonWrite(data, icondata):
         for FeatureName, FeatureSupport in FeatureData.items():
             FeatureSupportTemp = ""
 
-            for x in FeatureSupport.values():
-
-                # 먼저 기능 지원여부 먼저 추가
-                status = "supported" if x == "✓" else "not-supported"
-                symbol = "✓" if x == "✓" else "✕"
-                FeatureSupportTemp += tbodyTempInsert().format(
-                    Revanced_Extended=status,
-                    Revanced_Extended_Supported=symbol
-                )
+            for idx, x in enumerate(FeatureSupport.values(), start=1):
+                
+                if idx < len(FeatureSupport.values()):
+                    # 먼저 기능 지원여부 먼저 추가
+                    status = "supported" if x == "✓" else "not-supported"
+                    symbol = "✓" if x == "✓" else "✕"
+                    FeatureSupportTemp += tbodyTempInsert().format(
+                        Revanced_Extended=status,
+                        Revanced_Extended_Supported=symbol
+                    )
             
             # 생성된 FeatureSupportTemp를 tbodyTemp에 추가
             tbody += tbodyTemp().format(
                 Feature_name=FeatureName, 
+                Feature_desc=FeatureSupport["기능 설명"],
                 Supported_insert=FeatureSupportTemp
                 )
         

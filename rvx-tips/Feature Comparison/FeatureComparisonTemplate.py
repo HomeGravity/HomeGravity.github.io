@@ -16,9 +16,17 @@ def initHTML():
         </div>
     </div>
 
-    <!-- 본문 -->
-    {FullSpacesInsert}
+    <!-- 메인 콘텐츠에 관한 안내문 -->
+    <div class="main-content-guide">
+        <div class="main-content-guide-text">
+            YouTube에서 되는 기능이라 해도 비활성화/활성화 선택이 불가능하다면 '✕'으로 표시됨.
+        </div>
+    </div>
 
+    <!-- 본문 -->
+    <div class="main-content">
+        {FullSpacesInsert}
+    </div>
     
     <!-- 구분 -->
 
@@ -36,37 +44,39 @@ def initHTML():
 
 def FullSpacesTemp():
     return"""
-    <div class="Full-Spaces">
-        <div class="comparison-container">
-            <table class="feature-comparison-table">
-                <caption class="feature-comparison-table-title">
-                    {icon}
-                    <span class="feature-comparison-table-title-text">{title}</span>
-                </caption>
-                <thead>
-                    <tr>
-                        <th>기능</th>
-                        <th>YouTube</th>
-                        <th>Revanced Extended</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tbody_text}
-                </tbody>
-            </table>
+        <div class="Full-Spaces">
+            <div class="comparison-container">
+                <table class="feature-comparison-table">
+                    <caption class="feature-comparison-table-title">
+                        {icon}
+                        <span class="feature-comparison-table-title-text">{title}</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>기능</th>
+                            <th>기능 설명</th>
+                            <th>YouTube</th>
+                            <th>Revanced Extended</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tbody_text}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 """
 
 def tbodyTemp():
     return """
-                    <tr>
-                        <td>{Feature_name}</td>
-                        {Supported_insert}
-                    </tr>
+                        <tr>
+                            <td>{Feature_name}</td>
+                            <td>{Feature_desc}</td>
+                            {Supported_insert}
+                        </tr>
 """
 
 
 def tbodyTempInsert():
     return """          
-                        <td class="{Revanced_Extended}">{Revanced_Extended_Supported}</td>"""
+                            <td class="{Revanced_Extended}">{Revanced_Extended_Supported}</td>"""
