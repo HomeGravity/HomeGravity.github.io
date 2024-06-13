@@ -8,7 +8,8 @@ def AddImage(UserName, RepoName):
     PatchesData = InitResponse(f'https://github.com/{UserName}/{RepoName}/releases')
     PatchesData = json.dumps(PatchesData)
     PatchesData = json.loads(PatchesData)
-    DataRead = OpenJSON(rf"rvx-tips\py-scripts\SetPatchesImgPath\{UserName}AddPatchesImage.json")
+    DataRead = OpenJSON(rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json")
+
 
     
     for patch in PatchesData:
@@ -23,7 +24,7 @@ def AddImage(UserName, RepoName):
 
     print(UserName, "완료!")
 
-    JSONSave(ImgDataJSON, rf"rvx-tips\py-scripts\SetPatchesImgPath\{UserName}AddPatchesImage.json")
+    JSONSave(ImgDataJSON, rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json")
 
 
 
@@ -36,6 +37,7 @@ AddImage(
     "anddea",
     "revanced-patches"
     )
+
 
 
 

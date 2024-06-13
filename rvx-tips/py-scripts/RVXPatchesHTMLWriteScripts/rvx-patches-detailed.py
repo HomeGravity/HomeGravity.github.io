@@ -87,7 +87,7 @@ def ImagesInsert():
 
 
 def generate_html(patches, UserName):
-    ImgData = OpenJSON(rf"rvx-tips\py-scripts\SetPatchesImgPath\{UserName}AddPatchesImage.json")
+    ImgData = OpenJSON(rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json")
 
 
     html_template = """
