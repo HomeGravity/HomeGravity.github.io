@@ -1,0 +1,30 @@
+{
+    "main-1": {
+        "title": "영상의 어그로 썸네일을 숨기고 싶어요.",
+        "description": [
+            "대체 썸네일 - <span class=\"Feature-name\" onclick=\"copyText()\">홈 탭</span> - 원하는 값 선택",
+            "대체 썸네일 - <span class=\"Feature-name\" onclick=\"copyText()\">구독 탭</span> - 원하는 값 선택",
+            "대체 썸네일 - <span class=\"Feature-name\" onclick=\"copyText()\">플레이어 구성요소: 재생목록, 관련 동영상</span> - 원하는 값 선택",
+            "대체 썸네일 - <span class=\"Feature-name\" onclick=\"copyText()\">검색 결과</span> - 원하는 값 선택",
+            "영상 자체가 숨겨지는 것은 아닙니다."
+        ],
+        "image-url": [
+            "../images/Alternative-thumbnails-images/RVX-Alternative-thumbnails-1-1.png",
+            "../images/Alternative-thumbnails-images/RVX-Alternative-thumbnails-1-2.png",
+            "../images/Alternative-thumbnails-images/RVX-Alternative-thumbnails-1-3.png",
+            "../images/Alternative-thumbnails-images/RVX-Alternative-thumbnails-1-4.png",
+            "../images/Alternative-thumbnails-images/RVX-Alternative-thumbnails-1-5.png",
+            "../images/Alternative-thumbnails-images/RVX-Alternative-thumbnails-1-6.png"
+            
+        ]
+    },
+    "main-2": {
+        "title": "추가 예정",
+        "description": [
+            "추가 예정"
+        ],
+        "image-url": [
+            "../bird-8763079_1280.jpg"
+        ]
+    }
+}

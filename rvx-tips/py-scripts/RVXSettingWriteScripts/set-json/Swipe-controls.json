@@ -1,0 +1,13 @@
+{
+    "main-1": {
+        "title": "전체 화면 일 때 화면을 위아래로 스와이프 하면 밝기나 소리가 변경돼요.",
+        "description": [
+            "스와이프 제스처 - <span class=\"Feature-name\" onclick=\"copyText()\">스와이프 제스처로 밝기 조절 활성화하기</span> - 비활성화",
+            "스와이프 제스처 - <span class=\"Feature-name\" onclick=\"copyText()\">스와이프 제스처로 볼륨 조절 활성화하기</span> - 비활성화"
+        ],
+        "image-url": [
+            "../images/Swipe-controls-images/RVX-Swipe-controls-1-1.png",
+            "../images/Swipe-controls-images/RVX-Swipe-controls-1-2.png"
+        ]
+    }
+}

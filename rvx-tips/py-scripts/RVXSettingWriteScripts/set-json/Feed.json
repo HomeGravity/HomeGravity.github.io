@@ -1,0 +1,78 @@
+{
+    "main-1": {
+        "title": "조회수가 낮은/높은 영상을 숨기고 싶어요.",
+        "description": [
+            "피드 - 동영상 필터 - 조회수 필터 - <span class=\"Feature-name\" onclick=\"copyText()\">조회수를 기준으로 동영상 숨기기</span> - 활성화",
+            "피드 - 동영상 필터 - 조회수 필터 - <span class=\"Feature-name\" onclick=\"copyText()\">조회수가 낮은 동영상 숨기기</span> - 원하는 값 입력",
+            "피드 - 동영상 필터 - 조회수 필터 - <span class=\"Feature-name\" onclick=\"copyText()\">조회수가 높은 동영상 숨기기</span> - 원하는 값 입력"
+        ],
+        "image-url": [
+            "../images/Feed-images/RVX-Feed-1-1.png",
+            "../images/Feed-images/RVX-Feed-1-2.png",
+            "../images/Feed-images/RVX-Feed-1-3.png"
+        ]
+    },
+    "main-2": {
+        "title": "피드 플라이아웃 메뉴를 삭제하고 싶어요.",
+        "description": [
+            "피드 - 메뉴 구성요소 - <span class=\"Feature-name\" onclick=\"copyText()\">피드 메뉴 구성요소 필터 활성화하기</span> - 활성화",
+            "삭제 명령어: <span class=\"Feature-name\" onclick=\"copyText()\">현재 재생목록에서 다음 순서로 재생</span>",
+            "삭제 명령어: <span class=\"Feature-name\" onclick=\"copyText()\">나중에 볼 동영상에 저장</span>",
+            "삭제 명령어: <span class=\"Feature-name\" onclick=\"copyText()\">재생목록에 저장</span>",
+            "삭제 명령어: <span class=\"Feature-name\" onclick=\"copyText()\">공유</span>",
+            "삭제 명령어: <span class=\"Feature-name\" onclick=\"copyText()\">리믹스</span>",
+            "삭제 명령어: <span class=\"Feature-name\" onclick=\"copyText()\"> YouTube Music으로 음악 감상</span>"
+            
+        ],
+        "image-url": [
+            "../images/Feed-images/RVX-Feed-2-1.png",
+            "../images/Feed-images/RVX-Feed-2-2.png",
+            "../images/Feed-images/RVX-Feed-2-3.png",
+            "../images/Feed-images/RVX-Feed-2-4.png",
+            "../images/Feed-images/RVX-Feed-2-5.png",
+            "../images/Feed-images/RVX-Feed-2-6.png"
+        ]
+    },
+    "main-3": {
+        "title": "피드에서 혐오 썸네일을 가진 영상을 숨기고 싶어요.",
+        "description": [
+            "피드 - 메뉴 동영상 필터 - 추천 동영상 - <span class=\"Feature-name\" onclick=\"copyText()\">추천 동영상 숨기기</span> - 활성화",
+            "숨김 조건: '회원 전용' 태그가 있는 영상",
+            "숨김 조건: 썸네일 하단에 '시청자가 이 동영상도 시청함'와 같은 문구가 있는 영상",
+            "숨김 조건: 구독하지 않는 채널에서 업로드한 영상의 조회수가 1,000회 미만"
+        ],
+        "image-url": [
+            "../images/Feed-images/RVX-Feed-3-1.png",
+            "../images/Feed-images/RVX-Feed-3-2.png",
+            "../images/Feed-images/RVX-Feed-3-3.png"
+        ]
+    },
+    "main-4": {
+        "title": "피드에서 커뮤니티 게시글을 숨기고 싶어요",
+        "description": [
+            "피드 - 커뮤니티 게시글 - <span class=\"Feature-name\" onclick=\"copyText()\">채널에서 커뮤니티 게시글 숨기기</span> - 활성화",
+            "피드 - 커뮤니티 게시글 - <span class=\"Feature-name\" onclick=\"copyText()\">홈 피드와 관련 동영상에서 커뮤니티 게시글 숨기기</span> - 활성화",
+            "피드 - 커뮤니티 게시글 - <span class=\"Feature-name\" onclick=\"copyText()\">구독 피드에서 커뮤니티 게시글 숨기기</span> - 활성화"
+        ],
+        "image-url": [
+            "../images/Feed-images/RVX-Feed-4-1.png",
+            "../images/Feed-images/RVX-Feed-4-2.png",
+            "../images/Feed-images/RVX-Feed-4-3.png"
+        ]
+    },
+    "main-5": {
+        "title": "채널 피드에서 스토어, Shorts, 재생목록 탭 등을 숨기고 싶어요.",
+        "description": [
+            "피드 - 채널 프로필 - <span class=\"Feature-name\" onclick=\"copyText()\">채널 탭 필터 활성화하기</span> - 활성화",
+            "피드 - 채널 프로필 - <span class=\"Feature-name\" onclick=\"copyText()\">채널 탭 필터</span> - 값 지정"
+        ],
+        "image-url": [
+            "../images/Feed-images/RVX-Feed-5-1.png",
+            "../images/Feed-images/RVX-Feed-5-2.png",
+            "../images/Feed-images/RVX-Feed-5-3.png",
+            "../images/Feed-images/RVX-Feed-5-4.png",
+            "../images/Feed-images/RVX-Feed-5-5.png",
+            "../images/Feed-images/RVX-Feed-5-6.png"
+        ]
+    }
+}
