@@ -38,7 +38,7 @@ html {
 /* 메인 제목 설정 */
 .main-title > h3 {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 
 }
@@ -72,7 +72,7 @@ html {
 
 /* 카테고리 텍스트 설정 */
 #category-id h4 > span {
-    font-size: 20px;
+    font-size: 18px;
     /* margin-left: 0px; */
     display: inline-flex;
     align-items: center;
@@ -80,7 +80,7 @@ html {
 }
 
 #category-id h4 :hover {
-    color: darkolivegreen;
+    color: lightcoral;
 }
 
 #category-id h4 > span > svg {
@@ -104,8 +104,8 @@ html {
 
 #setting-id li {
     font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
     text-decoration: none;
     color: lightyellow;
     list-style-type: none;
@@ -120,8 +120,8 @@ html {
 #setting-id li > svg {
     margin-right: 10px;
     fill: white; /* SVG 색상 설정 */
-    width: 25px; /* SVG 크기 설정 */
-    height: 25px; /* SVG 크기 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
     position: relative;
     flex-shrink: 0;
 }
@@ -130,7 +130,7 @@ html {
 #setting-id li:hover,
 #setting-id li > a:hover {
     /* 마우스 오버 시 색상을 변경합니다. */
-    color: tomato;
+    color: lightcoral;
 }
 
 #setting-id li > a {
@@ -169,8 +169,8 @@ html {
 
 #Revanced-Tips-id li {
     font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
     text-decoration: none;
     color: lightyellow;
     list-style-type: none;
@@ -185,8 +185,8 @@ html {
 #Revanced-Tips-id li > svg {
     margin-right: 10px;
     fill: white; /* SVG 색상 설정 */
-    width: 25px; /* SVG 크기 설정 */
-    height: 25px; /* SVG 크기 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
     position: relative;
     flex-shrink: 0;
 }
@@ -195,7 +195,7 @@ html {
 
 #Revanced-Tips-id li:hover,
 #Revanced-Tips-id li > a:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 #Revanced-Tips-id  li > a {

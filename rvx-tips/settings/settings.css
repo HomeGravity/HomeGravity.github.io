@@ -46,7 +46,7 @@ html {
 
 .title {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .title > .main-title {
@@ -54,7 +54,7 @@ html {
 }
 
 .title > .main-title:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 
@@ -85,9 +85,9 @@ html {
 
 /* 여기에도 컬러 적용 */
 .variable > div > li {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: lightyellow;
     list-style-type: none;
     display: flex; /* flex box를 사용 */
@@ -98,8 +98,8 @@ html {
 .variable > div > li svg {
     margin-right: 10px;
     fill: white; /* SVG 색상 설정 */
-    width: 25px; /* SVG 크기 설정 */
-    height: 25px; /* SVG 크기 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
     /* position: relative; */
     flex-shrink: 0;
     
@@ -118,7 +118,7 @@ html {
 
 .variable > div > li:hover,
 .variable > div > li > a:hover {
-    color: tomato;
+    color: lightcoral;
     
 }
 
@@ -128,8 +128,7 @@ html {
 
 
 .category {
-    margin-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
 }
 
@@ -158,9 +157,8 @@ html {
 /* 질문 */
 .variable-title {
 
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 12px;
     font-weight: bold;
     color: lightyellow;
     /* transition: color 1.0s ease;  */
@@ -177,22 +175,22 @@ html {
 .variable-title svg {
     margin-right: 10px;
     fill: white; /* SVG 색상 설정 */
-    width: 25px; /* SVG 크기 설정 */
-    height: 25px; /* SVG 크기 설정 */
-    /* position: relative; */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
     flex-shrink: 0;
 }
 
 .variable-title:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 /* 질문 설명 */
 .variable-desc {
     list-style-type: decimal;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     color: white;
 
     padding-left: 10px;
@@ -227,8 +225,6 @@ html {
     padding-top: 20px;
     padding-bottom: 20px;
 
-    margin-top: 20px;
-    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
 
@@ -279,7 +275,7 @@ html {
 
     margin-top: 20px;
     margin-bottom: 20px;
-    /* margin-left: 15px; */
+
     margin-right: 15px;
 
     transition: opacity 1.2s ease, visibility 1.2s ease; /* 부드러운 전환 효과를 설정합니다 */
@@ -296,6 +292,19 @@ html {
     visibility: visible; /* 이미지를 보이게 합니다 */
     opacity: 1; /* 투명도를 1로 설정하여 이미지를 보이게 합니다 */
     
+}
+
+
+/* 사진 줄 바꿈*/
+.image-line-wrap {
+    display: block;
+    width: 85%;
+    height: 5px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -334,17 +343,4 @@ html {
 .contact  a {
     color: lightyellow;
     text-decoration: none;
-}
-
-
-/* 사진 줄 바꿈*/
-.image-line-wrap {
-    display: block;
-    width: 80%;
-    height: 5px;
-    background-color: lightskyblue;
-    border-radius: 10px;
-
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
