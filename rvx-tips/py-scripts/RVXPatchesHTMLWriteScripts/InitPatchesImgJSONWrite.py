@@ -7,13 +7,13 @@ from PatchesDownload import *
 def AddImageJSONTrackChanges(NewData, PreviousData):
 
     # PreviousData에는 있지만 NewData에는 없는 키 처리
-    TrackChangesOutput(PreviousData, NewData, "삭제되었습니다.")
+    TrackChangesOutput(PreviousData, NewData, "삭제되었습니다.", "PreviousData")
 
     # NewData에는 있지만 PreviousData에는 없는 키 처리
-    TrackChangesOutput(NewData, PreviousData, "추가되었습니다.")
+    TrackChangesOutput(NewData, PreviousData, "추가되었습니다.", "NewData")
 
 
-def TrackChangesOutput(targetData, compareData, outputstring):
+def TrackChangesOutput(targetData, compareData, outputstring, targetDataName):
 
     print() # 줄바꿈
     index = 1
@@ -22,7 +22,10 @@ def TrackChangesOutput(targetData, compareData, outputstring):
         if key not in compareData:
             print(f"[{index:,.0f}번] '{key}' Key {outputstring}")
             index += 1
-
+            
+            
+    if index == 1:
+        print(f"{targetDataName} JSON 변경사항 없음.")
 
 def AddImage(UserName, RepoName):
     ImgDataJSON = {}
@@ -50,13 +53,16 @@ def AddImage(UserName, RepoName):
     # 새롭게 생성된 JSON 데이터와 이전 데이터를 비교
     AddImageJSONTrackChanges(ImgDataJSON, DataRead)
 
+    # 줄바꿈
+    print()
+    
     # 새롭게 생성된 JSON 데이터를 JSON 포맷으로 저장
     JSONSave(
         ImgDataJSON,
         rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json"
         )
     
-    print("\n"+UserName, "완료!")
+    print(UserName, "완료!")
 
 
 
