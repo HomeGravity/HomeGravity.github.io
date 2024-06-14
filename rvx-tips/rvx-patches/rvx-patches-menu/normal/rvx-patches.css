@@ -56,7 +56,7 @@ html {
 }
 
 .main-content > .patches-web > h4 > span > a:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 /* 브라우저 열기 아이콘 */
@@ -99,7 +99,7 @@ html {
 }
 
 .main-content > .patches-web > h4 > span > .patches-version:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 /* 전체공간 */
@@ -249,7 +249,7 @@ html {
 }
 
 .Full-Spaces svg:hover {
-    fill: #5e6ed9;
+    fill: lightcoral;
 }
 
 

@@ -58,7 +58,7 @@ html {
 }
 
 .main-content > .patches-web > h4 > span > a:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 /* 브라우저 열기 아이콘 */
@@ -101,7 +101,7 @@ html {
 }
 
 .main-content > .patches-web > h4 > span > .patches-version:hover {
-    color: tomato;
+    color: lightcoral;
 }
 
 /* 전체공간 */
@@ -195,10 +195,16 @@ html {
     width: auto;
     height: auto;
 
-    background-color: #38484f;
+    background-color: #3b4042;
     border-radius: 15px;
     border: 3px solid lightyellow;
 }
+
+.rvx-Detailed-options:hover {
+    background-color: #3f494d;
+}
+
+
 
 .rvx-Detailed-options .rvx-option-Detailed-key,
 .rvx-option-Detailed-default,
@@ -306,7 +312,7 @@ html {
 }
 
 .Full-Spaces svg:hover {
-    fill: #5e6ed9;
+    fill: lightcoral;
 }
 
 /* 어드레스 적용 */
