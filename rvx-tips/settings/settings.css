@@ -185,7 +185,7 @@ html {
 /* 질문 설명 */
 .variable-desc {
     list-style-type: decimal;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -222,6 +222,8 @@ html {
 
     padding-top: 20px;
     padding-bottom: 20px;
+
+    margin-top: 20px;
 
     margin-left: auto;
     margin-right: auto;
@@ -271,7 +273,7 @@ html {
 
     border: 3px solid lightskyblue;
 
-    margin-bottom: 20px;
+    margin-top: 20px;
 
     margin-right: 15px;
 
@@ -300,8 +302,7 @@ html {
     background-color: lightskyblue;
     border-radius: 10px;
 
-    margin-top: 25px;
-    margin-bottom: 25px;
+
 }
 
 
