@@ -48,6 +48,11 @@ html {
 }
 
 
+/* 센터로 이동 */
+#category-id h4 {
+    text-align: center;
+}
+
 /* 카테고리 텍스트 설정 */
 #category-id h4 > span {
     font-size: 18px;
@@ -101,13 +106,13 @@ html {
 
 #setting-id li {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 20px;
     text-decoration: none;
     color: lightyellow;
     list-style-type: none;
     display: flex; 
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center; /* 수직 방향으로 중앙 정렬 */
 
 }
@@ -130,12 +135,6 @@ html {
 
 #setting-id li > a {
     color: inherit;
-}
-
-
-/* 설정 */
-#setting-id {
-    margin-left: 20px;
 }
 
 
@@ -164,13 +163,13 @@ html {
 
 #Revanced-Tips-id li {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 20px;
     text-decoration: none;
     color: lightyellow;
     list-style-type: none;
     display: flex; 
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center; /* 수직 방향으로 중앙 정렬 */
 
 }
@@ -195,10 +194,7 @@ html {
     color: inherit;
 }
 
-/* 설정 */
-#Revanced-Tips-id {
-    margin-left: 20px;
-}
+
 
 
 /* 어드레스 적용 */

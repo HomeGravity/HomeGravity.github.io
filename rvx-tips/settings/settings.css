@@ -85,7 +85,7 @@ html {
 
 /* 여기에도 컬러 적용 */
 .variable > div > li {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 20px;
     color: lightyellow;
@@ -156,7 +156,7 @@ html {
 
 /* 질문 */
 .variable-title {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     color: lightyellow;
     /* transition: color 1.0s ease;  */
