@@ -116,8 +116,6 @@ html {
     text-decoration: none;
     color: lightyellow;
     list-style-type: none;
-    position: relative; /* 상대 위치 설정 */
-    list-style-type: none;
     display: flex; 
     /* justify-content: center; */
     align-items: center; /* 수직 방향으로 중앙 정렬 */

@@ -48,28 +48,6 @@ html {
 }
 
 
-.main-setting-list {
-    display: block;
-
-    width: auto;
-    height: auto;
-
-
-    padding: 10px;
-    
-    
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-
-    border: 3px solid lightskyblue;
-    border-radius: 15px;
-    background-color: #93c7ea43;
-
-    /* text-align: center; */
-    
-}
-
 /* 카테고리 텍스트 설정 */
 #category-id h4 > span {
     font-size: 18px;
@@ -95,6 +73,25 @@ html {
 }
 
 
+.main-setting-list {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+
+    padding: 10px;
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    border: 3px solid lightskyblue;
+    border-radius: 15px;
+    background-color: #93c7ea43;
+}
+
 
 /* 설정 텍스트 밑줄 제거 */
 #setting-id li > a {
@@ -108,8 +105,6 @@ html {
     margin-bottom: 20px;
     text-decoration: none;
     color: lightyellow;
-    list-style-type: none;
-    position: relative; /* 상대 위치 설정 */
     list-style-type: none;
     display: flex; 
     /* justify-content: center; */
@@ -173,8 +168,6 @@ html {
     margin-bottom: 20px;
     text-decoration: none;
     color: lightyellow;
-    list-style-type: none;
-    position: relative; /* 상대 위치 설정 */
     list-style-type: none;
     display: flex; 
     /* justify-content: center; */
