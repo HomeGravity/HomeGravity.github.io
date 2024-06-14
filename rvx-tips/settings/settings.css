@@ -187,7 +187,7 @@ html {
 .variable-desc {
     list-style-type: decimal;
     font-size: 12px;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;

@@ -60,6 +60,10 @@ html {
     color: lightskyblue;
 }
 
+.main-title > h3 > .main-title-subject:hover {
+    color: lightcoral;
+}
+
 .main-setting-list {
     display: block;
 
@@ -220,7 +224,7 @@ html {
 .warning div > li,
 .warning .warning-desc {
     color: lightyellow;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 14px;
     list-style-type: decimal;
     
@@ -230,4 +234,5 @@ html {
 
 .warning .warning-desc > span > .warning-desc-span {
     color: lightgreen;
+    font-weight: bold;
 }

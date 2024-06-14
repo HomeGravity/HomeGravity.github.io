@@ -62,6 +62,10 @@ html {
     color: lightskyblue;
 }
 
+.main-title > h3 > .main-title-subject:hover {
+    color: lightcoral;
+}
+
 /* 센터로 이동 */
 #category-id h4 {
     text-align: center;

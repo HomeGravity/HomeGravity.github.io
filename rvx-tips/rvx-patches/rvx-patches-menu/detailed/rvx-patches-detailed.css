@@ -176,7 +176,7 @@ html {
 
 .rvx-option-desc {
     margin-bottom: 18px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #CFE1EE;
     font-size: 14px;
     
@@ -184,7 +184,7 @@ html {
 
 .rvx-option-version {
     margin-bottom: 18px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: lightyellow;
     font-size: 14px;
 
@@ -213,7 +213,7 @@ html {
 .rvx-option-Detailed-required,
 .rvx-option-Detailed-values {
     margin-bottom: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 15px;
 }
 
