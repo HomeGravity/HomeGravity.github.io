@@ -262,6 +262,12 @@ html {
     overflow: auto;
 }
 
+
+/* 스크롤바 제거 */
+.Reference-Flex div::-webkit-scrollbar {
+    display: none;
+}
+
 .reference-image {
     display: none;
     visibility: hidden; /* 기본적으로 이미지를 숨깁니다 */

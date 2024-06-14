@@ -366,6 +366,11 @@ html {
     
 }
 
+/* 스크롤바 제거 */
+.Reference-Flex div::-webkit-scrollbar {
+    display: none;
+}
+
 .reference-image:first-child {
     margin-left: 15px;
 }
