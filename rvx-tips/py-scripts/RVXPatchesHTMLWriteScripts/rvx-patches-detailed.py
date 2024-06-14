@@ -89,7 +89,6 @@ def ImagesInsert():
 def generate_html(patches, UserName):
     ImgData = OpenJSON(rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json")
 
-
     html_template = """
         <div class="Full-Spaces" id="{main_id}">
             <div class="rvx-option">
@@ -222,22 +221,24 @@ def StartHTML(UserName, RepoName):
     PatchesData = InitResponse(f'https://github.com/{UserName}/{RepoName}/releases')
     PatchesData = json.dumps(PatchesData)
     PatchesData = json.loads(PatchesData)
-    
-    new_html = generate_html(PatchesData, UserName)
 
-    SaveHTML(
-        rf"rvx-tips\rvx-patches\rvx-patches-menu\detailed\rvx-{UserName}-detailed.html", 
-        init_html().format(
-            Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
-            patches_version=PatchesData[len(PatchesData) - 1]["patches-version"],
-            name=UserName, 
-            insert_html=new_html, 
-            time=CurrentTime()
-            )
-    )
-    
-    print(f"{UserName} 완료!")
+    if "ResponseParseError" not in PatchesData:
+        new_html = generate_html(PatchesData, UserName)
 
+        SaveHTML(
+            rf"rvx-tips\rvx-patches\rvx-patches-menu\detailed\rvx-{UserName}-detailed.html", 
+            init_html().format(
+                Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
+                patches_version=PatchesData[len(PatchesData) - 1]["patches-version"],
+                name=UserName, 
+                insert_html=new_html, 
+                time=CurrentTime()
+                )
+        )
+        
+        print(f"{UserName} 완료!")
+    else:
+        print("예외처리가 발생해 프로그램 실행 조건이 만족되지 않음.")
 
 
 StartHTML("anddea", "revanced-patches")

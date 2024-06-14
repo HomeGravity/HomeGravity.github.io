@@ -24,19 +24,40 @@ def ResponseParse(source, URL):
     
     repo = URL.split("/")[4]
     PatchesJSON = f"https://github.com/{user}/{repo}/releases/download/{LastReleses.text.strip()}/patches.json"
-    JSONData = json.loads(JSONDownloadBytes(PatchesJSON))
 
 
-    if isinstance(JSONData, list):
-        JSONData.append({"patches-version" : LastReleses.text.strip()})
+    JSONDownloadRead = JSONDownload(PatchesJSON)
 
-        return JSONData
+    try:
+        condition = "JSONDownloadError" not in list(JSONDownloadRead.keys())
     
-    # 위 JSONDatas에서 아무것도 반환되지 않으면 리턴 값을 None로 지정
-    return None
+    except AttributeError:
+        condition = True
+    
+    except Exception as err:
+        print(f"예외처리가 발생해 프로그램 실행 조건이 만족되지 않음. {err}")
+        condition = False
+
+    if condition:
+        JSONData = json.loads(JSONDownloadRead)
+
+        try:
+            if isinstance(JSONData, list):
+                JSONData.append({"patches-version" : LastReleses.text.strip()})
+
+                return JSONData
+        
+        except UnboundLocalError as err:
+            print(f"UnboundLocalError 변수가 정의되지 않음: {err}")
+
+    else:
+        print("다운로드된 JSON 데이터 Read에 실패함.")
+
+    # 위 JSONDatas에서 아무것도 반환되지 않으면 오류 리턴 지정
+    return {"ResponseParseError" : "값을 가져올 수 없음"}
     
 
-def JSONDownloadBytes(URL):
+def JSONDownload(URL):
     try:
         response = requests.get(URL, headers=request_headers, timeout=10)
         response.raise_for_status()
@@ -49,11 +70,11 @@ def JSONDownloadBytes(URL):
     except Exception as err:
         print(f"다운로드 중 예외가 발생했습니다: {err}")
         
-    return None
+    return {"JSONDownloadError" : "값을 가져올 수 없음"}
 
 if __name__ == "__main__":
     a = InitResponse("https://github.com/anddea/revanced-patches/releases")
     # InitResponse("https://github.com/inotia00/revanced-patches/releases")
     print(a)
     print(type(a))
-    print(a[len(a)-1]["patches-version"])
+    # print(a[len(a)-1]["patches-version"])

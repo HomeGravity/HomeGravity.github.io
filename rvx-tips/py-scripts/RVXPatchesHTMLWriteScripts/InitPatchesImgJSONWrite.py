@@ -2,19 +2,44 @@ from basic import *
 from pprint import pprint
 from PatchesDownload import *
 
+
+# ImagePath JSON 변경사항 추적
+def AddImageJSONTrackChanges(NewData, PreviousData):
+
+    # PreviousData에는 있지만 NewData에는 없는 키 처리
+    TrackChangesOutput(PreviousData, NewData, "삭제되었습니다.")
+
+    # NewData에는 있지만 PreviousData에는 없는 키 처리
+    TrackChangesOutput(NewData, PreviousData, "추가되었습니다.")
+
+
+def TrackChangesOutput(targetData, compareData, outputstring):
+
+    print() # 줄바꿈
+    index = 1
+    for key in targetData.keys():
+        # targetData에 있는 keys가 compareData에 없으면 True
+        if key not in compareData:
+            print(f"[{index:,.0f}번] '{key}' Key {outputstring}")
+            index += 1
+
+
 def AddImage(UserName, RepoName):
     ImgDataJSON = {}
     
+    # 신규 패치 JSON 처리
     PatchesData = InitResponse(f'https://github.com/{UserName}/{RepoName}/releases')
     PatchesData = json.dumps(PatchesData)
     PatchesData = json.loads(PatchesData)
+
+    # 이전 JSON 데이터 불러오기
     DataRead = OpenJSON(rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json")
 
-
-    
     for patch in PatchesData:
         if list(patch.keys())[0] != "patches-version":
+
             if not any(x in patch["compatiblePackages"][0]["name"] for x in ["music", "reddit"]):
+
                 if patch["name"] in DataRead:
                     ImgDataJSON[patch["name"]] = DataRead[patch["name"]]
                 
@@ -22,9 +47,16 @@ def AddImage(UserName, RepoName):
                     ImgDataJSON[patch["name"]] = ["../../../bird-8763079_1280.jpg"]
 
 
-    print(UserName, "완료!")
+    # 새롭게 생성된 JSON 데이터와 이전 데이터를 비교
+    AddImageJSONTrackChanges(ImgDataJSON, DataRead)
 
-    JSONSave(ImgDataJSON, rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json")
+    # 새롭게 생성된 JSON 데이터를 JSON 포맷으로 저장
+    JSONSave(
+        ImgDataJSON,
+        rf"rvx-tips\rvx-patches\rvx-patches-menu\SetPatchesImgPath\{UserName}AddPatchesImage.json"
+        )
+    
+    print("\n"+UserName, "완료!")
 
 
 
@@ -38,29 +70,7 @@ AddImage(
     "revanced-patches"
     )
 
-
-
-
-def ImagePathCopy():
-    DataRead = OpenJSON(r"rvx-tips\py-scripts\PatchesSave\anddeaPatches\anddeaAddPatchesImage.json")
-    TargetRead = OpenJSON(r"rvx-tips\py-scripts\PatchesSave\inotia00Patches\inotia00AddPatchesImage.json")
-    
-    
-    difference = []
-    print(len(DataRead), len(TargetRead))
-    
-    for key, values in DataRead.items():
-        if key in TargetRead:
-            TargetRead[key] = values
-        
-        else:
-            difference.append(key)
-
-    
-    JSONSave(TargetRead, r"rvx-tips\py-scripts\PatchesSave\inotia00Patches\inotia00AddPatchesImage.json")
-    
-    print("\n기능 차이점\n")
-    for x in difference:
-        print(x)
-    
-# ImagePathCopy()
+# AddImage(
+#     "YT-Advanced",
+#     "rex-patches"
+#     )

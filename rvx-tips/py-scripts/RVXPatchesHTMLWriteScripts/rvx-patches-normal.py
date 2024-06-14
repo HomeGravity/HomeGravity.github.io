@@ -179,20 +179,24 @@ def StartHTML(UserName, RepoName):
     PatchesData = json.dumps(PatchesData)
     PatchesData = json.loads(PatchesData)
     
-    new_html = generate_html(PatchesData, UserName)
+    if "ResponseParseError" not in PatchesData:
+        new_html = generate_html(PatchesData, UserName)
 
-    SaveHTML(
-        rf"rvx-tips\rvx-patches\rvx-patches-menu\normal\rvx-{UserName}.html", 
-        init_html().format(
-            Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
-            patches_version=PatchesData[len(PatchesData) - 1]["patches-version"],
-            name=UserName, 
-            insert_html=new_html, 
-            time=CurrentTime()
-            )
-    )
+        SaveHTML(
+            rf"rvx-tips\rvx-patches\rvx-patches-menu\normal\rvx-{UserName}.html", 
+            init_html().format(
+                Patches_website=f"https://github.com/{UserName}/revanced-patches/releases",
+                patches_version=PatchesData[len(PatchesData) - 1]["patches-version"],
+                name=UserName, 
+                insert_html=new_html, 
+                time=CurrentTime()
+                )
+        )
+        
+        print(f"{UserName} 완료!")
     
-    print(f"{UserName} 완료!")
+    else:
+        print("예외처리가 발생해 프로그램 실행 조건이 만족되지 않음.")
 
 
 
