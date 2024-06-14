@@ -37,7 +37,7 @@ html {
 
     background-color: #93c7ea43;
 
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
     border-radius: 15px;
 
     text-align: center;
@@ -74,7 +74,7 @@ html {
     padding: 10px;
     
 
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
     background-color: #93c7ea43;
     border-radius: 15px;
 
@@ -140,7 +140,7 @@ html {
     padding-top: 20px;
     padding-bottom: 20px;
     
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
     background-color: #93c7ea43;
 
     border-radius: 15px;
@@ -218,7 +218,7 @@ html {
     color: #294253;
     background-color: rgb(100, 177, 184);
     border-radius: 30px;
-    border: 3px solid lightskyblue;
+    border: none;
     width: 250px;
 
     padding-top: 20px;
@@ -278,7 +278,7 @@ html {
     max-width: 320px;
     max-height: 400px;
 
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
 
     margin-top: 20px;
 
@@ -306,7 +306,7 @@ html {
     display: block;
     width: 85%;
     height: 5px;
-    background-color: lightskyblue;
+    background-color: lightcoral;
     border-radius: 10px;
 
 
@@ -319,7 +319,7 @@ html {
     font-weight: bold;
 
     border-radius: 15px;
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
 
     width: auto;
     height: auto;

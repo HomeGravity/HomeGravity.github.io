@@ -28,7 +28,7 @@ html {
 
     background-color: #93c7ea43;
     border-radius: 15px;
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
 
     padding-top: 10px;
     padding-bottom: 10px;
@@ -107,7 +107,7 @@ html {
 /* 전체공간 */
 .Full-Spaces {
     width: auto;
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
     margin-bottom: 30px;
     background: #9ba4ab43;
     border-radius: 15px;
@@ -320,7 +320,7 @@ html {
     font-weight: bold;
 
     border-radius: 15px;
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
 
     width: auto;
     height: auto;
@@ -358,7 +358,7 @@ html {
     color: #127ecb;
     background-color: rgb(199, 224, 252);
     border-radius: 30px;
-    border: 3px solid lightskyblue;
+    border: none;
     width: 250px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -414,7 +414,7 @@ html {
     max-height: 400px;
     
 
-    border: 3px solid lightskyblue;
+    border: 3px solid lightcoral;
 
     margin-top: 20px;
     margin-bottom: 10px;
@@ -443,6 +443,6 @@ html {
 hr {
     width: 95%;
     height: 10px;
-    background-color: lightskyblue;
+    background-color: lightcoral;
     border-radius: 10px;
 }
