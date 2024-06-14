@@ -44,6 +44,7 @@ html {
 
 }
 
+/* 메인 타이틀 */
 .title {
     color: white;
     font-size: 18px;
@@ -83,7 +84,7 @@ html {
     text-align: center;
 }
 
-/* 여기에도 컬러 적용 */
+/* 여기에도 컬러 적용, 목차 부분 */
 .variable > div > li {
     font-size: 14px;
     font-weight: bold;
