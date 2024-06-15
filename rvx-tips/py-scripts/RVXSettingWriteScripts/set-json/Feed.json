@@ -7,9 +7,9 @@
             "피드 - 동영상 필터 - 조회수 필터 - <span class=\"Feature-name\" onclick=\"copyText()\">조회수가 높은 동영상 숨기기</span> - 원하는 값 입력"
         ],
         "image-url": [
-            "../images/Feed-images/RVX-Feed-1-1.png",
-            "../images/Feed-images/RVX-Feed-1-2.png",
-            "../images/Feed-images/RVX-Feed-1-3.png"
+            "../images/Feed-images/RVX-Feed-1/RVX-Feed-1-1.png",
+            "../images/Feed-images/RVX-Feed-1/RVX-Feed-1-2.png",
+            "../images/Feed-images/RVX-Feed-1/RVX-Feed-1-3.png"
         ]
     },
     "main-2": {
@@ -25,12 +25,12 @@
             
         ],
         "image-url": [
-            "../images/Feed-images/RVX-Feed-2-1.png",
-            "../images/Feed-images/RVX-Feed-2-2.png",
-            "../images/Feed-images/RVX-Feed-2-3.png",
-            "../images/Feed-images/RVX-Feed-2-4.png",
-            "../images/Feed-images/RVX-Feed-2-5.png",
-            "../images/Feed-images/RVX-Feed-2-6.png"
+            "../images/Feed-images/RVX-Feed-2/RVX-Feed-2-1.png",
+            "../images/Feed-images/RVX-Feed-2/RVX-Feed-2-2.png",
+            "../images/Feed-images/RVX-Feed-2/RVX-Feed-2-3.png",
+            "../images/Feed-images/RVX-Feed-2/RVX-Feed-2-4.png",
+            "../images/Feed-images/RVX-Feed-2/RVX-Feed-2-5.png",
+            "../images/Feed-images/RVX-Feed-2/RVX-Feed-2-6.png"
         ]
     },
     "main-3": {
@@ -42,9 +42,9 @@
             "숨김 조건: 구독하지 않는 채널에서 업로드한 영상의 조회수가 1,000회 미만"
         ],
         "image-url": [
-            "../images/Feed-images/RVX-Feed-3-1.png",
-            "../images/Feed-images/RVX-Feed-3-2.png",
-            "../images/Feed-images/RVX-Feed-3-3.png"
+            "../images/Feed-images/RVX-Feed-3/RVX-Feed-3-1.png",
+            "../images/Feed-images/RVX-Feed-3/RVX-Feed-3-2.png",
+            "../images/Feed-images/RVX-Feed-3/RVX-Feed-3-3.png"
         ]
     },
     "main-4": {
@@ -55,9 +55,9 @@
             "피드 - 커뮤니티 게시글 - <span class=\"Feature-name\" onclick=\"copyText()\">구독 피드에서 커뮤니티 게시글 숨기기</span> - 활성화"
         ],
         "image-url": [
-            "../images/Feed-images/RVX-Feed-4-1.png",
-            "../images/Feed-images/RVX-Feed-4-2.png",
-            "../images/Feed-images/RVX-Feed-4-3.png"
+            "../images/Feed-images/RVX-Feed-4/RVX-Feed-4-1.png",
+            "../images/Feed-images/RVX-Feed-4/RVX-Feed-4-2.png",
+            "../images/Feed-images/RVX-Feed-4/RVX-Feed-4-3.png"
         ]
     },
     "main-5": {
@@ -67,12 +67,12 @@
             "피드 - 채널 프로필 - <span class=\"Feature-name\" onclick=\"copyText()\">채널 탭 필터</span> - 값 지정"
         ],
         "image-url": [
-            "../images/Feed-images/RVX-Feed-5-1.png",
-            "../images/Feed-images/RVX-Feed-5-2.png",
-            "../images/Feed-images/RVX-Feed-5-3.png",
-            "../images/Feed-images/RVX-Feed-5-4.png",
-            "../images/Feed-images/RVX-Feed-5-5.png",
-            "../images/Feed-images/RVX-Feed-5-6.png"
+            "../images/Feed-images/RVX-Feed-5/RVX-Feed-5-1.png",
+            "../images/Feed-images/RVX-Feed-5/RVX-Feed-5-2.png",
+            "../images/Feed-images/RVX-Feed-5/RVX-Feed-5-3.png",
+            "../images/Feed-images/RVX-Feed-5/RVX-Feed-5-4.png",
+            "../images/Feed-images/RVX-Feed-5/RVX-Feed-5-5.png",
+            "../images/Feed-images/RVX-Feed-5/RVX-Feed-5-6.png"
         ]
     }
 }

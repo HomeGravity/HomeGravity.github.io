@@ -6,8 +6,8 @@
             "스와이프 제스처 - <span class=\"Feature-name\" onclick=\"copyText()\">스와이프 제스처로 볼륨 조절 활성화하기</span> - 비활성화"
         ],
         "image-url": [
-            "../images/Swipe-controls-images/RVX-Swipe-controls-1-1.png",
-            "../images/Swipe-controls-images/RVX-Swipe-controls-1-2.png"
+            "../images/Swipe-controls-images/RVX-Swipe-controls-1/RVX-Swipe-controls-1-1.png",
+            "../images/Swipe-controls-images/RVX-Swipe-controls-1/RVX-Swipe-controls-1-2.png"
         ]
     }
 }

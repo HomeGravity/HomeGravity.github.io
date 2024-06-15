@@ -5,7 +5,7 @@
             "플레이어 - 전체 화면 - <span class=\"Feature-name\" onclick=\"copyText()\">관련 동영상 오버레이 숨기기</span> - 비활성화"
         ],
         "image-url": [
-            "../images/Player-images/RVX-Player-1.png"
+            "../images/Player-images/RVX-Player-1/RVX-Player-1-1.png"
         ]
     },
     "main-2": {
@@ -14,7 +14,7 @@
             "플레이어 - 플레이어 버튼 - <span class=\"Feature-name\" onclick=\"copyText()\">이전 동영상 & 다음 동영상 버튼 숨기기</span> - 비활성화"
         ],
         "image-url": [
-            "../images/Player-images/RVX-Player-2.png"
+            "../images/Player-images/RVX-Player-2/RVX-Player-2-1.png"
         ]
     },
     "main-3": {
@@ -24,7 +24,7 @@
             "필요한 기능은 액션 버튼 항목에서 활성화 하세요."
         ],
         "image-url": [
-            "../images/Player-images/RVX-Player-3.png"
+            "../images/Player-images/RVX-Player-3/RVX-Player-3-1.png"
         ]
     },
     "main-4": {
@@ -34,7 +34,7 @@
             "필요한 기능은 오버레이 버튼 항목에서 활성화 하세요."
         ],
         "image-url": [
-            "../images/Player-images/RVX-Player-4.png"
+            "../images/Player-images/RVX-Player-4/RVX-Player-4-1.png"
         ]
     },
     "main-5": {
@@ -44,7 +44,7 @@
             "이 기능을 켜면 '좌우 슬라이드하여 탐색' 동작이 복원됩니다."
         ],
         "image-url": [
-            "../images/Player-images/RVX-Player-5.png"
+            "../images/Player-images/RVX-Player-5/RVX-Player-5-1.png"
         ]
     },
     "main-6": {
@@ -54,7 +54,7 @@
             "필요한 기능은 빠른 작업에서 숨기기를 비활성화 하세요."
         ],
         "image-url": [
-            "../images/Player-images/RVX-Player-6.png"
+            "../images/Player-images/RVX-Player-6/RVX-Player-6-1.png"
         ]
     },
     "main-7": {

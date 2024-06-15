@@ -7,7 +7,7 @@
             "이 설정을 켜면 Shorts에 광고가 나올 수 있어요."
         ],
         "image-url": [
-            "../images/General-layout-images/RVX-General-layout-1.jpg"
+            "../images/General-layout-images/RVX-General-layout-1/RVX-General-layout-1-1.jpg"
         ]
     },
     "main-2": {
@@ -16,7 +16,7 @@
             "일반 - 툴바 - <span class=\"Feature-name\" onclick=\"copyText()\">넓은 검색 바 활성화하기</span> - 비활성화"
         ],
         "image-url": [
-            "../images/General-layout-images/RVX-General-layout-2.jpg"
+            "../images/General-layout-images/RVX-General-layout-2/RVX-General-layout-2-1.jpg"
         ]
     },
     "main-3": {
@@ -25,7 +25,7 @@
             "일반 - <span class=\"Feature-name\" onclick=\"copyText()\">스플래시 애니메이션 비활성하기</span> - 비활성화"
         ],
         "image-url": [
-            "../images/General-layout-images/RVX-General-layout-3.png"
+            "../images/General-layout-images/RVX-General-layout-3/RVX-General-layout-3-1.png"
         ]
     },
     "main-4": {
@@ -34,7 +34,7 @@
             "일반 - 하단바 버튼 > <span class=\"Feature-name\" onclick=\"copyText()\">Shorts 버튼 숨기기</span> - 비활성화"
         ],
         "image-url": [
-            "../images/General-layout-images/RVX-General-layout-4.png"
+            "../images/General-layout-images/RVX-General-layout-4/RVX-General-layout-4-1.png"
         ]
     }
 }

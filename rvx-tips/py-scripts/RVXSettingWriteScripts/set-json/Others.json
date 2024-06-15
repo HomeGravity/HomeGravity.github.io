@@ -6,7 +6,7 @@
             "플레이어 매개변수를 활성화하면 \"Video Not Available\"이가 표시돼요."
         ],
         "image-url": [
-            "../images/Others-images/RVX-Others-1.jpg"
+            "../images/Others-images/RVX-Others-1/RVX-Others-1-1.jpg"
         ]
     },
     "main-2": {
@@ -18,12 +18,12 @@
             "알려진 문제점을 참고하세요."
         ],
         "image-url": [
-            "../images/Others-images/RVX-Others-2-1.png",
-            "../images/Others-images/RVX-Others-2-2.png",
-            "../images/Others-images/RVX-Others-2-3.png",
-            "../images/Others-images/RVX-Others-2-4.png",
-            "../images/Others-images/RVX-Others-2-5.png",
-            "../images/Others-images/RVX-Others-2-6.png"
+            "../images/Others-images/RVX-Others-2/RVX-Others-2-1.png",
+            "../images/Others-images/RVX-Others-2/RVX-Others-2-2.png",
+            "../images/Others-images/RVX-Others-2/RVX-Others-2-3.png",
+            "../images/Others-images/RVX-Others-2/RVX-Others-2-4.png",
+            "../images/Others-images/RVX-Others-2/RVX-Others-2-5.png",
+            "../images/Others-images/RVX-Others-2/RVX-Others-2-6.png"
         ]
     }
 }
