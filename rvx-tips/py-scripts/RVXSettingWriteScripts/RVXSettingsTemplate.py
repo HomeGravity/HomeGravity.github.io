@@ -24,10 +24,7 @@ def InitHTML():
         </figure>
 
         <h3 class="title">ReVanced Extended <span class="main-title">{title}</span> 설정</h3>
-
     </div>
-    
-
 
     {category}
     
