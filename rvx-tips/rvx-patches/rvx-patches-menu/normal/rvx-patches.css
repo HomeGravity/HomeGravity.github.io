@@ -24,7 +24,7 @@ html {
     margin-top: 20px;
     margin-bottom: 20px;
 
-    background-color: #93c7ea43;
+    background-color: #68b0e04f;
     border-radius: 15px;
     border: 3px solid lightcoral;
 
@@ -108,7 +108,7 @@ html {
     height: auto;
     border: 3px solid lightcoral;
     margin-bottom: 30px;
-    background: #9ba4ab43;
+    background: #68b0e04f;
     border-radius: 15px;
 
     padding: 5px;
@@ -159,7 +159,7 @@ html {
     cursor: pointer;
     padding: 5px;
     /* overflow: hidden; */
-    word-wrap: break-word; 
+    word-break: keep-all;
     white-space: normal;
 }
 
@@ -271,7 +271,7 @@ html {
 
     text-align: center;
     
-    background-color: #93c7ea43;
+    background-color: #68b0e04f;
     color: white;
 }
 

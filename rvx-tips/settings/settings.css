@@ -35,7 +35,7 @@ html {
     width: auto;
     height: auto;
 
-    background-color: #93c7ea43;
+    background-color: #68b0e04f;
 
     border: 3px solid lightcoral;
     border-radius: 15px;
@@ -75,7 +75,7 @@ html {
     
 
     border: 3px solid lightcoral;
-    background-color: #93c7ea43;
+    background-color: #68b0e04f;
     border-radius: 15px;
 
     margin-left: auto;
@@ -141,7 +141,7 @@ html {
     padding-bottom: 20px;
     
     border: 3px solid lightcoral;
-    background-color: #93c7ea43;
+    background-color: #68b0e04f;
 
     border-radius: 15px;
 
@@ -186,7 +186,7 @@ html {
 /* 질문 설명 */
 .variable-desc {
     list-style-type: decimal;
-    font-size: 12px;
+    font-size: 13px;
     /* font-weight: bold; */
     margin-top: 20px;
     margin-bottom: 20px;
@@ -331,7 +331,7 @@ html {
 
     text-align: center;
     
-    background-color: #93c7ea43;
+    background-color: #68b0e04f;
     color: white;
 }
 
