@@ -18,7 +18,11 @@
         "../PatchesImages/Change Shorts repeat state/Change Shorts repeat state-3.png"
     ],
     "Change player flyout menu toggles": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Change player flyout menu toggles/Change player flyout menu toggles-1.png",
+        "../PatchesImages/Change player flyout menu toggles/Change player flyout menu toggles-2.png",
+        "../PatchesImages/Change player flyout menu toggles/Change player flyout menu toggles-3.png",
+        "../PatchesImages/Change player flyout menu toggles/Change player flyout menu toggles-4.png",
+        "../PatchesImages/Change player flyout menu toggles/Change player flyout menu toggles-5.png"
     ],
     "Change start page": [
         "../PatchesImages/Change start page/Change start page-1.png",
@@ -40,20 +44,27 @@
         "../PatchesImages/Custom double tap length/Custom double tap length-4.png"
     ],
     "Custom package name": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Custom package name/Custom package name-1.png",
+        "../PatchesImages/Custom package name/Custom package name-2.png"
     ],
     "Description components": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Description components/Description components-1.png",
+        "../PatchesImages/Description components/Description components-2.png",
+        "../PatchesImages/Description components/Description components-3.png",
+        "../PatchesImages/Description components/Description components-4.png",
+        "../PatchesImages/Description components/Description components-5.png"
     ],
     "Disable QUIC protocol": [
         "../PatchesImages/Disable QUIC protocol/Disable QUIC protocol-1.png",
         "../PatchesImages/Disable QUIC protocol/Disable QUIC protocol-2.png"
     ],
     "Disable auto audio tracks": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Disable auto audio tracks/Disable auto audio tracks-1.png",
+        "../PatchesImages/Disable auto audio tracks/Disable auto audio tracks-2.png"
     ],
     "Disable auto captions": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Disable auto captions/Disable auto captions-1.png",
+        "../PatchesImages/Disable auto captions/Disable auto captions-2.png"
     ],
     "Disable haptic feedback": [
         "../PatchesImages/Disable haptic feedback/Disable haptic feedback-1.png",
@@ -65,10 +76,12 @@
         "../PatchesImages/Disable resuming Shorts on startup/Disable resuming Shorts on startup-2.png"
     ],
     "Disable splash animation": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Disable splash animation/Disable splash animation-1.png",
+        "../PatchesImages/Disable splash animation/Disable splash animation-2.png"
     ],
     "Enable OPUS codec": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Enable OPUS codec/Enable OPUS codec-1.png",
+        "../PatchesImages/Enable OPUS codec/Enable OPUS codec-2.png"
     ],
     "Enable debug logging": [
         "../PatchesImages/Enable debug logging/Enable debug logging-1.png",
@@ -181,7 +194,12 @@
         "../../../bird-8763079_1280.jpg"
     ],
     "Miniplayer": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Miniplayer/Miniplayer-1.png",
+        "../PatchesImages/Miniplayer/Miniplayer-2.png",
+        "../PatchesImages/Miniplayer/Miniplayer-3.png",
+        "../PatchesImages/Miniplayer/Miniplayer-4.png",
+        "../PatchesImages/Miniplayer/Miniplayer-5.png",
+        "../PatchesImages/Miniplayer/Miniplayer-6.png"
     ],
     "Navigation bar components": [
         "../PatchesImages/Navigation bar components/Navigation bar components-1.png",
@@ -200,7 +218,8 @@
         "../../../bird-8763079_1280.jpg"
     ],
     "Remove background playback restrictions": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Remove background playback restrictions/Remove background playback restrictions-1.png",
+        "../PatchesImages/Remove background playback restrictions/Remove background playback restrictions-2.png"
     ],
     "Remove viewer discretion dialog": [
         "../PatchesImages/Remove viewer discretion dialog/Remove viewer discretion dialog-1.png",
@@ -256,14 +275,17 @@
         "../../../bird-8763079_1280.jpg"
     ],
     "Toolbar components": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Toolbar components/Toolbar components-1.png",
+        "../PatchesImages/Toolbar components/Toolbar components-2.png",
+        "../PatchesImages/Toolbar components/Toolbar components-3.png"
     ],
     "Translations": [
         "../PatchesImages/Translations/Translations-1.png",
         "../PatchesImages/Translations/Translations-2.png"
     ],
     "Video playback": [
-        "../../../bird-8763079_1280.jpg"
+        "../PatchesImages/Video playback/Video playback-1.png",
+        "../PatchesImages/Video playback/Video playback-2.png"
     ],
     "Visual preferences icons": [
         "../PatchesImages/Visual preferences icons/Visual preferences icons-1.png",
