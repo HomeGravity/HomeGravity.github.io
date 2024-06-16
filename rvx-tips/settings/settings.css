@@ -313,6 +313,87 @@ html {
 }
 
 
+/* 다음 카테고리 이동 */
+.next-category {
+    width: auto;
+    height: auto;
+
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    background-color: #68b0e04f;
+    border-radius: 15px;
+    border: 3px solid lightcoral;
+    
+}
+
+.next-category > .next-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.next-category > .next-title > svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 10px;
+}
+
+.next-category > .next-title:hover {
+    /* 마우스 오버 시 색상을 변경합니다. */
+    color: lightcoral;
+}
+
+
+/* 다음 카테고리 텍스트 밑줄 제거 */
+.next-category-li > li > a {
+    text-decoration: none;
+            
+}
+
+.next-category-li > li {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: lightyellow;
+    list-style-type: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center; /* 수직 방향으로 중앙 정렬 */
+
+}
+
+.next-category-li > li > svg {
+    margin-right: 10px;
+    fill: white; /* SVG 색상 설정 */
+    width: 20px; /* SVG 크기 설정 */
+    height: 20px; /* SVG 크기 설정 */
+    position: relative;
+    flex-shrink: 0;
+}
+
+
+.next-category-li > li:hover,
+.next-category-li > li > a:hover {
+    /* 마우스 오버 시 색상을 변경합니다. */
+    color: lightcoral;
+}
+
+.next-category-li > li > a {
+    color: inherit;
+}
+
+
 
 /* 어드레스 적용 */
 .contact {
