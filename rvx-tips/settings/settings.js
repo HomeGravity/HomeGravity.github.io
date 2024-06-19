@@ -9,6 +9,7 @@ function toggleImages(button) {
                 image.style.display = "none"; // 전환 효과 후 이미지를 숨깁니다
             }, 500); // 여기서 전환 시간(0.5초)을 맞춥니다
             button.textContent = "Show Images";
+            
         } else {
             image.style.display = "block";
             setTimeout(function() {
