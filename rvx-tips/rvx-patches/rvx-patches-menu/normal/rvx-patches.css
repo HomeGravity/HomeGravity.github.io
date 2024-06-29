@@ -1,5 +1,5 @@
 html {
-    background: #181725;
+    background: white;
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
 }
@@ -11,7 +11,7 @@ html {
 }
 
 .home > .set-img-svg > .path-svg > svg {
-    fill: #ffffff;
+    fill: black;
     flex-shrink: 0;
 }
 
@@ -24,9 +24,9 @@ html {
     margin-top: 20px;
     margin-bottom: 20px;
 
-    background-color: #68b0e04f;
+    background-color: #dadfe3;
     border-radius: 15px;
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
 
     padding-top: 10px;
     padding-bottom: 10px;
@@ -38,7 +38,7 @@ html {
 
 /* 타이틀 영역 */
 .main-content > .title {
-    color: white;
+    color: black;
     /* margin-left: 20px; */
     font-weight: bold;
 }
@@ -48,7 +48,7 @@ html {
 .main-content > .patches-web > h4 span > a {
     text-decoration: none;
     font-weight: bold;
-    color: lightyellow;
+    color: black;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -56,13 +56,13 @@ html {
 }
 
 .main-content > .patches-web > h4 > span > a:hover {
-    color: lightcoral;
+    color: darkred;
 }
 
 /* 브라우저 열기 아이콘 */
 .patches-web > h4 > span > a > svg {
     margin-right: 10px;
-    fill: rgb(255, 255, 255); /* SVG 색상 설정 */
+    fill: black; /* SVG 색상 설정 */
     width: 25px; /* SVG 크기 설정 */
     height: 25px; /* SVG 크기 설정 */
     position: relative;
@@ -72,14 +72,14 @@ html {
 
 /* 해당 패치 개발자 이름 */
 .patch-developer-name {
-    color: skyblue;
+    color: darkblue;
 }
 
 /* 패치 버전 */
 .main-content > .patches-web > h4 span > .patches-version {
     text-decoration: none;
     font-weight: bold;
-    color: lightyellow;
+    color: black;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -91,7 +91,7 @@ html {
 .patches-web > h4 > span > .patches-version > svg {
     margin-right: 10px;
     margin-top: 0;
-    fill: rgb(255, 255, 255); /* SVG 색상 설정 */
+    fill: black; /* SVG 색상 설정 */
     width: 25px; /* SVG 크기 설정 */
     height: 25px; /* SVG 크기 설정 */
     position: relative;
@@ -99,16 +99,16 @@ html {
 }
 
 .main-content > .patches-web > h4 > span > .patches-version:hover {
-    color: lightcoral;
+    color: darkred;
 }
 
 /* 전체공간 */
 .Full-Spaces {
     width: auto;
     height: auto;
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
     margin-bottom: 30px;
-    background: #68b0e04f;
+    background: #dadfe3;
     border-radius: 15px;
 
     padding: 5px;
@@ -118,7 +118,7 @@ html {
 }
 
 .Full-Spaces:hover {
-    background-color: #93c7ea43;
+    background-color: #99aabc;
 }
 
 
@@ -152,7 +152,7 @@ html {
 .rvx-option {
     /* height: 100px; */
     width: auto;
-    border: 3px solid #d6d9db;
+    border: 3px solid black;
     margin-bottom: 20px;
     background: #252E33;
     border-radius: 15px;
@@ -161,10 +161,6 @@ html {
     /* overflow: hidden; */
     word-break: keep-all;
     white-space: normal;
-}
-
-.rvx-option:hover {
-    background-color: #4649493e;
 }
 
 
@@ -188,7 +184,7 @@ html {
 .rvx-option-version {
     margin-bottom: 18px;
     /* font-weight: bold; */
-    color: #127ecb;
+    color: lightblue;
     /* margin-left: 20px; */
     
 }
@@ -240,16 +236,12 @@ html {
     width: 25px;
     height: 25px;
 
-    fill: white;
+    fill: black;
     margin-bottom: 10px;
     flex-shrink: 0;
 
     /* margin: 0; */
 
-}
-
-.Full-Spaces svg:hover {
-    fill: lightcoral;
 }
 
 
@@ -259,7 +251,7 @@ html {
     font-weight: bold;
 
     border-radius: 15px;
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
 
     width: auto;
     height: auto;
@@ -271,8 +263,8 @@ html {
 
     text-align: center;
     
-    background-color: #68b0e04f;
-    color: white;
+    background-color: #dadfe3;
+    color: black;
 }
 
 /* 문의 svg 정의 */
@@ -281,12 +273,12 @@ html {
     height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
-    fill: white;
+    fill: black;
 }
 
 /* 어드레스 링크 컬러 적용 */
 .contact  a {
-    color: lightyellow;
+    color: darkblue;
     text-decoration: none;
 }
 
@@ -295,8 +287,8 @@ html {
 /* 버튼 */
 .Reference > .images-open {
     display: block;
-    color: #127ecb;
-    background-color: rgb(199, 224, 252);
+    color: #add2ed;
+    background-color: darkblue;
     border-radius: 30px;
     border: none;
     width: 250px;
@@ -355,7 +347,7 @@ html {
     max-height: 400px;
     
 
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
 
     margin-top: 20px;
     margin-bottom: 10px;
@@ -385,6 +377,6 @@ html {
 hr {
     width: 95%;
     height: 10px;
-    background-color: lightcoral;
+    background-color: darkred;
     border-radius: 10px;
 }

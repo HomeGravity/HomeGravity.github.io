@@ -1,5 +1,5 @@
 html {
-    background-color:  #181725;
+    background-color:  white;
     
     /* 부드러운 스크롤을 위한 CSS */
     scroll-behavior: smooth;
@@ -20,7 +20,7 @@ html {
 }
 
 .home > .set-img-svg > .path-svg > svg {
-    fill: white;
+    fill: black;
     flex-shrink: 0;
 }
 
@@ -35,9 +35,9 @@ html {
     width: auto;
     height: auto;
 
-    background-color: #68b0e04f;
+    background-color: #dadfe3;
 
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
     border-radius: 15px;
 
     text-align: center;
@@ -46,16 +46,16 @@ html {
 
 /* 메인 타이틀 */
 .title {
-    color: white;
+    color: black;
     font-size: 18px;
 }
 
 .title > .main-title {
-    color: lightskyblue;
+    color: darkblue;
 }
 
 .title > .main-title:hover {
-    color: lightcoral;
+    color: darkred;
 }
 
 
@@ -70,12 +70,10 @@ html {
     width: auto;
     height: auto;
 
-
     padding: 10px;
     
-
-    border: 3px solid lightcoral;
-    background-color: #68b0e04f;
+    border: 3px solid darkred;
+    background-color: #dadfe3;
     border-radius: 15px;
 
     margin-left: auto;
@@ -89,7 +87,7 @@ html {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: lightyellow;
+    color: black;
     list-style-type: none;
     display: flex; /* flex box를 사용 */
     justify-content: center;
@@ -98,7 +96,7 @@ html {
 
 .variable > div > li svg {
     margin-right: 10px;
-    fill: white; /* SVG 색상 설정 */
+    fill: black; /* SVG 색상 설정 */
     width: 20px; /* SVG 크기 설정 */
     height: 20px; /* SVG 크기 설정 */
     /* position: relative; */
@@ -111,7 +109,7 @@ html {
 .variable > div > li > a {
     text-decoration: none;
     
-    color: lightyellow;
+    color: black;
     /* transition: color 1.0s ease;  */
     /* 부드러운 색상 전환 효과 */
     
@@ -119,7 +117,7 @@ html {
 
 .variable > div > li:hover,
 .variable > div > li > a:hover {
-    color: lightcoral;
+    color: darkred;
     
 }
 
@@ -130,7 +128,7 @@ html {
 
 .category {
     font-size: 18px;
-    color: white;
+    color: black;
 }
 
 .Full-Spaces {
@@ -140,8 +138,8 @@ html {
     padding-top: 20px;
     padding-bottom: 20px;
     
-    border: 3px solid lightcoral;
-    background-color: #68b0e04f;
+    border: 3px solid darkred;
+    background-color: #dadfe3;
 
     border-radius: 15px;
 
@@ -152,14 +150,14 @@ html {
 }
 
 .Full-Spaces:hover {
-    background-color: #181725;
+    background-color: #b3b7b9;
 }
 
 /* 질문 */
 .variable-title {
     font-size: 14px;
     font-weight: bold;
-    color: lightyellow;
+    color: black;
     /* transition: color 1.0s ease;  */
     /* 부드러운 색상 전환 효과 */
     list-style-type: none;
@@ -173,14 +171,14 @@ html {
 
 .variable-title svg {
     margin-right: 10px;
-    fill: white; /* SVG 색상 설정 */
+    fill: black; /* SVG 색상 설정 */
     width: 20px; /* SVG 크기 설정 */
     height: 20px; /* SVG 크기 설정 */
     flex-shrink: 0;
 }
 
 .variable-title:hover {
-    color: lightcoral;
+    color: darkred;
 }
 
 /* 질문 설명 */
@@ -190,7 +188,7 @@ html {
     /* font-weight: bold; */
     margin-top: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: black;
 
     padding-left: 10px;
     padding-right: 10px;
@@ -204,12 +202,12 @@ html {
 
 /* 기능 이름 */
 .Feature-name {
-    color: lightgreen;
+    color: darkgreen;
     cursor: pointer;
 }
 
 .Feature-name:hover {
-    color: lightcoral;
+    color: darkred;
 }
 
 /* 버튼 */
@@ -278,7 +276,7 @@ html {
     max-width: 320px;
     max-height: 400px;
 
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
 
     margin-top: 20px;
 
@@ -306,7 +304,7 @@ html {
     display: block;
     width: 85%;
     height: 5px;
-    background-color: lightcoral;
+    background-color: darkred;
     border-radius: 10px;
 
 
@@ -322,16 +320,16 @@ html {
     padding: 15px;
     margin-bottom: 20px;
 
-    background-color: #68b0e04f;
+    background-color: #dadfe3;
     border-radius: 15px;
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
     
 }
 
 .next-category > .next-title {
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: black;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -343,13 +341,13 @@ html {
 .next-category > .next-title > svg {
     width: 20px;
     height: 20px;
-    fill: white;
+    fill: black;
     margin-right: 10px;
 }
 
 .next-category > .next-title:hover {
     /* 마우스 오버 시 색상을 변경합니다. */
-    color: lightcoral;
+    color: darkred;
 }
 
 
@@ -365,7 +363,7 @@ html {
     margin-bottom: 20px;
     margin-bottom: 20px;
     text-decoration: none;
-    color: lightyellow;
+    color: black;
     list-style-type: none;
     display: flex; 
     justify-content: center;
@@ -375,7 +373,7 @@ html {
 
 .next-category-li > li > svg {
     margin-right: 10px;
-    fill: white; /* SVG 색상 설정 */
+    fill: black; /* SVG 색상 설정 */
     width: 20px; /* SVG 크기 설정 */
     height: 20px; /* SVG 크기 설정 */
     position: relative;
@@ -386,7 +384,7 @@ html {
 .next-category-li > li:hover,
 .next-category-li > li > a:hover {
     /* 마우스 오버 시 색상을 변경합니다. */
-    color: lightcoral;
+    color: darkred;
 }
 
 .next-category-li > li > a {
@@ -400,7 +398,7 @@ html {
     font-weight: bold;
 
     border-radius: 15px;
-    border: 3px solid lightcoral;
+    border: 3px solid darkred;
 
     width: auto;
     height: auto;
@@ -412,8 +410,8 @@ html {
 
     text-align: center;
     
-    background-color: #68b0e04f;
-    color: white;
+    background-color: #dadfe3;
+    color: black;
 }
 
 /* 문의 svg 정의 */
@@ -422,11 +420,11 @@ html {
     height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
-    fill: white;
+    fill: black;
 }
 
 /* 어드레스 링크 컬러 적용 */
 .contact  a {
-    color: lightyellow;
+    color: darkblue;
     text-decoration: none;
 }

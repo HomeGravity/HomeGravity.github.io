@@ -132,20 +132,10 @@
         "../PatchesImages/Hide ads/Hide ads-1.png",
         "../PatchesImages/Hide ads/Hide ads-2.png"
     ],
-    "Hide animated button background": [
-        "../PatchesImages/Hide animated button background/Hide animated button background-1.png"
-    ],
     "Hide comments components": [
         "../PatchesImages/Hide comments components/Hide comments components-1.png",
         "../PatchesImages/Hide comments components/Hide comments components-2.png",
         "../PatchesImages/Hide comments components/Hide comments components-3.png"
-    ],
-    "Hide double tap overlay filter": [
-        "../PatchesImages/Hide double tap overlay filter/Hide double tap overlay filter-1.png",
-        "../PatchesImages/Hide double tap overlay filter/Hide double tap overlay filter-2.png"
-    ],
-    "Hide double tap to like animations": [
-        "../PatchesImages/Hide double tap to like animations/Hide double tap to like animations-1.png"
     ],
     "Hide feed components": [
         "../PatchesImages/Hide feed components/Hide feed components-1.png",
