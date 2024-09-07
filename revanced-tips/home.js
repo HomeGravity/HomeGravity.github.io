@@ -1,3 +1,6 @@
+const category_value = ["일반", "광고", "대체 썸네일", "피드", "플레이어", "Shorts", "스와이프 제스처", "동영상", "Return Youtube Dislike", "SponsorBlock", "기타"];
+
+
 // 태그 생성 함수
 function create_element(tag, id, className, innerText) {
     const element = document.createElement(tag);
@@ -15,7 +18,7 @@ function update_body_style() {
 }
 
 
-function apply_style_based_on_user_agent(element) {
+function apply_style_based_on_user_agent(element, max_height) {
     const userAgent = navigator.userAgent;
 
     // User-Agent에 따라 스타일 설정
@@ -23,14 +26,14 @@ function apply_style_based_on_user_agent(element) {
         // PC 기기일 경우
         element.style.minWidth = "600px";
         element.style.maxWidth = "1200px";
-        element.style.minHeight = "200px";
-        element.style.maxHeight = "200px";
+        element.style.minHeight = max_height;
+        element.style.maxHeight = max_height;
     } else {
         // 모바일 기기일 경우
         element.style.minWidth = "300px";
         element.style.maxWidth = "800px";
-        element.style.minHeight = "200px";
-        element.style.maxHeight = "200px";
+        element.style.minHeight = max_height;
+        element.style.maxHeight = max_height;
     }
 }
 
@@ -55,7 +58,7 @@ function update_top_main_search_input_handler() {
 
 function update_top_main_handler() {
     const element = document.getElementById('top-main');
-    apply_style_based_on_user_agent(element)
+    apply_style_based_on_user_agent(element, "200px")
 
     // 메인 타이틀 추가
     const revanced_features = create_element("div", "revanced-features", null, null);
@@ -68,8 +71,8 @@ function update_top_main_handler() {
     element.style.flexDirection = "column"; // 세로 방향으로 정렬
     
     element.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
-    element.style.marginTop = "5px"
-    element.style.marginBottom = "5px"
+    element.style.marginTop = "10px"
+    element.style.marginBottom = "10px"
     element.style.marginLeft = "auto";
     element.style.marginRight = "auto";
     
@@ -88,17 +91,16 @@ function update_top_main_handler() {
 
 function update_top_category_handler() {
     const element = document.getElementById('top-category');
-    apply_style_based_on_user_agent(element)
+    apply_style_based_on_user_agent(element, "400px")
 
     // 카테고리 항목 추가
-    const category_value = ["test1", "test2"];
     let insert_html = '';
 
     // 각 카테고리 항목을 <a> 태그로 추가 (for 문 사용)
     for (let i = 0; i < category_value.length; i++) {
         insert_html += `
         <div class="item">
-            <a href="#">
+            <a href="./tips.html">
                 ${category_value[i]}
             </a>
         </div>
@@ -120,8 +122,8 @@ function update_top_category_handler() {
     element.style.flexDirection = "column"; // 세로 방향으로 정렬
 
     element.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
-    element.style.marginTop = "5px"
-    element.style.marginBottom = "5px"
+    element.style.marginTop = "10px"
+    element.style.marginBottom = "10px"
     element.style.marginLeft = "auto";
     element.style.marginRight = "auto";
 
@@ -149,8 +151,8 @@ function update_top_category_title_handler() {
 function update_top_category_items_handler() {
     const element = document.getElementsByClassName('item');
     for (const item of element) {
-        item.style.marginTop = "5px";
-        item.style.marginBottom = "5px";
+        item.style.marginTop = "10px";
+        item.style.marginBottom = "10px";
 
         let a = item.getElementsByTagName("a");
         for (const link of a) {
@@ -158,7 +160,29 @@ function update_top_category_items_handler() {
             link.style.color = "#4d3996";
         }
     }
-} 
+}
+
+function update_local_storage() {
+    // 모든 링크 요소 선택
+    const links = document.querySelectorAll('.items > div > a');
+
+    // 각 링크에 클릭 이벤트 리스너 추가
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+
+            // 클릭한 링크의 텍스트 가져오기
+            const textToSave = this.textContent.trim();
+
+            if (category_value.includes(textToSave)) {
+                // localStorage에 텍스트 저장
+                localStorage.setItem('savedLinkText', textToSave);
+                console.log("저장된 텍스트: ", textToSave);
+            } else {
+                console.log("저장된 텍스트: ", null);
+            }
+        });
+    });
+}
 
 // 태그 정의
 const home_top = create_element("div", "home-top", null, null);
@@ -174,3 +198,4 @@ document.body.appendChild(top_category)
 update_body_style();
 update_top_main_handler();
 update_top_category_handler();
+update_local_storage();
