@@ -163,7 +163,7 @@ function top_category_items_handler(class_name) {
     }
 }
 
-function local_storage(dataset) {
+function local_storage(dataset, saved_name) {
     // 모든 링크 요소 선택
     const links = document.querySelectorAll('.items > div > a');
 
@@ -176,10 +176,10 @@ function local_storage(dataset) {
 
             if (dataset.includes(textToSave)) {
                 // localStorage에 텍스트 저장
-                localStorage.setItem('savedLinkText', textToSave);
+                localStorage.setItem(saved_name, textToSave);
                 console.log("저장된 텍스트: ", textToSave);
             } else {
-                localStorage.removeItem('savedLinkText'); // 아예 삭제
+                localStorage.removeItem(saved_name); // 아예 삭제
                 console.log("저장된 텍스트: ", null);
             }
         });
@@ -206,4 +206,5 @@ body_style();
 top_main_handler();
 top_category_handler("리밴스드 설정", "top-category", category_value, "item", "category-title");
 top_category_handler("기타 설정", "top-sub-category", category_sub_value, "item", "category-sub-title");
-local_storage(category_value);
+local_storage(category_value, "revanced-setting-items");
+local_storage(category_sub_value, "other-setting-items");
