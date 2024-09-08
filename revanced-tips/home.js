@@ -1,10 +1,10 @@
 
 // 태그 생성 함수
-function create_element(tag, id, className, innerText) {
+function create_element(tag, id, class_name, inner_text) {
     const element = document.createElement(tag);
     if (id) element.id = id;
-    if (className) element.className = className;
-    if (innerText) element.innerText = innerText;
+    if (class_name) element.className = class_name;
+    if (inner_text) element.innerText = inner_text;
     return element;
 }
 
@@ -23,7 +23,7 @@ function apply_style_based_on_user_agent(element, max_height) {
     if (userAgent.includes("Windows")) {
         // PC 기기일 경우
         element.style.minWidth = "600px";
-        element.style.maxWidth = "1200px";
+        element.style.maxWidth = "1000px";
         element.style.minHeight = max_height;
         element.style.maxHeight = max_height;
     } else {
