@@ -3,7 +3,7 @@ function get_saved_link_text() {
     const savedLinkText = localStorage.getItem('savedLinkText');
 
     // 저장된 텍스트가 있는 경우 출력
-    if (savedLinkText) {
+    if (savedLinkText !== null) {
         console.log("저장된 링크 텍스트:", savedLinkText);
         return savedLinkText
     } else {
@@ -13,7 +13,7 @@ function get_saved_link_text() {
 }
 
 function test() {
-    text = get_saved_link_text()
+    const text = get_saved_link_text()
     if (text !== null) {
         document.body.textContent = text    
     } else {
