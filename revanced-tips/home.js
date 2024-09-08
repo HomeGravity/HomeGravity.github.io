@@ -1,3 +1,4 @@
+import {body_style, apply_style_based_on_user_agent, element_default_style } from "./utils.js";
 
 // 태그 생성 함수
 function create_element(tag, id, class_name, inner_text) {
@@ -8,32 +9,6 @@ function create_element(tag, id, class_name, inner_text) {
     return element;
 }
 
-
-function body_style() {
-    // 부모 요소 스타일 정의 (예: body)
-    document.body.style.display = "block";
-    document.body.style.justifyContent = "center"; // 가로 중앙 정렬
-}
-
-
-function apply_style_based_on_user_agent(element, max_height) {
-    const userAgent = navigator.userAgent;
-
-    // User-Agent에 따라 스타일 설정
-    if (userAgent.includes("Windows")) {
-        // PC 기기일 경우
-        element.style.minWidth = "600px";
-        element.style.maxWidth = "1000px";
-        element.style.minHeight = max_height;
-        element.style.maxHeight = max_height;
-    } else {
-        // 모바일 기기일 경우
-        element.style.minWidth = "300px";
-        element.style.maxWidth = "800px";
-        element.style.minHeight = max_height;
-        element.style.maxHeight = max_height;
-    }
-}
 
 function top_main_search_input_handler() {
     const element = document.getElementById("top-main");
@@ -68,24 +43,7 @@ function top_main_handler() {
     element.appendChild(revanced_features)
 
 
-    element.style.display = "flex"; // 플렉스 박스 사용
-    element.style.flexDirection = "column"; // 세로 방향으로 정렬
-    
-    element.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
-    element.style.marginTop = "10px"
-    element.style.marginBottom = "10px"
-    element.style.marginLeft = "auto";
-    element.style.marginRight = "auto";
-    
-    element.style.borderRadius = "20px"; // 둥근 모서리
-    element.style.backgroundColor = "#aeb3bd"; // 배경 색상
-    element.style.color = "white"; // 글자 색상
-    element.style.fontWeight = "bold";
-    element.style.fontSize = "25px"; // 폰트 사이즈
-    element.style.textAlign = "center"; // 텍스트 중앙 정렬
-    element.style.alignItems = "center"; // 수직 중앙 정렬
-    element.style.justifyContent = "center"; // 수평 중앙 정렬
-
+    element_default_style(element, "25px")
     top_main_search_input_handler()
 }
 
@@ -119,24 +77,7 @@ function top_category_handler(title, id, dataset, class_name, category_title) {
     </div>`;
 
 
-    element.style.display = "flex"; // 플렉스 박스 사용
-    element.style.flexDirection = "column"; // 세로 방향으로 정렬
-
-    element.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
-    element.style.marginTop = "10px"
-    element.style.marginBottom = "10px"
-    element.style.marginLeft = "auto";
-    element.style.marginRight = "auto";
-
-    element.style.borderRadius = "20px"; // 둥근 모서리
-    element.style.backgroundColor = "#aeb3bd"; // 배경 색상
-    element.style.color = "white"; // 글자 색상
-    element.style.fontWeight = "bold";
-    element.style.fontSize = "15px"; // 폰트 사이즈
-    element.style.textAlign = "center"; // 텍스트 중앙 정렬
-    element.style.alignItems = "center"; // 수직 중앙 정렬
-    element.style.justifyContent = "center"; // 수평 중앙 정렬
-
+    element_default_style(element, "15px")
     top_category_title_handler(category_title);
     top_category_items_handler(class_name);
 
