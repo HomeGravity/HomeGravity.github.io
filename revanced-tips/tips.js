@@ -1,7 +1,7 @@
 import {body_style, apply_style_based_on_user_agent, element_default_style } from "./utils.js";
 
 
-function get_saved_link_text(saved_name) {
+function get_local_storage(saved_name) {
     // 로컬 스토리지에서 저장된 링크 텍스트 가져오기
     const items = localStorage.getItem(saved_name);
 
@@ -15,7 +15,7 @@ function get_saved_link_text(saved_name) {
     }
 }
 
-
+// 오류 화면
 function error_display_screen_handler(error_message) {
     const error_screen = document.createElement("div")
     apply_style_based_on_user_agent(error_screen, "200px")
@@ -30,13 +30,28 @@ function error_display_screen_handler(error_message) {
     document.body.appendChild(error_screen)
 }
 
+// 정상 화면
+function normal_display_screen_handler(normal_text) {
+    const normal_screen = document.createElement("div")
+    apply_style_based_on_user_agent(normal_screen, "200px")
 
-function display_saved_link_text(saved_name1, saved_name2) {
+    normal_screen.innerText = normal_text
+    normal_screen.classList = "error-scrren"
+    normal_screen.id = "error-scrren"
+
+    element_default_style(normal_screen, "15px")
+
+    // body에 오류 화면 태그 추가
+    document.body.appendChild(normal_screen)
+}
+
+
+function display_handler(saved_name1, saved_name2) {
     const error_message = "데이터를 불러오는 중에 문제가 생겼습니다.";
-    const text = get_saved_link_text(saved_name1) || get_saved_link_text(saved_name2);
+    const text = get_local_storage(saved_name1) || get_local_storage(saved_name2);
 
     if (text) {
-        document.body.textContent = text;
+        normal_display_screen_handler(text);
         document.querySelector("head > title").innerText = `tips - ${text}`
     } else {
         error_display_screen_handler(error_message);
@@ -49,4 +64,4 @@ function display_saved_link_text(saved_name1, saved_name2) {
 // 초기 스타일 설정
 body_style();
 
-display_saved_link_text("revanced-setting-items", "other-setting-items");
+display_handler("revanced-setting-items", "other-setting-items");
