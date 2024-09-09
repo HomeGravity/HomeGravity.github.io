@@ -36,8 +36,8 @@ function normal_display_screen_handler(normal_text) {
     apply_style_based_on_user_agent(normal_screen, "200px")
 
     normal_screen.innerText = normal_text
-    normal_screen.classList = "error-scrren"
-    normal_screen.id = "error-scrren"
+    normal_screen.classList = "normal-scrren"
+    normal_screen.id = "normal-scrren"
 
     element_default_style(normal_screen, "15px")
 
