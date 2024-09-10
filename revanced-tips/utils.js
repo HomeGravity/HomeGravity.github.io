@@ -25,7 +25,7 @@ export function apply_style_based_on_user_agent(element, max_height) {
 }
 
 // 기본 스타일
-export function element_default_style(element, font_size) {
+export function element_default_style(element, font_size, color) {
     element.style.display = "flex"; // 플렉스 박스 사용
     element.style.flexDirection = "column"; // 세로 방향으로 정렬
 
@@ -37,7 +37,7 @@ export function element_default_style(element, font_size) {
 
     element.style.borderRadius = "20px"; // 둥근 모서리
     element.style.backgroundColor = "#aeb3bd"; // 배경 색상
-    element.style.color = "white"; // 글자 색상
+    element.style.color = color; // 글자 색상
     element.style.fontWeight = "bold";
     element.style.fontSize = font_size; // 폰트 사이즈
     element.style.textAlign = "center"; // 텍스트 중앙 정렬

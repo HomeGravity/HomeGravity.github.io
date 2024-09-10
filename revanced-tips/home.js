@@ -43,7 +43,7 @@ function top_main_handler() {
     element.appendChild(revanced_features)
 
 
-    element_default_style(element, "25px")
+    element_default_style(element, "25px", "black")
     top_main_search_input_handler()
 }
 
@@ -77,7 +77,7 @@ function top_category_handler(title, id, dataset, class_name, category_title) {
     </div>`;
 
 
-    element_default_style(element, "15px")
+    element_default_style(element, "15px", "black")
     top_category_title_handler(category_title);
     top_category_items_handler(class_name);
 
