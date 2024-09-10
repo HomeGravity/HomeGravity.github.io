@@ -91,6 +91,7 @@ function revanced_tips_column_handler(category_head, access_key) {
     // 카테고리 컨테이너 div 생성
     let category_container = document.createElement("div");
     category_container.className = "category_container"; // 클래스 추가
+
     
     for (let key in category_head[access_key]) {
         const item = category_head[access_key][key];
@@ -107,6 +108,10 @@ function revanced_tips_column_handler(category_head, access_key) {
         category_title.innerText = item["head_name"];
         category_title.className = "category_title"; // 클래스 추가
 
+        // 여백
+        category_title.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
+        category_title.style.marginTop = "10px"
+        category_title.style.marginBottom = "10px"
         
         
         // 스타일 적용 함수 호출
@@ -175,6 +180,8 @@ function revanced_tips_row_style_handler() {
             // 원하는 스타일을 적용
             title.style.color = "white"; // 예시: 글자 색상 변경
             title.style.fontWeight = "bold"; // 예시: 글자 두껍게
+
+            // 여백
             title.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
             title.style.marginTop = "10px"
             title.style.marginBottom = "10px"
