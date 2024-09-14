@@ -11,14 +11,14 @@ export function apply_style_based_on_user_agent(element, max_height) {
     // User-Agent에 따라 스타일 설정
     if (userAgent.includes("Windows")) {
         // PC 기기일 경우
-        element.style.minWidth = "600px";
-        element.style.maxWidth = "1000px";
+        element.style.minWidth = "700px";
+        element.style.maxWidth = "1200px";
         element.style.minHeight = max_height;
         element.style.maxHeight = max_height;
     } else {
         // 모바일 기기일 경우
-        element.style.minWidth = "300px";
-        element.style.maxWidth = "800px";
+        element.style.minWidth = "600px";
+        element.style.maxWidth = "900px";
         element.style.minHeight = max_height;
         element.style.maxHeight = max_height;
     }

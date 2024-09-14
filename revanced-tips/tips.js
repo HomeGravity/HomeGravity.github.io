@@ -18,7 +18,7 @@ let category_data = {
                     {"title": "제목_2", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}],
 
     "action_button": [{"title": "제목_3", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test1.png"]},
-                    {"title": "제목_4", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}],
+                    {"title": "제목_4", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test3.png"]}],
 
     "ambient_mode": [{"title": "제목_5", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]},
                     {"title": "제목_6", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}]
@@ -205,8 +205,10 @@ function images_style_handler() {
         imgs_element.style.overflowY = "auto"; // 세로 스크롤 활성화
         imgs_element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
         imgs_element.style.padding = "5px"; // 패딩 추가
-        imgs_element.style.maxWidth = "auto"; // 부모 요소의 너비
-        imgs_element.style.maxHeight = "auto"; // 부모 요소의 높이
+        imgs_element.style.maxWidth = "100%"; // 부모 요소의 너비
+        imgs_element.style.maxHeight = "100%"; // 부모 요소의 높이
+        imgs_element.style.width = "auto"; // 너비 자동 조정
+        imgs_element.style.height = "auto"; // 높이는 자동 조정
         imgs_element.style.alignItems = "center"; // 중앙 정렬
 
         // imgs_element.style.marginTop = "5px"
@@ -222,8 +224,8 @@ function images_style_handler() {
         img_element.style.borderRadius = "20px"; // 이미지를 둥글게
 
         img_element.style.marginTop = "8px"
-        img_element.style.marginLeft = "3px";
-        img_element.style.marginRight = "3px";
+        img_element.style.marginLeft = "5px";
+        img_element.style.marginRight = "5px";
         img_element.style.marginBottom = "8px"
 
         img_element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
