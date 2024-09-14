@@ -19,7 +19,7 @@ function top_main_search_handler() {
     search_input.style.minHeight = "40px";
 
     search_input.style.margin = "5px"
-    search_input.style.marginTop = "5px";
+    search_input.style.marginTop = "15px";
     search_input.style.marginBottom = "15px";
     
     search_input.style.borderRadius = "20px";
