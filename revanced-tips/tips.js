@@ -195,44 +195,54 @@ function revanced_tips_images_handler(images) {
 
 // 사진 스타일 처리자
 function images_style_handler() {
-    const imgs_elements = document.querySelectorAll(".item_images");
+    const item_images = document.querySelectorAll("#item_images");
+    const images = document.querySelectorAll("#item_image");
 
-    imgs_elements.forEach(imgs_element => {
-        imgs_element.style.display = "inline-flex"; // 디스플레이로 변경
-        imgs_element.style.borderRadius = "20px"; // 모서리 둥글게
-        imgs_element.style.border = "3px solid #ccc"; // 경계선 추가
-        imgs_element.style.overflowX = "auto"; // 가로 스크롤 활성화
-        imgs_element.style.overflowY = "auto"; // 세로 스크롤 활성화
-        imgs_element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
-        imgs_element.style.padding = "5px"; // 패딩 추가
-        imgs_element.style.maxWidth = "100%"; // 부모 요소의 너비
-        imgs_element.style.maxHeight = "100%"; // 부모 요소의 높이
-        imgs_element.style.width = "auto"; // 너비 자동 조정
-        imgs_element.style.height = "auto"; // 높이는 자동 조정
-        imgs_element.style.alignItems = "center"; // 중앙 정렬
+    item_images.forEach(element => {
+        element.style.display = "inline-flex"; // 디스플레이로 변경
+        element.style.borderRadius = "20px"; // 모서리 둥글게
+        element.style.border = "3px solid #ccc"; // 경계선 추가
+        element.style.overflowX = "auto"; // 가로 스크롤 활성화
+        element.style.overflowY = "auto"; // 세로 스크롤 활성화
+        element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
+        element.style.padding = "5px"; // 패딩 추가
+        element.style.maxWidth = "100%"; // 부모 요소의 너비
+        element.style.maxHeight = "100%"; // 부모 요소의 높이
+        element.style.width = "auto"; // 너비 자동 조정
+        element.style.height = "auto"; // 높이는 자동 조정
+        element.style.alignItems = "center"; // 중앙 정렬
 
-        // imgs_element.style.marginTop = "5px"
-        imgs_element.style.marginLeft = "8px";
-        imgs_element.style.marginRight = "8px";
-        // imgs_element.style.marginBottom = "5px"
+        // element.style.marginTop = "5px"
+        element.style.marginLeft = "8px";
+        element.style.marginRight = "8px";
+        // element.style.marginBottom = "5px"
     });
 
-    const img_elements = document.querySelectorAll(".item_image");
 
-    img_elements.forEach(img_element => {
-        img_element.style.display = "inline-block"; // 디스플레이로 변경
-        img_element.style.borderRadius = "20px"; // 이미지를 둥글게
+    images.forEach(element => {
+        // element.style.display = "inline-flex"; // 디스플레이로 변경
+        element.style.borderRadius = "20px"; // 이미지를 둥글게
 
-        img_element.style.marginTop = "8px"
-        img_element.style.marginLeft = "5px";
-        img_element.style.marginRight = "5px";
-        img_element.style.marginBottom = "8px"
+        element.style.marginTop = "8px"
+        element.style.marginLeft = "5px";
+        element.style.marginRight = "5px";
+        element.style.marginBottom = "8px"
 
-        img_element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
-        img_element.style.maxHeight = "100%"; // 최대 높이
-        img_element.style.width = "auto"; // 너비 자동 조정
-        img_element.style.height = "auto"; // 높이는 자동 조정
-        img_element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
+        element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
+
+
+        // User-Agent에 따라 스타일 설정
+        const userAgent = navigator.userAgent;
+        if (userAgent.includes("Windows")) {
+            // PC 기기일 경우
+            element.style.maxHeight = "800px"; // 최대 높이
+        } else {
+            // 모바일 기기일 경우
+            element.style.maxHeight = "600px"; // 최대 높이
+        }
+
+        element.style.width = "auto"; // 너비 자동 조정 
+        element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
 
     });
 }
