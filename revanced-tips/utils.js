@@ -17,8 +17,8 @@ export function apply_style_based_on_user_agent(element, max_height) {
         element.style.maxHeight = max_height;
     } else {
         // 모바일 기기일 경우
-        element.style.minWidth = "600px";
-        element.style.maxWidth = "900px";
+        element.style.minWidth = "500px";
+        element.style.maxWidth = "1000px";
         element.style.minHeight = max_height;
         element.style.maxHeight = max_height;
     }
