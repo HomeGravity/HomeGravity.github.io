@@ -14,7 +14,7 @@ let category_head = {
 // 임시 데이터
 let category_data = {
     "플레이어": {
-    "player_button": [{"title": "제목_1", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test2.png", "/revanced-tips/test1.png", "/revanced-tips/test1.png"]},
+    "player_button": [{"title": "제목_1", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test2.png", "/revanced-tips/test1.png", "/revanced-tips/test3.png"]},
                     {"title": "제목_2", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}],
 
     "action_button": [{"title": "제목_3", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test1.png"]},
@@ -202,11 +202,12 @@ function images_style_handler() {
         imgs_element.style.borderRadius = "20px"; // 모서리 둥글게
         imgs_element.style.border = "3px solid #ccc"; // 경계선 추가
         imgs_element.style.overflowX = "auto"; // 가로 스크롤 활성화
+        imgs_element.style.overflowY = "auto"; // 세로 스크롤 활성화
         imgs_element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
         imgs_element.style.padding = "5px"; // 패딩 추가
-        imgs_element.style.maxWidth = "800px"; // 부모 요소의 너비
+        imgs_element.style.maxWidth = "auto"; // 부모 요소의 너비
         imgs_element.style.maxHeight = "auto"; // 부모 요소의 높이
-        imgs_element.style.alignItems = "center"; // w중앙 정렬
+        imgs_element.style.alignItems = "center"; // 중앙 정렬
 
         // imgs_element.style.marginTop = "5px"
         imgs_element.style.marginLeft = "8px";
@@ -219,7 +220,6 @@ function images_style_handler() {
     img_elements.forEach(img_element => {
         img_element.style.display = "inline-block"; // 디스플레이로 변경
         img_element.style.borderRadius = "20px"; // 이미지를 둥글게
-        img_element.style.border = "2px solid #ccc"; // 경계선 추가
 
         img_element.style.marginTop = "8px"
         img_element.style.marginLeft = "3px";
@@ -228,9 +228,10 @@ function images_style_handler() {
 
         img_element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
         img_element.style.maxHeight = "100%"; // 최대 높이
-        img_element.style.width = "350px"; // 너비 자동 조정
+        img_element.style.width = "auto"; // 너비 자동 조정
         img_element.style.height = "auto"; // 높이는 자동 조정
         img_element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
+
     });
 }
 
