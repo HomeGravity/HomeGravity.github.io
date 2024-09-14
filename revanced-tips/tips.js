@@ -14,14 +14,14 @@ let category_head = {
 // 임시 데이터
 let category_data = {
     "플레이어": {
-    "player_button": [{"title": "test1", "imgs": []},
-                    {"title": "test2", "imgs": []}],
+    "player_button": [{"title": "제목_1", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test2.png", "/revanced-tips/test1.png", "/revanced-tips/test1.png"]},
+                    {"title": "제목_2", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}],
 
-    "action_button": [{"title": "test3", "imgs": []},
-                    {"title": "test4", "imgs": []}],
+    "action_button": [{"title": "제목_3", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test1.png"]},
+                    {"title": "제목_4", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}],
 
-    "ambient_mode": [{"title": "test5", "imgs": []},
-                    {"title": "test6", "imgs": []}]
+    "ambient_mode": [{"title": "제목_5", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]},
+                    {"title": "제목_6", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}]
     }
 };
 
@@ -41,12 +41,12 @@ function get_local_storage(saved_name) {
 }
 
 // 오류 화면
-function error_display_screen_handler(error_message) {
+function error_screen_handler(error_message) {
     const error_screen = document.createElement("div")
     apply_style_based_on_user_agent(error_screen, "auto")
 
     error_screen.innerText = error_message
-    error_screen.classList = "error-scrren"
+    error_screen.className = "error-scrren"
     error_screen.id = "error-scrren"
     error_screen.style.paddingTop = "50px"
     error_screen.style.paddingBottom = "50px"
@@ -59,12 +59,12 @@ function error_display_screen_handler(error_message) {
 }
 
 // 정상 화면
-function normal_display_screen_handler(normal_text) {
+function normal_screen_handler(normal_text) {
     const normal_screen = document.createElement("div")
     apply_style_based_on_user_agent(normal_screen, "auto")
 
     normal_screen.innerText = normal_text
-    normal_screen.classList = "normal-scrren"
+    normal_screen.className = "normal-scrren"
     normal_screen.id = "normal-scrren"
     normal_screen.style.paddingTop = "30px"
     normal_screen.style.paddingBottom = "30px"
@@ -75,13 +75,14 @@ function normal_display_screen_handler(normal_text) {
     element_default_style(normal_screen, "15px", "black")
 
     // 리밴스드 사용 관련 팁 헤드 추가
-    revanced_tips_column_handler(category_head, normal_text)
-    revanced_tips_row_handler(category_data, normal_text)
-    revanced_tips_row_style_handler()
+    tips_column_handler(category_head, normal_text)
+    tips_row_handler(category_data, normal_text)
+    tips_row_style_handler()
+    images_style_handler()
 }
 
 // 리밴스드 카테고리 처리자
-function revanced_tips_column_handler(category_head, access_key) {
+function tips_column_handler(category_head, access_key) {
     // access_key가 category_head에 있는지 검사
     if (!(access_key in category_head)) {
         console.error(`Access key "${access_key}" not found in category data.`);
@@ -127,8 +128,8 @@ function revanced_tips_column_handler(category_head, access_key) {
     document.body.appendChild(category_container);
 }
 
-// 리밴스드 데이터 처리자
-function revanced_tips_row_handler(category_data, access_key) {
+// 카테고리 데이터에서 요소 반복하여 HTML 생성
+function tips_row_handler(category_data, access_key) {
     // access_key에 해당하는 카테고리 데이터가 존재하는지 확인
     if (!category_data[access_key]) {
         console.error(`Access key "${access_key}" not found in category_data.`);
@@ -136,7 +137,7 @@ function revanced_tips_row_handler(category_data, access_key) {
     }
 
     // 해당 access_key의 모든 category_key에 대해 반복
-    for (const category_key in category_data[access_key]) {        
+    for (const category_key in category_data[access_key]) {
         const row_element = document.getElementById(category_key); // category_key에 해당하는 요소 가져오기
 
         // row_element가 null인지 확인
@@ -146,17 +147,12 @@ function revanced_tips_row_handler(category_data, access_key) {
         }
 
         let category_values = document.createElement("div");
-        category_values.className = "category_values"
+        category_values.className = "category_values";
         let item_html = '';
 
         // category_data에서 요소 반복
         for (const element of category_data[access_key][category_key]) {
-            item_html += `
-            <div class="item_data">
-                <div class="item_title" id="item_title">
-                    ${element["title"]}
-                </div>
-            </div>`;
+            item_html += create_item_html(element);
         }
 
         // item_html을 category_values에 추가
@@ -167,8 +163,83 @@ function revanced_tips_row_handler(category_data, access_key) {
     }
 }
 
+// 개별 아이템 HTML 생성
+function create_item_html(element) {
+    return `
+    <div id="item_data" style="margin: 10px 0;">
+        <div class="item_title" id="item_title">
+            ${element["title"]}
+        </div>
+        <div class="item_descriptions" id="item_descriptions">
+            ${revanced_tips_descriptions_handler(element["descriptions"])}
+        </div>
+        <div class="item_images" id="item_images">
+            ${revanced_tips_images_handler(element["images"])}
+        </div>
+    </div>`;
+}
+
+// 설명 추가 처리자
+function revanced_tips_descriptions_handler(descriptions) {
+    return descriptions.map(description => `
+        <div class="item_description">
+            ${description}
+        </div>
+    `).join('');
+}
+
+// 사진 추가 처리자
+function revanced_tips_images_handler(images) {
+    return images.map(image => `<img src="${image}" class="item_image" id="item_image">`).join('');
+}
+
+// 사진 스타일 처리자
+function images_style_handler() {
+    const imgs_elements = document.querySelectorAll(".item_images");
+
+    imgs_elements.forEach(imgs_element => {
+        imgs_element.style.display = "inline-flex"; // 디스플레이로 변경
+        imgs_element.style.borderRadius = "20px"; // 모서리 둥글게
+        imgs_element.style.border = "3px solid #ccc"; // 경계선 추가
+        imgs_element.style.overflowX = "auto"; // 가로 스크롤 활성화
+        imgs_element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
+        imgs_element.style.padding = "5px"; // 패딩 추가
+        imgs_element.style.maxWidth = "800px"; // 부모 요소의 너비
+        imgs_element.style.maxHeight = "auto"; // 부모 요소의 높이
+        imgs_element.style.alignItems = "center"; // w중앙 정렬
+
+        // imgs_element.style.marginTop = "5px"
+        imgs_element.style.marginLeft = "8px";
+        imgs_element.style.marginRight = "8px";
+        // imgs_element.style.marginBottom = "5px"
+    });
+
+    const img_elements = document.querySelectorAll(".item_image");
+
+    img_elements.forEach(img_element => {
+        img_element.style.display = "inline-block"; // 디스플레이로 변경
+        img_element.style.borderRadius = "20px"; // 이미지를 둥글게
+        img_element.style.border = "2px solid #ccc"; // 경계선 추가
+
+        img_element.style.marginTop = "8px"
+        img_element.style.marginLeft = "3px";
+        img_element.style.marginRight = "3px";
+        img_element.style.marginBottom = "8px"
+
+        img_element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
+        img_element.style.maxHeight = "100%"; // 최대 높이
+        img_element.style.width = "350px"; // 너비 자동 조정
+        img_element.style.height = "auto"; // 높이는 자동 조정
+        img_element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
+    });
+}
+
+
+
+
+
 // 리밴스드 팁 데이터 스타일 적용 처리자
-function revanced_tips_row_style_handler() {
+function tips_row_style_handler() {
     let elements = document.querySelectorAll("div.category_values")
 
     for (const element of elements) {
@@ -190,15 +261,15 @@ function revanced_tips_row_style_handler() {
 }
 
 
-function display_handler(saved_name1, saved_name2) {
+function screen_handler(saved_name1, saved_name2) {
     const error_message = "데이터를 불러오는 중에 문제가 생겼습니다.";
     const text = get_local_storage(saved_name1) || get_local_storage(saved_name2);
 
     if (text) {
-        normal_display_screen_handler(text);
+        normal_screen_handler(text);
         document.querySelector("head > title").innerText = `tips - ${text}`
     } else {
-        error_display_screen_handler(error_message);
+        error_screen_handler(error_message);
         document.querySelector("head > title").innerText = "tips - Error"
 
     }
@@ -208,4 +279,4 @@ function display_handler(saved_name1, saved_name2) {
 // 초기 스타일 설정
 body_style();
 
-display_handler("revanced-setting-items", "other-setting-items");
+screen_handler("revanced-setting-items", "other-setting-items");

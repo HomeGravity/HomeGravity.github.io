@@ -10,7 +10,7 @@ function create_element(tag, id, class_name, inner_text) {
 }
 
 
-function top_main_search_input_handler() {
+function top_main_search_handler() {
     const element = document.getElementById("top-main");
     const search_input = create_element("input", "revanced-search-input", null, null);
     search_input.type = "text";
@@ -42,9 +42,11 @@ function top_main_handler() {
     revanced_features.style.marginBottom = "5px";
     element.appendChild(revanced_features)
 
-
+    // 기본 스타일
     element_default_style(element, "25px", "black")
-    top_main_search_input_handler()
+
+    // 검색 처리자
+    top_main_search_handler()
 }
 
 
@@ -76,9 +78,13 @@ function top_category_handler(title, id, dataset, class_name, category_title) {
         </div>
     </div>`;
 
-
+    // 기본 스타일
     element_default_style(element, "15px", "black")
+
+    // 홈 - 제목 처리자
     top_category_title_handler(category_title);
+
+    // 홈 - 카테고리 링크 처리자
     top_category_items_handler(class_name);
 
     
@@ -90,6 +96,7 @@ function top_category_title_handler(category_title) {
     element.style.marginTop = "15px";
     element.style.marginBottom = "15px";
 }
+
 function top_category_items_handler(class_name) {
     const element = document.getElementsByClassName(class_name);
     for (const item of element) {
