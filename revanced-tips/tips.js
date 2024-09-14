@@ -166,23 +166,26 @@ function tips_row_handler(category_data, access_key) {
 // 개별 아이템 HTML 생성
 function create_item_html(element) {
     return `
-    <div id="item_data" style="margin: 10px 0;">
-        <div class="item_title" id="item_title">
-            ${element["title"]}
-        </div>
-        <div class="item_descriptions" id="item_descriptions">
-            ${revanced_tips_descriptions_handler(element["descriptions"])}
-        </div>
-        <div class="item_images" id="item_images">
-            ${revanced_tips_images_handler(element["images"])}
-        </div>
-    </div>`;
+        <div id="item-container" style="margin: 10px 0;">
+            <div class="item-title" id="item-title">
+                ${element["title"]}
+            </div>
+            <div class="item-description" id="item-description">
+                ${revanced_tips_descriptions_handler(element["descriptions"])}
+            </div>
+            
+            <div class="item-image-container" id="item-image-container">
+                <div class="item-image-wrapper">
+                    ${revanced_tips_images_handler(element["images"])}
+                </div>
+            </div>
+        </div>`;
 }
 
 // 설명 추가 처리자
 function revanced_tips_descriptions_handler(descriptions) {
     return descriptions.map(description => `
-        <div class="item_description">
+        <div class="item-description">
             ${description}
         </div>
     `).join('');
@@ -190,61 +193,45 @@ function revanced_tips_descriptions_handler(descriptions) {
 
 // 사진 추가 처리자
 function revanced_tips_images_handler(images) {
-    return images.map(image => `<img src="${image}" class="item_image" id="item_image">`).join('');
-}
+    return images.map(image => `<img src="${image}" class="item-image" id="item-image">`).join('');}
 
 // 사진 스타일 처리자
 function images_style_handler() {
-    const item_images = document.querySelectorAll("#item_images");
-    const images = document.querySelectorAll("#item_image");
+    const imageContainer = document.querySelectorAll("#item-image-container");
+    const imageWrapper = document.querySelectorAll(".item-image-wrapper");
+    const images = document.querySelectorAll("#item-image");
 
-    item_images.forEach(element => {
-        element.style.display = "inline-flex"; // 디스플레이로 변경
+    // imageContainer 스타일 적용
+    imageContainer.forEach(element => {
+        element.style.display = "flex"; // 디스플레이로 변경
+        element.style.justifyContent = "center"; // 중앙 정렬
+        element.style.maxWidth = "100%"; // 부모 요소의 너비
+        element.style.maxHeight = "100%"; // 부모 요소의 높이
+    });
+
+    // imageWrapper 스타일 적용
+    imageWrapper.forEach(element => {
+        element.style.display = "flex"; // 디스플레이로 변경
         element.style.borderRadius = "20px"; // 모서리 둥글게
-        element.style.border = "3px solid #ccc"; // 경계선 추가
+        element.style.border = "2px solid #ccc"; // 경계선 추가
         element.style.overflowX = "auto"; // 가로 스크롤 활성화
         element.style.overflowY = "auto"; // 세로 스크롤 활성화
         element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
-        element.style.padding = "5px"; // 패딩 추가
-        element.style.maxWidth = "100%"; // 부모 요소의 너비
-        element.style.maxHeight = "100%"; // 부모 요소의 높이
-        element.style.width = "auto"; // 너비 자동 조정
-        element.style.height = "auto"; // 높이는 자동 조정
         element.style.alignItems = "center"; // 중앙 정렬
-
-        // element.style.marginTop = "5px"
         element.style.marginLeft = "8px";
         element.style.marginRight = "8px";
-        // element.style.marginBottom = "5px"
+        element.style.maxWidth = "100%"; // 부모 요소의 너비
+        element.style.maxHeight = "100%"; // 부모 요소의 높이
     });
 
-
+    // images 스타일 적용
     images.forEach(element => {
-        // element.style.display = "inline-flex"; // 디스플레이로 변경
         element.style.borderRadius = "20px"; // 이미지를 둥글게
-
-        element.style.marginTop = "8px"
-        element.style.marginLeft = "5px";
-        element.style.marginRight = "5px";
-        element.style.marginBottom = "8px"
-
+        element.style.margin = "8px 5px"; // 여백 설정
         element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
-
-
-        // User-Agent에 따라 스타일 설정
-        const userAgent = navigator.userAgent;
-        if (userAgent.includes("Windows")) {
-            // PC 기기일 경우
-            element.style.maxHeight = "800px"; // 최대 높이
-        } else {
-            // 모바일 기기일 경우
-            element.style.maxHeight = "600px"; // 최대 높이
-        }
-
-        element.style.width = "auto"; // 너비 자동 조정 
         element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
-
     });
+
 }
 
 

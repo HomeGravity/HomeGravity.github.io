@@ -18,7 +18,7 @@ export function apply_style_based_on_user_agent(element, max_height) {
     } else {
         // 모바일 기기일 경우
         element.style.minWidth = "auto";
-        element.style.maxWidth = "700px";
+        element.style.maxWidth = "800px";
         element.style.minHeight = max_height;
         element.style.maxHeight = max_height;
     }
@@ -41,5 +41,5 @@ export function element_default_style(element, font_size, color) {
     element.style.fontSize = font_size; // 폰트 사이즈
     element.style.textAlign = "center"; // 텍스트 중앙 정렬
     element.style.alignItems = "center"; // 수직 중앙 정렬
-    // element.style.justifyContent = "center"; // 수평 중앙 정렬
+    element.style.justifyContent = "center"; // 수평 중앙 정렬
 }
