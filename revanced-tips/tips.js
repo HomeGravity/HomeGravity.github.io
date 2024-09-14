@@ -90,7 +90,7 @@ function tips_column_handler(category_head, access_key) {
     }
 
     // 카테고리 컨테이너 div 생성
-    let category_container = document.createElement("div");
+    const category_container = document.createElement("div");
     category_container.className = "category_container"; // 클래스 추가
 
     
@@ -99,13 +99,13 @@ function tips_column_handler(category_head, access_key) {
         // console.log(item["head_name"]);
         
         // 새로운 div 요소 생성
-        let category_items = document.createElement("div");
+        const category_items = document.createElement("div");
         category_items.className = "category_items"
         category_items.id = key; // ID 값 설정
         category_items.style.paddingTop = "30px"
         category_items.style.paddingBottom = "30px"
 
-        let category_title = document.createElement("div");
+        const category_title = document.createElement("div");
         category_title.innerText = item["head_name"];
         category_title.className = "category_title"; // 클래스 추가
 
@@ -200,37 +200,45 @@ function images_style_handler() {
     const imageContainer = document.querySelectorAll("#item-image-container");
     const imageWrapper = document.querySelectorAll(".item-image-wrapper");
     const images = document.querySelectorAll("#item-image");
-
+    
     // imageContainer 스타일 적용
     imageContainer.forEach(element => {
-        element.style.display = "flex"; // 디스플레이로 변경
+        element.style.display = "flex"; // 디스플레이 변경
         element.style.justifyContent = "center"; // 중앙 정렬
-        element.style.maxWidth = "100%"; // 부모 요소의 너비
-        element.style.maxHeight = "100%"; // 부모 요소의 높이
+        element.style.alignItems = "center"; // 수직 중앙 정렬
+        element.style.width = "100%"; // 부모 요소의 너비
+        element.style.height = "100%"; // 부모 요소의 높이
     });
-
+    
     // imageWrapper 스타일 적용
     imageWrapper.forEach(element => {
-        element.style.display = "flex"; // 디스플레이로 변경
+        element.style.display = "flex"; // 디스플레이 변경
         element.style.borderRadius = "20px"; // 모서리 둥글게
         element.style.border = "2px solid #ccc"; // 경계선 추가
         element.style.overflowX = "auto"; // 가로 스크롤 활성화
-        element.style.overflowY = "auto"; // 세로 스크롤 활성화
+        element.style.overflowY = "auto"; // 세로 스크롤 비활성화
         element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
         element.style.alignItems = "center"; // 중앙 정렬
+
         element.style.marginLeft = "8px";
         element.style.marginRight = "8px";
+
         element.style.maxWidth = "100%"; // 부모 요소의 너비
         element.style.maxHeight = "100%"; // 부모 요소의 높이
     });
-
+    
     // images 스타일 적용
     images.forEach(element => {
         element.style.borderRadius = "20px"; // 이미지를 둥글게
-        element.style.margin = "8px 5px"; // 여백 설정
-        element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소에 맞춤
+        element.style.margin = "8px"; // 여백 설정 (모든 방향에 8px)
+        element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소의 100%로 설정
+        element.style.maxHeight = navigator.userAgent.includes("Windows") ? "100%" : "500px";
         element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
+        element.style.height = "auto"; // 높이는 자동 조정
     });
+    
+    
+    
 
 }
 
@@ -240,11 +248,11 @@ function images_style_handler() {
 
 // 리밴스드 팁 데이터 스타일 적용 처리자
 function tips_row_style_handler() {
-    let elements = document.querySelectorAll("div.category_values")
+    const elements = document.querySelectorAll("div.category_values")
 
     for (const element of elements) {
-        // element 내에서 클래스가 "item_title"인 요소 찾기
-        let titles = element.querySelectorAll(".item_title"); // 클래스 선택자 사용
+        // element 내에서 클래스가 "item-title"인 요소 찾기
+        const titles = element.querySelectorAll(".item-title"); // 클래스 선택자 사용
 
         // 각 title에 대해 스타일 적용
         titles.forEach(title => {
