@@ -36,7 +36,7 @@ function top_main_handler() {
 
     // 메인 타이틀 추가
     const revanced_features = create_element("div", "revanced-features", null, null);
-    revanced_features.innerText = "리밴스드 기능 설명/팁"
+    revanced_features.innerText = "리밴스드 기능 설명 & 팁"
     revanced_features.style.margin = "5px"
     revanced_features.style.marginTop = "15px";
     revanced_features.style.marginBottom = "5px";
@@ -147,7 +147,7 @@ document.body.appendChild(top_category);
 document.body.appendChild(top_sub_category);
 
 const category_value = ["일반", "광고", "대체 썸네일", "피드", "플레이어", "Shorts", "스와이프 제스처", "동영상", "Return YouTube Dislike", "SponsorBlock", "기타"];
-const category_sub_value = ["테스트1", "테스트2", "테스트3", "테스트4", "테스트5"]
+const category_sub_value = ["RVX 매니저 패치 데이터 (한국어로 확인)", "테스트2", "테스트3", "테스트4", "테스트5"]
 
 // 초기 스타일 설정
 body_style();
