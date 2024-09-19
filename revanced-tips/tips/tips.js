@@ -1,4 +1,4 @@
-import {body_style, apply_style_based_on_user_agent, element_default_style } from "./utils.js";
+import {body_style, apply_style_based_on_user_agent, element_default_style } from "../utils.js";
 
 // 임시 데이터
 let category_head = {
@@ -195,52 +195,53 @@ function revanced_tips_descriptions_handler(descriptions) {
 function revanced_tips_images_handler(images) {
     return images.map(image => `<img src="${image}" class="item-image" id="item-image">`).join('');}
 
+
 // 사진 스타일 처리자
 function images_style_handler() {
-    const imageContainer = document.querySelectorAll("#item-image-container");
+    const imageContainer = document.querySelectorAll("#item-container");
     const imageWrapper = document.querySelectorAll(".item-image-wrapper");
     const images = document.querySelectorAll("#item-image");
-    
+
     // imageContainer 스타일 적용
     imageContainer.forEach(element => {
-        element.style.display = "flex"; // 디스플레이 변경
+        element.style.display = "block"; // 디스플레이 변경
         element.style.justifyContent = "center"; // 중앙 정렬
         element.style.alignItems = "center"; // 수직 중앙 정렬
-        element.style.width = "100%"; // 부모 요소의 너비
-        element.style.height = "100%"; // 부모 요소의 높이
+        element.style.width = "100%"; // 부모 요소의 너비를 100%로 설정
+
+        element.style.maxWidth = "400px"; // 최대 너비 설정
+
+        element.style.margin = "0 auto"; // 중앙 정렬
     });
-    
+
     // imageWrapper 스타일 적용
     imageWrapper.forEach(element => {
-        element.style.display = "flex"; // 디스플레이 변경
+        element.style.display = "inline-flex"; // 디스플레이 변경
         element.style.borderRadius = "20px"; // 모서리 둥글게
         element.style.border = "2px solid #ccc"; // 경계선 추가
-        element.style.overflowX = "auto"; // 가로 스크롤 활성화
-        element.style.overflowY = "auto"; // 세로 스크롤 비활성화
         element.style.whiteSpace = "nowrap"; // 이미지가 한 줄에 표시되도록 설정
         element.style.alignItems = "center"; // 중앙 정렬
-
-        element.style.marginLeft = "8px";
-        element.style.marginRight = "8px";
-
-        element.style.maxWidth = "100%"; // 부모 요소의 너비
-        element.style.maxHeight = "100%"; // 부모 요소의 높이
+        element.style.overflowX = "auto"; // 가로 스크롤 활성화
+        element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모의 100%로 설정
+        element.style.marginLeft = "6px";
+        element.style.marginRight = "6px";
     });
-    
+
     // images 스타일 적용
     images.forEach(element => {
         element.style.borderRadius = "20px"; // 이미지를 둥글게
-        element.style.margin = "8px"; // 여백 설정 (모든 방향에 8px)
+        element.style.margin = "10px"; // 여백 설정
         element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소의 100%로 설정
-        element.style.maxHeight = navigator.userAgent.includes("Windows") ? "100%" : "500px";
+
+        element.style.maxHeight = "400px"; // 사진의 최대 높이 설정 (필요에 따라 조정)
+
         element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
         element.style.height = "auto"; // 높이는 자동 조정
     });
-    
-    
-    
-
 }
+
+
+
 
 
 

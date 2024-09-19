@@ -13,13 +13,13 @@ export function apply_style_based_on_user_agent(element, max_height) {
         // PC 기기일 경우
         element.style.minWidth = "auto";
         element.style.maxWidth = "1100px";
-        element.style.minHeight = max_height;
+        element.style.minHeight = "auto";
         element.style.maxHeight = max_height;
     } else {
         // 모바일 기기일 경우
         element.style.minWidth = "auto";
         element.style.maxWidth = "800px";
-        element.style.minHeight = max_height;
+        element.style.minHeight = "auto";
         element.style.maxHeight = max_height;
     }
 }

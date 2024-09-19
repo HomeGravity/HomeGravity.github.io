@@ -61,7 +61,7 @@ function top_category_handler(title, id, dataset, class_name, category_title) {
     for (let i = 0; i < dataset.length; i++) {
         insert_html += `
         <div class="item">
-            <a href="./tips.html">
+            <a href="./tips/tips.html">
                 ${dataset[i]}
             </a>
         </div>
