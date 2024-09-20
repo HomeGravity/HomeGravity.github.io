@@ -81,6 +81,38 @@ function normal_screen_handler(normal_text) {
 
     element_default_style(normal_screen, "15px", "black")
 
+    // 홈 버튼 추가
+    normal_screen.appendChild(home_button());
+
+    // 리밴스드 사용 관련 팁 헤드 추가
+    if (categories.includes(normal_text)) {
+        tips_column_handler(category_head, normal_text)
+        tips_row_handler(category_data, normal_text)
+        tips_row_style_handler()
+        tips_style_handler()
+    
+    // 리밴스드 패치 확인
+    } else if (normal_text == subCategories[0]) {
+        // fetch_patches_data("anddea", "revanced-patches")
+        // .then(data => {
+        //     console.log(data); // JSON 데이터 처리
+        // })
+        // .catch(error => {
+        //     console.error('Failed to fetch data:', error);
+        // });
+
+        // fetch_patches_data("inotia00", "revanced-patches")
+        // .then(data => {
+        //     console.log(data); // JSON 데이터 처리
+        // })
+        // .catch(error => {
+        //     console.error('Failed to fetch data:', error);
+        // });
+    }
+}
+
+// 홈 버튼 추가 함수
+function home_button() {
     // 홈으로 이동 버튼 추가
     const home_btn = document.createElement("button")
     home_btn.innerText = "홈으로 이동"
@@ -120,34 +152,9 @@ function normal_screen_handler(normal_text) {
         window.location.href = "../home.html"; // 이동할 URL
     });
 
-    normal_screen.appendChild(home_btn);
-
-    // 리밴스드 사용 관련 팁 헤드 추가
-    if (categories.includes(normal_text)) {
-        tips_column_handler(category_head, normal_text)
-        tips_row_handler(category_data, normal_text)
-        tips_row_style_handler()
-        tips_style_handler()
-    
-    // 리밴스드 패치 확인
-    } else if (normal_text == subCategories[0]) {
-        // fetch_patches_data("anddea", "revanced-patches")
-        // .then(data => {
-        //     console.log(data); // JSON 데이터 처리
-        // })
-        // .catch(error => {
-        //     console.error('Failed to fetch data:', error);
-        // });
-
-        // fetch_patches_data("inotia00", "revanced-patches")
-        // .then(data => {
-        //     console.log(data); // JSON 데이터 처리
-        // })
-        // .catch(error => {
-        //     console.error('Failed to fetch data:', error);
-        // });
-    }
+    return home_btn
 }
+
 
 // 리밴스드 카테고리 처리자
 function tips_column_handler(category_head, access_key) {
