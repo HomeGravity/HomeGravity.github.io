@@ -1,4 +1,6 @@
 import {body_style, apply_style_based_on_user_agent, element_default_style } from "./utils.js";
+import {getCategories} from "./dataset.js"
+
 
 // 태그 생성 함수
 function create_element(tag, id, class_name, inner_text) {
@@ -146,13 +148,12 @@ document.body.appendChild(home_top);
 document.body.appendChild(top_category);
 document.body.appendChild(top_sub_category);
 
-const category_value = ["일반", "광고", "대체 썸네일", "피드", "플레이어", "Shorts", "스와이프 제스처", "동영상", "Return YouTube Dislike", "SponsorBlock", "기타"];
-const category_sub_value = ["RVX 매니저 패치 데이터 (한국어로 확인)", "테스트2", "테스트3", "테스트4", "테스트5"]
+const { categories, subCategories } = getCategories();
 
 // 초기 스타일 설정
 body_style();
 top_main_handler();
-top_category_handler("리밴스드 설정", "top-category", category_value, "item", "category-title");
-top_category_handler("기타 설정", "top-sub-category", category_sub_value, "item", "category-sub-title");
-local_storage(category_value, "revanced-setting-items");
-local_storage(category_sub_value, "other-setting-items");
+top_category_handler("리밴스드 설정", "top-category", categories, "item", "category-title");
+top_category_handler("기타 설정", "top-sub-category", subCategories, "item", "category-sub-title");
+local_storage(categories, "revanced-setting-items");
+local_storage(subCategories, "other-setting-items");

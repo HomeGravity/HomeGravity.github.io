@@ -1,7 +1,11 @@
 import {body_style, apply_style_based_on_user_agent, element_default_style } from "../utils.js";
+import {fetch_patches_data} from "./revanced-patches/revanced-patches.js"
+import {getCategories} from "../dataset.js"
+
+
 
 // 임시 데이터
-let category_head = {
+const category_head = {
     "플레이어": {
     "player_button": {"head_name": "플레이어 버튼"},
 
@@ -12,7 +16,7 @@ let category_head = {
 };
 
 // 임시 데이터
-let category_data = {
+const category_data = {
     "플레이어": {
     "player_button": [{"title": "제목_1", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]},
                     {"title": "제목_2", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]}],
@@ -25,6 +29,7 @@ let category_data = {
     }
 };
 
+const { categories, subCategories } = getCategories();
 
 function get_local_storage(saved_name) {
     // 로컬 스토리지에서 저장된 링크 텍스트 가져오기
@@ -75,17 +80,37 @@ function normal_screen_handler(normal_text) {
     element_default_style(normal_screen, "15px", "black")
 
     // 리밴스드 사용 관련 팁 헤드 추가
-    tips_column_handler(category_head, normal_text)
-    tips_row_handler(category_data, normal_text)
-    tips_row_style_handler()
-    images_style_handler()
+    if (categories.includes(normal_text)) {
+        tips_column_handler(category_head, normal_text)
+        tips_row_handler(category_data, normal_text)
+        tips_row_style_handler()
+        tips_style_handler()
+    
+    // 리밴스드 패치 확인
+    } else if (normal_text == subCategories[0]) {
+        // fetch_patches_data("anddea", "revanced-patches")
+        // .then(data => {
+        //     console.log(data); // JSON 데이터 처리
+        // })
+        // .catch(error => {
+        //     console.error('Failed to fetch data:', error);
+        // });
+
+        // fetch_patches_data("inotia00", "revanced-patches")
+        // .then(data => {
+        //     console.log(data); // JSON 데이터 처리
+        // })
+        // .catch(error => {
+        //     console.error('Failed to fetch data:', error);
+        // });
+    }
 }
 
 // 리밴스드 카테고리 처리자
 function tips_column_handler(category_head, access_key) {
     // access_key가 category_head에 있는지 검사
     if (!(access_key in category_head)) {
-        console.error(`Access key "${access_key}" not found in category data.`);
+        console.error(`Access key "${access_key}" not found in category head.`);
         return; // access_key가 없으면 함수 종료
     }
 
@@ -196,26 +221,25 @@ function revanced_tips_images_handler(images) {
     return images.map(image => `<img src="${image}" class="item-image" id="item-image">`).join('');}
 
 
-// 사진 스타일 처리자
-function images_style_handler() {
+// 스타일 처리자
+function tips_style_handler() {
     const imageContainer = document.querySelectorAll("#item-container");
     const imageWrapper = document.querySelectorAll(".item-image-wrapper");
-    const images = document.querySelectorAll("#item-image");
 
     // imageContainer 스타일 적용
     imageContainer.forEach(element => {
         element.style.display = "block"; // 디스플레이 변경
         element.style.justifyContent = "center"; // 중앙 정렬
         element.style.alignItems = "center"; // 수직 중앙 정렬
+        element.style.maxWidth = "450px"; // 최대 너비 설정
         element.style.width = "100%"; // 부모 요소의 너비를 100%로 설정
-
-        element.style.maxWidth = "400px"; // 최대 너비 설정
 
         element.style.margin = "0 auto"; // 중앙 정렬
     });
 
     // imageWrapper 스타일 적용
     imageWrapper.forEach(element => {
+        // 기본 스타일 적용
         element.style.display = "inline-flex"; // 디스플레이 변경
         element.style.borderRadius = "20px"; // 모서리 둥글게
         element.style.border = "2px solid #ccc"; // 경계선 추가
@@ -223,20 +247,29 @@ function images_style_handler() {
         element.style.alignItems = "center"; // 중앙 정렬
         element.style.overflowX = "auto"; // 가로 스크롤 활성화
         element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모의 100%로 설정
-        element.style.marginLeft = "6px";
-        element.style.marginRight = "6px";
-    });
+        element.style.marginLeft = "4px";
+        element.style.marginRight = "4px";
+        element.style.padding = "5px";
 
-    // images 스타일 적용
-    images.forEach(element => {
-        element.style.borderRadius = "20px"; // 이미지를 둥글게
-        element.style.margin = "10px"; // 여백 설정
-        element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소의 100%로 설정
+        // 이미지 스타일 적용
+        const imagesInWrapper = element.querySelectorAll("#item-image");
+        imagesInWrapper.forEach(img_element => {
+            img_element.style.borderRadius = "20px"; // 이미지를 둥글게
+            img_element.style.maxWidth = "100%"; // 사진의 최대 너비를 부모 요소의 100%로 설정
+            img_element.style.maxHeight = "450px"; // 사진의 최대 높이 설정 (필요에 따라 조정)
+            img_element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
+            img_element.style.height = "auto"; // 높이는 자동 조정
 
-        element.style.maxHeight = "400px"; // 사진의 최대 높이 설정 (필요에 따라 조정)
+            // 사진이 2개 이상인 경우 여백 적용
+            if (imagesInWrapper.length >= 2) {
+                console.debug("여백 적용됨")
+                img_element.style.marginLeft = "4px";
+                img_element.style.marginRight = "4px";
+            } else {
+                console.debug("여백 적용안됨")
 
-        element.style.flexShrink = "0"; // 이미지가 줄어들지 않도록 설정
-        element.style.height = "auto"; // 높이는 자동 조정
+            }
+        });
     });
 }
 
