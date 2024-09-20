@@ -14,14 +14,14 @@ let category_head = {
 // 임시 데이터
 let category_data = {
     "플레이어": {
-    "player_button": [{"title": "제목_1", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test2.png", "/revanced-tips/test1.png", "/revanced-tips/test3.png"]},
-                    {"title": "제목_2", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}],
+    "player_button": [{"title": "제목_1", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]},
+                    {"title": "제목_2", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]}],
 
-    "action_button": [{"title": "제목_3", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png", "/revanced-tips/test1.png"]},
-                    {"title": "제목_4", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test3.png"]}],
+    "action_button": [{"title": "제목_3", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]},
+                    {"title": "제목_4", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]}],
 
-    "ambient_mode": [{"title": "제목_5", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]},
-                    {"title": "제목_6", "descriptions": ["설명_1", "설명_2"], "images": ["/revanced-tips/test1.png"]}]
+    "ambient_mode": [{"title": "제목_5", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]},
+                    {"title": "제목_6", "descriptions": ["설명_1", "설명_2"], "images": ["../no-img-1.png"]}]
     }
 };
 
@@ -242,11 +242,6 @@ function images_style_handler() {
 
 
 
-
-
-
-
-
 // 리밴스드 팁 데이터 스타일 적용 처리자
 function tips_row_style_handler() {
     const elements = document.querySelectorAll("div.category_values")
@@ -288,4 +283,6 @@ function screen_handler(saved_name1, saved_name2) {
 // 초기 스타일 설정
 body_style();
 
+
+// 초기 화면 표시
 screen_handler("revanced-setting-items", "other-setting-items");
