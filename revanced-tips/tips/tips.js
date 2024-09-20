@@ -71,6 +71,8 @@ function normal_screen_handler(normal_text) {
     normal_screen.innerText = normal_text
     normal_screen.className = "normal-scrren"
     normal_screen.id = "normal-scrren"
+
+    // normal_screen.style.marginBottom = "10px"
     normal_screen.style.paddingTop = "30px"
     normal_screen.style.paddingBottom = "30px"
 
@@ -78,6 +80,47 @@ function normal_screen_handler(normal_text) {
     document.body.appendChild(normal_screen)
 
     element_default_style(normal_screen, "15px", "black")
+
+    // 홈으로 이동 버튼 추가
+    const home_btn = document.createElement("button")
+    home_btn.innerText = "홈으로 이동"
+    home_btn.className = "go-home"
+    home_btn.id = "go-home"
+
+    // 스타일 적용
+    home_btn.style.borderRadius = "20px";
+    home_btn.style.marginTop = "15px";
+    home_btn.style.padding = "15px"
+    home_btn.style.backgroundColor = "#4798a1"; // 기본 배경색
+    home_btn.style.color = "white"; // 텍스트 색상
+    home_btn.style.border = "none"; // 기본 테두리 제거
+    home_btn.style.fontSize = "16px"; // 폰트 크기
+    home_btn.style.cursor = "pointer"; // 마우스 커서 변경
+    home_btn.style.transition = "background-color 0.3s, transform 0.2s"; // 애니메이션 효과
+
+    // 호버 효과
+    home_btn.addEventListener("mouseover", () => {
+        home_btn.style.backgroundColor = "#4a888f"; // 호버 시 배경색 변경
+        home_btn.style.transform = "scale(1.25)"; // 호버 시 크기 증가
+    });
+
+    // 클릭 효과
+    home_btn.addEventListener("mousedown", () => {
+        home_btn.style.transform = "scale(0.85)"; // 클릭 시 크기 감소
+    });
+
+    // 마우스가 버튼을 떠날 때 원래 상태로 복원
+    home_btn.addEventListener("mouseout", () => {
+        home_btn.style.backgroundColor = "#4798a1"; // 원래 배경색
+        home_btn.style.transform = "scale(1)"; // 원래 크기로 복원
+    });
+
+    // 버튼 클릭 시 특정 페이지로 이동
+    home_btn.addEventListener("click", () => {
+        window.location.href = "../home.html"; // 이동할 URL
+    });
+
+    normal_screen.appendChild(home_btn);
 
     // 리밴스드 사용 관련 팁 헤드 추가
     if (categories.includes(normal_text)) {
