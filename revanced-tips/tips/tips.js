@@ -142,11 +142,12 @@ function display_patches_btn() {
     patches_btn_container.style.borderRadius = "20px"; // 모서리 둥글게
     patches_btn_container.style.whiteSpace = "nowrap"; // 한 줄에 표시되도록 설정
     patches_btn_container.style.alignItems = "center"; // 중앙 정렬
-    patches_btn_container.style.overflowX = "auto"; // 가로 스크롤 활성화
-    patches_btn_container.style.maxWidth = "80%"; // 최대 너비를 부모의 80%로 설정
+    patches_btn_container.style.maxWidth = "100%"; // 최대 너비를 부모의 100%로 설정
+    patches_btn_container.style.maxHeight = "100%"; // 최대 높이를 부모의 100%로 설정
+    
     patches_btn_container.style.marginLeft = "4px";
     patches_btn_container.style.marginRight = "4px";
-    patches_btn_container.style.padding = "5px";
+    // patches_btn_container.style.padding = "10px";
 
     // 부모 태그에 추가
     document.body.appendChild(patches_container);
