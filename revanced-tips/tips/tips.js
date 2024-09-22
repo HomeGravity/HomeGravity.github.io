@@ -1,7 +1,6 @@
 import {body_style, apply_style_based_on_user_agent, element_default_style, element_btn_default_style } from "../utils.js";
 import {patches_selection_button} from "./revanced-patches/revanced-patches.js"
 import {getCategories} from "../dataset.js"
-import {fetchIPInfo} from "./revanced-patches/ip_info_display.js"
 
 
 // 임시 데이터
@@ -89,8 +88,6 @@ function normal_screen_handler(normal_text) {
     
     // 리밴스드 패치 확인
     } else if (normal_text == subCategories[0]) {
-        // IP 정보 표시
-        display_ip_info()
 
         // 패치 선택자 화면 표시
         display_patches_btn()
@@ -114,91 +111,6 @@ function home_button() {
     
 
     return home_btn
-}
-
-// IP 정보를 표시하는 함수
-function display_ip_info() {
-    // 패치 선택 태그
-    const ip_info_container = document.createElement("div");
-    apply_style_based_on_user_agent(ip_info_container, "auto");
-
-    ip_info_container.className = "ip_info_container"; // 클래스 이름 수정
-    ip_info_container.id = "ip_info_container"; // ID 수정
-
-    // 스타일 설정
-    ip_info_container.style.paddingTop = "30px";
-    ip_info_container.style.paddingBottom = "30px";
-    element_default_style(ip_info_container, "15px", "black");
-
-    // IP 정보 제목 추가
-    const ip_info_title = document.createElement("div");
-    apply_style_based_on_user_agent(ip_info_title, "auto");
-
-    ip_info_title.innerText = "IP 정보";
-    ip_info_title.className = "ip_info_title"; // 클래스 이름 수정
-    ip_info_title.id = "ip_info_title"; // ID 수정
-
-    // 컨테이너에 제목 추가
-    ip_info_container.appendChild(ip_info_title);
-    
-    // 최종적으로 DOM에 추가
-    document.body.appendChild(ip_info_container);
-
-    extend_display_ip_info(ip_info_container);
-
-}
-
-
-// IP 정보를 가져와서 주어진 컨테이너에 표시하는 확장 함수
-function extend_display_ip_info(ip_info_container) {
-    fetchIPInfo()
-    .then(data => {
-        let ip_items = document.createElement("div");
-        ip_items.id = "ip_items"; // id 이름 지정
-
-        if (data !== null) {
-            // IP 정보에서 각 속성을 추가
-            for (const key in data) {
-                if (data.hasOwnProperty(key)) {
-                    ip_items.innerHTML += `<div class="ip-item">${key}: <span class="ip-value">${data[key]}</span></div>`; // 각 속성을 div에 추가
-                }
-            }
-            ip_info_container.appendChild(ip_items);
-
-        } else {
-            ip_items.innerHTML = `<div class="ip-item">data: null</div>`
-            ip_info_container.appendChild(ip_items);
-
-        }
-
-        ip_items.style.marginTop = "5px"
-        ip_items.style.marginBottom= "5px"
-
-        ip_items.querySelectorAll(".ip-item").forEach(element => {
-            element.style.marginTop = "5px"
-            element.style.marginBottom = "5px"
-            element.style.color = "#2c3e50"
-        })
-
-        ip_items.querySelectorAll(".ip-item > .ip-value").forEach(element => {
-            element.style.color = "#2980b9"
-        })
-
-        
-        // 많은 요청 방지를 위해 IP를 수집 및 요청 횟수를 수집함.
-
-        // 로컬 스토리지에서 IP 값 가져오기
-        let storedIP = localStorage.getItem("ip_data");
-
-        if (!storedIP) { // 값이 없을 때만 초기화
-            // 로컬 스토리지에 저장
-            localStorage.setItem("ip_data", JSON.stringify({ [data["query"]]: 0, "ip": data["query"] }));
-            
-            console.log("로컬 스토리지에 초기화되었습니다.");
-        } else {
-            console.log("로컬 스토리지에 이미 값이 존재합니다");
-        }
-    });
 }
 
 
