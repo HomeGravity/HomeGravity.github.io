@@ -1,4 +1,7 @@
-export async function fetch_patches_data(user_name, repo_name) {
+import {element_btn_default_style } from "../../utils.js";
+
+
+async function fetch_patches_data(user_name, repo_name) {
     try {
         const response = await fetch(`https://raw.githubusercontent.com/${user_name}/${repo_name}/dev/patches.json`, {
             method: 'GET', // GET 요청
@@ -11,7 +14,7 @@ export async function fetch_patches_data(user_name, repo_name) {
         });
 
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('네트워크 응답이 실패했습니다.');
         }
 
         const json = await response.json(); // 응답 객체를 JSON으로 변환
@@ -21,4 +24,56 @@ export async function fetch_patches_data(user_name, repo_name) {
         console.error('Error:', error); // 오류 처리
         throw error; // 오류를 외부로 전달
     }
+}
+
+// 패치 선택자 버튼
+export function patches_selection_button(user_name, repo_name) {
+    const btn = document.createElement("button")
+    btn.innerText = user_name
+    btn.className = "patches_btn"
+    btn.id = "patches_btn"
+
+    element_btn_default_style(btn)
+
+    btn.style.marginLeft = "8px"
+    btn.style.marginRight = "8px"
+
+    // 버튼 클릭 시 특정 페이지로 이동
+    btn.addEventListener("click", () => {
+        get_patches(user_name, repo_name);
+
+        // 패치 선택자 이름 변경
+        const selector_name = document.querySelector("#selector_name")
+        selector_name.innerText = "패치 선택자 이름" + " : " + user_name
+        
+        // 많은 요청 방지를 위해 IP를 수집 및 요청 횟수를 수집함.
+
+        // 로컬 스토리지에서 IP 값 가져오기
+        let storedIP = localStorage.getItem("ip_data");
+
+        if (storedIP) {
+            // 저장된 데이터를 JSON으로 파싱
+            let parsedData = JSON.parse(storedIP);
+            parsedData[parsedData["ip"]] += 1; // 값 증가
+
+            // 업데이트된 데이터를 로컬 스토리지에 저장
+            localStorage.setItem("ip_data", JSON.stringify(parsedData));
+            console.log("ip_data - 로컬 스토리지의 값이 업데이트되었습니다.");
+        }
+
+        
+    });
+
+    return btn
+}
+
+// 패치 데이터 가져오기
+function get_patches(user_name, repo_name) {
+    fetch_patches_data(user_name, repo_name)
+    .then(data => {
+        console.log(data); // JSON 데이터 처리
+    })
+    .catch(error => {
+        console.error('Failed to fetch data:', error);
+    });
 }

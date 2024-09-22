@@ -1,7 +1,7 @@
-import {body_style, apply_style_based_on_user_agent, element_default_style } from "../utils.js";
-import {fetch_patches_data} from "./revanced-patches/revanced-patches.js"
+import {body_style, apply_style_based_on_user_agent, element_default_style, element_btn_default_style } from "../utils.js";
+import {patches_selection_button} from "./revanced-patches/revanced-patches.js"
 import {getCategories} from "../dataset.js"
-
+import {fetchIPInfo} from "./revanced-patches/ip_info_display.js"
 
 
 // 임시 데이터
@@ -58,8 +58,7 @@ function error_screen_handler(error_message) {
     
     // body에 오류 화면 태그 추가
     document.body.appendChild(error_screen)
-
-    element_default_style(error_screen, "15px", "red")
+    element_default_style(error_screen, "15px", "tomato")
 
 }
 
@@ -71,14 +70,11 @@ function normal_screen_handler(normal_text) {
     normal_screen.innerText = normal_text
     normal_screen.className = "normal-scrren"
     normal_screen.id = "normal-scrren"
-
-    // normal_screen.style.marginBottom = "10px"
     normal_screen.style.paddingTop = "30px"
     normal_screen.style.paddingBottom = "30px"
 
     // body에 정상 화면 태그 추가
     document.body.appendChild(normal_screen)
-
     element_default_style(normal_screen, "15px", "black")
 
     // 홈 버튼 추가
@@ -93,21 +89,11 @@ function normal_screen_handler(normal_text) {
     
     // 리밴스드 패치 확인
     } else if (normal_text == subCategories[0]) {
-        // fetch_patches_data("anddea", "revanced-patches")
-        // .then(data => {
-        //     console.log(data); // JSON 데이터 처리
-        // })
-        // .catch(error => {
-        //     console.error('Failed to fetch data:', error);
-        // });
+        // IP 정보 표시
+        display_ip_info()
 
-        // fetch_patches_data("inotia00", "revanced-patches")
-        // .then(data => {
-        //     console.log(data); // JSON 데이터 처리
-        // })
-        // .catch(error => {
-        //     console.error('Failed to fetch data:', error);
-        // });
+        // 패치 선택자 화면 표시
+        display_patches_btn()
     }
 }
 
@@ -119,40 +105,146 @@ function home_button() {
     home_btn.className = "go-home"
     home_btn.id = "go-home"
 
-    // 스타일 적용
-    home_btn.style.borderRadius = "20px";
-    home_btn.style.marginTop = "15px";
-    home_btn.style.padding = "15px"
-    home_btn.style.backgroundColor = "#4798a1"; // 기본 배경색
-    home_btn.style.color = "white"; // 텍스트 색상
-    home_btn.style.border = "none"; // 기본 테두리 제거
-    home_btn.style.fontSize = "16px"; // 폰트 크기
-    home_btn.style.cursor = "pointer"; // 마우스 커서 변경
-    home_btn.style.transition = "background-color 0.3s, transform 0.2s"; // 애니메이션 효과
-
-    // 호버 효과
-    home_btn.addEventListener("mouseover", () => {
-        home_btn.style.backgroundColor = "#4a888f"; // 호버 시 배경색 변경
-        home_btn.style.transform = "scale(1.25)"; // 호버 시 크기 증가
-    });
-
-    // 클릭 효과
-    home_btn.addEventListener("mousedown", () => {
-        home_btn.style.transform = "scale(0.85)"; // 클릭 시 크기 감소
-    });
-
-    // 마우스가 버튼을 떠날 때 원래 상태로 복원
-    home_btn.addEventListener("mouseout", () => {
-        home_btn.style.backgroundColor = "#4798a1"; // 원래 배경색
-        home_btn.style.transform = "scale(1)"; // 원래 크기로 복원
-    });
+    element_btn_default_style(home_btn)
 
     // 버튼 클릭 시 특정 페이지로 이동
     home_btn.addEventListener("click", () => {
         window.location.href = "../home.html"; // 이동할 URL
     });
+    
 
     return home_btn
+}
+
+// IP 정보를 표시하는 함수
+function display_ip_info() {
+    // 패치 선택 태그
+    const ip_info_container = document.createElement("div");
+    apply_style_based_on_user_agent(ip_info_container, "auto");
+
+    ip_info_container.className = "ip_info_container"; // 클래스 이름 수정
+    ip_info_container.id = "ip_info_container"; // ID 수정
+
+    // 스타일 설정
+    ip_info_container.style.paddingTop = "30px";
+    ip_info_container.style.paddingBottom = "30px";
+    element_default_style(ip_info_container, "15px", "black");
+
+    // IP 정보 제목 추가
+    const ip_info_title = document.createElement("div");
+    apply_style_based_on_user_agent(ip_info_title, "auto");
+
+    ip_info_title.innerText = "IP 정보";
+    ip_info_title.className = "ip_info_title"; // 클래스 이름 수정
+    ip_info_title.id = "ip_info_title"; // ID 수정
+
+    // 컨테이너에 제목 추가
+    ip_info_container.appendChild(ip_info_title);
+    
+    // 최종적으로 DOM에 추가
+    document.body.appendChild(ip_info_container);
+
+    extend_display_ip_info(ip_info_container);
+
+}
+
+
+// IP 정보를 가져와서 주어진 컨테이너에 표시하는 확장 함수
+function extend_display_ip_info(ip_info_container) {
+    fetchIPInfo()
+    .then(data => {
+        let ip_items = document.createElement("div");
+        ip_items.id = "ip_items"; // id 이름 지정
+
+        if (data !== null) {
+            // IP 정보에서 각 속성을 추가
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    ip_items.innerHTML += `<div class="ip-item">${key}: <span class="ip-value">${data[key]}</span></div>`; // 각 속성을 div에 추가
+                }
+            }
+            ip_info_container.appendChild(ip_items);
+
+        } else {
+            ip_items.innerHTML = `<div class="ip-item">data: null</div>`
+            ip_info_container.appendChild(ip_items);
+
+        }
+
+        ip_items.style.marginTop = "5px"
+        ip_items.style.marginBottom= "5px"
+
+        ip_items.querySelectorAll(".ip-item").forEach(element => {
+            element.style.marginTop = "5px"
+            element.style.marginBottom = "5px"
+            element.style.color = "#2c3e50"
+        })
+
+        ip_items.querySelectorAll(".ip-item > .ip-value").forEach(element => {
+            element.style.color = "#2980b9"
+        })
+
+        
+        // 많은 요청 방지를 위해 IP를 수집 및 요청 횟수를 수집함.
+
+        // 로컬 스토리지에서 IP 값 가져오기
+        let storedIP = localStorage.getItem("ip_data");
+
+        if (!storedIP) { // 값이 없을 때만 초기화
+            // 로컬 스토리지에 저장
+            localStorage.setItem("ip_data", JSON.stringify({ [data["query"]]: 0, "ip": data["query"] }));
+            
+            console.log("로컬 스토리지에 초기화되었습니다.");
+        } else {
+            console.log("로컬 스토리지에 이미 값이 존재합니다");
+        }
+    });
+}
+
+
+// 패치 선택
+function display_patches_btn() {
+    // 패치 선택 태그
+    const patches_container = document.createElement("div");
+    apply_style_based_on_user_agent(patches_container, "auto");
+
+    patches_container.className = "patches_screen"; // 클래스 이름 수정
+    patches_container.id = "patches_screen"; // ID 수정
+
+    // 스타일 설정
+    patches_container.style.paddingTop = "30px";
+    patches_container.style.paddingBottom = "30px";
+    element_default_style(patches_container, "15px", "black");
+
+    // 패치 선택자 명 추가
+    const patches_selector_name = document.createElement("div");
+    apply_style_based_on_user_agent(patches_selector_name, "auto");
+
+    patches_selector_name.innerText = "패치 선택자 이름"
+    patches_selector_name.className = "selector_name"; // 클래스 이름 수정
+    patches_selector_name.id = "selector_name"; // ID 수정
+
+    // 버튼 컨테이너 생성
+    const patches_btn_container = document.createElement("div");
+    patches_btn_container.style.display = "inline-flex"; // 디스플레이 변경
+    patches_btn_container.style.borderRadius = "20px"; // 모서리 둥글게
+    patches_btn_container.style.whiteSpace = "nowrap"; // 한 줄에 표시되도록 설정
+    patches_btn_container.style.alignItems = "center"; // 중앙 정렬
+    patches_btn_container.style.overflowX = "auto"; // 가로 스크롤 활성화
+    patches_btn_container.style.maxWidth = "80%"; // 최대 너비를 부모의 80%로 설정
+    patches_btn_container.style.marginLeft = "4px";
+    patches_btn_container.style.marginRight = "4px";
+    patches_btn_container.style.padding = "5px";
+
+    // 부모 태그에 추가
+    document.body.appendChild(patches_container);
+    patches_container.appendChild(patches_selector_name);
+    patches_container.appendChild(patches_btn_container)
+
+    //  버튼 추가
+    patches_btn_container.appendChild(patches_selection_button("anddea", "revanced-patches"))
+    patches_btn_container.appendChild(patches_selection_button("inotia00", "revanced-patches"))
+
 }
 
 
@@ -368,4 +460,4 @@ body_style();
 
 
 // 초기 화면 표시
-screen_handler("revanced-setting-items", "other-setting-items");
+screen_handler("revanced_setting_items", "other_setting_items");

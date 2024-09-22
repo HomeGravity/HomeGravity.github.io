@@ -155,5 +155,5 @@ body_style();
 top_main_handler();
 top_category_handler("리밴스드 설정", "top-category", categories, "item", "category-title");
 top_category_handler("기타 설정", "top-sub-category", subCategories, "item", "category-sub-title");
-local_storage(categories, "revanced-setting-items");
-local_storage(subCategories, "other-setting-items");
+local_storage(categories, "revanced_setting_items");
+local_storage(subCategories, "other_setting_items");
