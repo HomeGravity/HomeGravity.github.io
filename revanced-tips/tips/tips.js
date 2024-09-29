@@ -91,6 +91,9 @@ function normal_screen_handler(normal_text) {
 
         // 패치 선택자 화면 표시
         display_patches_btn()
+
+        // 패치 데이터 표시
+        display_patches_data()
     }
 }
 
@@ -114,9 +117,9 @@ function home_button() {
 }
 
 
-// 패치 선택
+// 패치 선택지 이름
 function display_patches_btn() {
-    // 패치 선택 태그
+    // 패치 선택자 태그
     const patches_container = document.createElement("div");
     apply_style_based_on_user_agent(patches_container, "auto");
 
@@ -160,6 +163,40 @@ function display_patches_btn() {
 
 }
 
+// 패치 목록 표시
+function display_patches_data() {
+    // 패치 목록 표시 태그
+    const patches_data_container = document.createElement("div");
+    apply_style_based_on_user_agent(patches_data_container, "auto");
+
+    patches_data_container.className = "patches_data_screen"; // 클래스 이름 수정
+    patches_data_container.id = "patches_data_screen"; // ID 수정
+
+    // 스타일 설정
+    patches_data_container.style.paddingTop = "30px";
+    patches_data_container.style.paddingBottom = "30px";
+    element_default_style(patches_data_container, "15px", "black");
+
+    // 패치 목록 타이틀 표시
+    const patches_data_title = document.createElement("div");
+    apply_style_based_on_user_agent(patches_data_title, "auto");
+
+    patches_data_title.innerText = "패치 표시"
+    patches_data_title.className = "patches_data_title"; // 클래스 이름 수정
+    patches_data_title.id = "patches_data_title"; // ID 수정
+
+    // 패치 목록 표시
+    const patches_items = document.createElement("div");
+    patches_items.className = "patches_items"; // 클래스 이름 수정
+    patches_items.id = "patches_items"; // ID 수정
+
+    // 부모 태그에 추가
+    document.body.appendChild(patches_data_container);
+    patches_data_container.appendChild(patches_data_title);
+    patches_data_container.appendChild(patches_items)
+
+    patches_data_container.style.display = "none";
+}
 
 // 리밴스드 카테고리 처리자
 function tips_column_handler(category_head, access_key) {
@@ -190,9 +227,9 @@ function tips_column_handler(category_head, access_key) {
         category_title.className = "category_title"; // 클래스 추가
 
         // 여백
-        category_title.style.margin = "5px"; // 상하 px, 좌우 중앙 정렬
-        category_title.style.marginTop = "10px"
-        category_title.style.marginBottom = "10px"
+        // category_title.style.margin = "5px"; //// 상하 px, 좌우 중앙 정렬
+        // category_title.style.marginTop = "5px"
+        category_title.style.marginBottom = "5px"
         
         
         // 스타일 적용 함수 호출
