@@ -70,6 +70,7 @@ function add_patches(patches_data) {
 
 
     const patches_items = document.querySelector("#patches_items")
+    let patches_chk_list = []
     let patches_items_html = ""
 
     for (const patches of patches_data) {
@@ -93,6 +94,10 @@ function add_patches(patches_data) {
                 console.log(packages_name)
                 console.log(packages_versions)
                 console.log(packages_use)
+
+                // Chk List Push
+                patches_chk_list.push(packages_use)
+
                 patches_items_html += patches_items_html_create(patches_name, patches_description, packages_use)
 
 
@@ -104,6 +109,10 @@ function add_patches(patches_data) {
             console.log("ALL Packages")
             console.log(packages_versions)
             console.log(packages_use)
+
+            // Chk List Push
+            patches_chk_list.push(packages_use)
+
             patches_items_html += patches_items_html_create(patches_name, patches_description, packages_use)
 
         }
@@ -111,34 +120,78 @@ function add_patches(patches_data) {
 
     patches_items.innerHTML = patches_items_html
 
+    // 체크박스 선택값 설정
+    set_patches_checkbox(patches_chk_list)
+
 }
 
 
 // html 생성
 function patches_items_html_create(patches_name, patches_description, patches_use) {
     // 체크박스 옵션 값 선택 
-    let use = ""
-    if (patches_use === true) {
-        use = "checked"
-    } 
-
     return `
     <div class="patches_item">
-        <input type="checkbox" id="${patches_name.replace(/\s+/g, '_')}" ${use}>
-        <label for="${patches_name.replace(/\s+/g, '_')}" data-original-text="${patches_name}">${patches_name}</label>
-
-        <div class="patches_description">
-            ${patches_description}
-        </div>
+        <input class="patches_chk" type="checkbox" id="${patches_name.replace(/\s+/g, '_')}">
+        <label class="patches_title" for="${patches_name.replace(/\s+/g, '_')}" data-original-text="${patches_name}">
+            ${patches_name}
+            <div class="patches_description">
+                ${patches_description}
+            </div>
+        </label>
     </div>
     `;
 }
 
+function set_patches_checkbox(checkedArray) {
+    const patches_chk = document.querySelectorAll("#patches_items > .patches_item > .patches_chk");
+    patches_chk.forEach((element, index) => {
+        element.style.display = "none"; // 체크박스 표시 없애기
+        element.checked = checkedArray[index] !== undefined ? checkedArray[index] : false; // 기본값 false
+    });
+}
+
+
 // 스타일
 function patches_items_style() {
-    const patches_items = document.querySelectorAll("#patches_items > .patches_item")
+    const patches_items = document.querySelectorAll("#patches_items > .patches_item");
     patches_items.forEach(element => {
+        element.style.border = '3px solid lightgray';
+        element.style.borderRadius = "15px"
         element.style.marginTop = "20px";
         element.style.marginBottom = "20px";
+        element.style.marginLeft = "10px";
+        element.style.marginRight = "10px";
+
+        // 체크박스 값 가져오기
+        const patches_chk = element.querySelectorAll(".patches_chk");
+        patches_chk.forEach(chk_element=> {
+            // 선택값의 따라 배경색상 변경
+            if (chk_element.checked === true) {
+                element.style.backgroundColor = "#729bed";
+            }
+
+        })
+
+        // 패치 제목
+        const patches_title = element.querySelectorAll(".patches_title");
+        patches_title.forEach(element=> {
+            element.style.color = "#384d52";
+            element.style.marginTop = "5px"
+            element.style.marginBottom = "5px"
+            element.style.fontSize = "15px"
+        })
+
+        // 패치 설명
+        const patches_description = element.querySelectorAll(".patches_description");
+        patches_description.forEach(element=>{
+            element.style.color = "#464561";
+            element.style.marginTop = "5px"
+            element.style.marginBottom = "5px"
+            element.style.fontSize = "15px"
+            // element.style.fontWeight = "700";
+
+        })
+
+
     })
 }

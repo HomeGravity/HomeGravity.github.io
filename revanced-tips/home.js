@@ -1,4 +1,4 @@
-import {body_style, apply_style_based_on_user_agent, element_default_style } from "./utils.js";
+import {body_style, apply_style_based_on_user_agent, element_default_style, scrollbar_style } from "./utils.js";
 import {getCategories} from "./dataset.js"
 
 
@@ -152,6 +152,8 @@ const { categories, subCategories } = getCategories();
 
 // 초기 스타일 설정
 body_style();
+// 스크롤바 스타일
+scrollbar_style();
 top_main_handler();
 top_category_handler("리밴스드 설정", "top-category", categories, "item", "category-title");
 top_category_handler("기타 설정", "top-sub-category", subCategories, "item", "category-sub-title");

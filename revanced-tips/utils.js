@@ -76,3 +76,25 @@ export function element_btn_default_style(btn_element) {
 
     // return btn_element
 }
+
+
+
+
+export function scrollbar_style() {
+    // 스크롤바 색상을 변경하는 CSS 스타일 생성
+    const style = document.createElement('style');
+    style.innerHTML = `
+        /* Chrome, Safari, Edge */
+        ::-webkit-scrollbar {
+            width: 10px; /* 스크롤바 너비 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: darkgray; /* 스크롤바 색상: 초록색 */
+            border-radius: 5px; /* 스크롤바 둥글게 */
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* 스크롤바 트랙 색상: 밝은 회색 */
+        }
+    `;
+    document.head.appendChild(style);
+}

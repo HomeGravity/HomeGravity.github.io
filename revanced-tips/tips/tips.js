@@ -1,4 +1,4 @@
-import {body_style, apply_style_based_on_user_agent, element_default_style, element_btn_default_style } from "../utils.js";
+import {body_style, apply_style_based_on_user_agent, element_default_style, element_btn_default_style, scrollbar_style } from "../utils.js";
 import {patches_selection_button} from "./revanced-patches/revanced-patches.js"
 import {getCategories} from "../dataset.js"
 
@@ -167,7 +167,7 @@ function display_patches_btn() {
 function display_patches_data() {
     // 패치 목록 표시 태그
     const patches_data_container = document.createElement("div");
-    apply_style_based_on_user_agent(patches_data_container, "auto");
+    apply_style_based_on_user_agent(patches_data_container, "450px");
 
     patches_data_container.className = "patches_data_screen"; // 클래스 이름 수정
     patches_data_container.id = "patches_data_screen"; // ID 수정
@@ -175,6 +175,7 @@ function display_patches_data() {
     // 스타일 설정
     patches_data_container.style.paddingTop = "30px";
     patches_data_container.style.paddingBottom = "30px";
+    patches_data_container.style.overflowY = "auto";
     element_default_style(patches_data_container, "15px", "black");
 
     // 패치 목록 타이틀 표시
@@ -407,6 +408,9 @@ function screen_handler(saved_name1, saved_name2) {
 
 // 초기 스타일 설정
 body_style();
+
+// 스크롤바 스타일
+scrollbar_style()
 
 
 // 초기 화면 표시
