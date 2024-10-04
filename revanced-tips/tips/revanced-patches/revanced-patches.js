@@ -161,6 +161,7 @@ function patches_items_style() {
         element.style.marginBottom = "20px";
         element.style.marginLeft = "10px";
         element.style.marginRight = "10px";
+        element.style.padding = "5px";
 
         // 체크박스 값 가져오기
         const patches_chk = element.querySelectorAll(".patches_chk");
@@ -176,7 +177,6 @@ function patches_items_style() {
         const patches_title = element.querySelectorAll(".patches_title");
         patches_title.forEach(element=> {
             element.style.color = "#384d52";
-            element.style.marginTop = "5px"
             element.style.marginBottom = "5px"
             element.style.fontSize = "15px"
         })
@@ -186,7 +186,6 @@ function patches_items_style() {
         patches_description.forEach(element=>{
             element.style.color = "#464561";
             element.style.marginTop = "5px"
-            element.style.marginBottom = "5px"
             element.style.fontSize = "15px"
             // element.style.fontWeight = "700";
 
