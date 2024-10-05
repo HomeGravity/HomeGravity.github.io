@@ -80,14 +80,14 @@ function add_patches(patches_data) {
         const packages = patches["compatiblePackages"]
         const packages_use = patches["use"]
 
-        let packages_versions = null
+        let packages_versions = "ALL Versions"
         
         // 패키지명 필터링
         if (packages !== null) {
             const packages_name = packages[0]["name"]
             const _packages_versions = packages[0]["versions"]
-            packages_versions = _packages_versions
-            
+            packages_versions = patches_max_version(_packages_versions)
+
             // 패키지명이 유튜브이면
             if (packages_name === "com.google.android.youtube") {
                 // Chk List Push
@@ -115,6 +115,23 @@ function add_patches(patches_data) {
     patches_chk_click_event()
 }
 
+// 가장 높은 버전 찾기
+function patches_max_version(versions) {
+    return versions.reduce((max, version) => {
+        // 버전 문자열을 비교하여 가장 높은 버전 결정
+        const maxParts = max.split('.').map(Number);
+        const versionParts = version.split('.').map(Number);
+
+        for (let i = 0; i < Math.max(maxParts.length, versionParts.length); i++) {
+            const maxPart = maxParts[i] || 0;
+            const versionPart = versionParts[i] || 0;
+
+            if (versionPart > maxPart) return version; // version이 더 크면 version 반환
+            if (versionPart < maxPart) return max; // max가 더 크면 max 반환
+        }
+        return max; // 두 버전이 같으면 max 반환
+    });
+}
 
 // html 생성
 function patches_items_html_create(patches_name, patches_description, patches_packages_name, patches_versions) {
