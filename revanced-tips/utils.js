@@ -74,7 +74,6 @@ export function element_btn_default_style(btn_element) {
         btn_element.style.transform = "scale(1)"; // 원래 크기로 복원
     });
 
-    // return btn_element
 }
 
 
@@ -86,15 +85,11 @@ export function scrollbar_style() {
     style.innerHTML = `
         /* Chrome, Safari, Edge */
         ::-webkit-scrollbar {
-            width: 10px; /* 스크롤바 너비 */
+            width: 12px; /* 스크롤바 너비 */
         }
         ::-webkit-scrollbar-thumb {
-            background-color: darkgray; /* 스크롤바 색상: 초록색 */
-            border-radius: 5px; /* 스크롤바 둥글게 */
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1; /* 스크롤바 트랙 색상: 밝은 회색 */
-        }
+            background-color: lightblue; /* 스크롤바 색상: 초록색 */
+            border-radius: 15px; /* 스크롤바 둥글게 */
     `;
     document.head.appendChild(style);
 }

@@ -1,5 +1,7 @@
 import {element_btn_default_style } from "../../utils.js";
 
+const PATCHES_CHK_ON = "#6a8eb8"
+const PATCHES_CHK_OFF = "#c74e70"
 
 async function fetch_patches_data(user_name, repo_name) {
     try {
@@ -50,10 +52,9 @@ export function patches_selection_button(user_name, repo_name) {
 function get_patches(user_name, repo_name) {
     fetch_patches_data(user_name, repo_name)
     .then(data => {
-        // console.log(data); // JSON 데이터 처리
-        // return data;
         add_patches(data);
         patches_items_style();
+
     })
     .catch(error => {
         console.error('Failed to fetch data:', error);
@@ -78,8 +79,8 @@ function add_patches(patches_data) {
         const patches_description = patches["description"]
         const packages = patches["compatiblePackages"]
         const packages_use = patches["use"]
-        
-        let packages_versions = ""
+
+        let packages_versions = null
         
         // 패키지명 필터링
         if (packages !== null) {
@@ -89,55 +90,56 @@ function add_patches(patches_data) {
             
             // 패키지명이 유튜브이면
             if (packages_name === "com.google.android.youtube") {
-                console.log(patches_name)
-                console.log(patches_description)
-                console.log(packages_name)
-                console.log(packages_versions)
-                console.log(packages_use)
-
                 // Chk List Push
                 patches_chk_list.push(packages_use)
-
-                patches_items_html += patches_items_html_create(patches_name, patches_description, packages_use)
-
-
+                patches_items_html += patches_items_html_create(patches_name, patches_description, packages_name, packages_versions)
             }
 
         } else {
-            console.log(patches_name)
-            console.log(patches_description)
-            console.log("ALL Packages")
-            console.log(packages_versions)
-            console.log(packages_use)
-
             // Chk List Push
             patches_chk_list.push(packages_use)
-
-            patches_items_html += patches_items_html_create(patches_name, patches_description, packages_use)
+            patches_items_html += patches_items_html_create(patches_name, patches_description, "ALL Packages", packages_versions)
 
         }
     }
 
     patches_items.innerHTML = patches_items_html
 
-    // 체크박스 선택값 설정
+    // 체크박스 초기 선택값 설정
     set_patches_checkbox(patches_chk_list)
 
+    // 체크된 체크박스 데이터 출력
+    patches_chk_on_data();
+
+    // 체크박스 선택 이벤트
+    patches_chk_click_event()
 }
 
 
 // html 생성
-function patches_items_html_create(patches_name, patches_description, patches_use) {
+function patches_items_html_create(patches_name, patches_description, patches_packages_name, patches_versions) {
     // 체크박스 옵션 값 선택 
     return `
     <div class="patches_item">
         <input class="patches_chk" type="checkbox" id="${patches_name.replace(/\s+/g, '_')}">
-        <label class="patches_title" for="${patches_name.replace(/\s+/g, '_')}" data-original-text="${patches_name}">
-            ${patches_name}
-            <div class="patches_description">
-                ${patches_description}
-            </div>
-        </label>
+        <div class="patches_space">
+            <label class="patches_title" for="${patches_name.replace(/\s+/g, '_')}" data-original-text="${patches_name}">
+                ${patches_name}
+
+                <div class="patches_description">
+                    ${patches_description}
+                </div>
+
+                <div class="patches_packages_name">
+                    ${patches_packages_name}
+                </div>
+
+                <div class="patches_versions">
+                    ${patches_versions}
+                </div>
+
+            </label>
+        </div>
     </div>
     `;
 }
@@ -146,7 +148,8 @@ function set_patches_checkbox(checkedArray) {
     const patches_chk = document.querySelectorAll("#patches_items > .patches_item > .patches_chk");
     patches_chk.forEach((element, index) => {
         element.style.display = "none"; // 체크박스 표시 없애기
-        element.checked = checkedArray[index] !== undefined ? checkedArray[index] : false; // 기본값 false
+        element.checked = checkedArray[index] !== undefined ? checkedArray[index] : false; // 기본값 
+        // element.checked = false
     });
 }
 
@@ -161,36 +164,91 @@ function patches_items_style() {
         element.style.marginBottom = "20px";
         element.style.marginLeft = "10px";
         element.style.marginRight = "10px";
-        element.style.padding = "5px";
+        element.style.paddingTop="3px";
+        element.style.paddingBottom="3px";
+        element.style.cursor="pointer";
+
 
         // 체크박스 값 가져오기
         const patches_chk = element.querySelectorAll(".patches_chk");
         patches_chk.forEach(chk_element=> {
-            // 선택값의 따라 배경색상 변경
-            if (chk_element.checked === true) {
-                element.style.backgroundColor = "#729bed";
-            }
+            // 선택값에 따라 배경색 변경
+            element.style.backgroundColor = chk_element.checked ? PATCHES_CHK_ON : PATCHES_CHK_OFF;
 
+        })
+
+        const patches_space = element.querySelectorAll(".patches_space");
+        patches_space.forEach(element=> {
+            element.style.marginTop="10px";
+            element.style.marginBottom="10px";
         })
 
         // 패치 제목
         const patches_title = element.querySelectorAll(".patches_title");
         patches_title.forEach(element=> {
-            element.style.color = "#384d52";
-            element.style.marginBottom = "5px"
-            element.style.fontSize = "15px"
+            element.style.color = "white";
+            element.style.fontSize = "15px";
+            element.style.cursor="pointer";
         })
 
         // 패치 설명
         const patches_description = element.querySelectorAll(".patches_description");
         patches_description.forEach(element=>{
-            element.style.color = "#464561";
-            element.style.marginTop = "5px"
-            element.style.fontSize = "15px"
-            // element.style.fontWeight = "700";
-
+            element.style.color = "black";
+            element.style.marginTop = "15px";
+            element.style.fontSize = "15px";
         })
 
+        // 패치 패키지명
+        const patches_packages_name = element.querySelectorAll(".patches_packages_name");
+        patches_packages_name.forEach(element=>{
+            element.style.color = "black";
+            element.style.marginTop = "15px";
+            element.style.fontSize = "15px";
+        })
+
+        // 패치 지원 버전
+        const patches_versions = element.querySelectorAll(".patches_versions");
+        patches_versions.forEach(element=>{
+            element.style.color = "white";;
+            element.style.marginTop = "15px";
+            element.style.fontSize = "15px";
+        })
 
     })
+}
+
+// 클릭 이벤트
+function patches_chk_click_event() {
+    const patches_items = document.querySelectorAll("#patches_items > .patches_item");
+    
+    patches_items.forEach((item) => {
+        item.addEventListener("click", function() {
+            const patches_chk = item.querySelector(".patches_chk"); // 체크박스 선택
+
+            // 선택값에 따라 배경색 변경
+            item.style.backgroundColor = patches_chk.checked ? PATCHES_CHK_ON : PATCHES_CHK_OFF;
+            
+            // 체크된 체크박스 데이터 출력
+            patches_chk_on_data();
+        });
+    });
+
+    
+}
+
+
+function patches_chk_on_data() {
+    const patches_items = document.querySelectorAll("#patches_items > .patches_item");
+    
+    let chk_on_count = 0
+    patches_items.forEach((element) => {
+        const patches_title = element.querySelector(".patches_title")
+        const patches_chk = element.querySelector(".patches_chk"); // 체크박스 선택
+        if (patches_chk.checked === true) {
+            chk_on_count += 1
+        }
+    });
+
+    console.log(chk_on_count)
 }
