@@ -12,8 +12,9 @@ export function tips_column_handler(category_head, access_key) {
     // 카테고리 컨테이너 div 생성
     const category_container = document.createElement("div");
     category_container.className = "category_container"; // 클래스 추가
+    category_container.style.maxHeight = "700px"
+    category_container.style.overflowY = "auto";
 
-    
     for (let key in category_head[access_key]) {
         const item = category_head[access_key][key];
         

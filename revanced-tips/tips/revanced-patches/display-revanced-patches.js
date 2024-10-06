@@ -68,7 +68,16 @@ export function display_patches_data() {
     patches_data_title.innerText = "패치 표시"
     patches_data_title.className = "patches_data_title"; // 클래스 이름 수정
     patches_data_title.id = "patches_data_title"; // ID 수정
+    patches_data_title.style.marginBottom = "3px"
     
+    // 패치 목록 개수
+    const patches_data_count = document.createElement("div");
+    apply_style_based_on_user_agent(patches_data_title, "auto");
+
+    patches_data_count.innerText = "선택된 패치 개수: null"
+    patches_data_count.className = "patches_data_count"; // 클래스 이름 수정
+    patches_data_count.id = "patches_data_count"; // ID 수정
+    patches_data_count.style.marginTop = "3px"
 
     // 패치 목록 표시
     const patches_items = document.createElement("div");
@@ -83,7 +92,8 @@ export function display_patches_data() {
     // 부모 태그에 추가
     document.body.appendChild(patches_data_container);
     patches_data_container.appendChild(patches_data_title);
-    patches_data_container.appendChild(patches_items)
+    patches_data_container.appendChild(patches_data_count);
+    patches_data_container.appendChild(patches_items);
 
     patches_data_container.style.display = "none";
 }

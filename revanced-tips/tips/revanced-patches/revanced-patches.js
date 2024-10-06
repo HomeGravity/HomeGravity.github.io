@@ -250,22 +250,22 @@ function patches_chk_click_event() {
             patches_chk_on_data();
         });
     });
-
-    
 }
 
 
 function patches_chk_on_data() {
     const patches_items = document.querySelectorAll("#patches_items > .patches_item");
-    
-    let chk_on_count = 0
+    const patches_data_count = document.querySelector(".patches_data_count");
+
+    let chk_on_count = 0;
+
     patches_items.forEach((element) => {
-        const patches_title = element.querySelector(".patches_title")
         const patches_chk = element.querySelector(".patches_chk"); // 체크박스 선택
-        if (patches_chk.checked === true) {
-            chk_on_count += 1
+        if (patches_chk.checked) {
+            chk_on_count++;
         }
     });
 
-    console.log(chk_on_count)
+    const all_chk_count = patches_items.length;
+    patches_data_count.innerText = `선택된 패치 개수: ${chk_on_count}/${all_chk_count}개`;
 }

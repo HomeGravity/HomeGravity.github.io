@@ -60,6 +60,9 @@ function error_screen_handler(error_message) {
     document.body.appendChild(error_screen)
     element_default_style(error_screen, "15px", "tomato")
 
+    // 홈 버튼 추가
+    error_screen.appendChild(home_button());
+
 }
 
 // 정상 화면
