@@ -261,8 +261,8 @@ function patches_chk_on_data() {
 
     patches_items.forEach((element) => {
         const patches_chk = element.querySelector(".patches_chk"); // 체크박스 선택
-        if (patches_chk.checked) {
-            chk_on_count++;
+        if (patches_chk.checked === true) {
+            chk_on_count += 1;
         }
     });
 
