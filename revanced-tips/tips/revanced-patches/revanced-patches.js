@@ -71,6 +71,10 @@ function add_patches(patches_data) {
 
 
     const patches_items = document.querySelector("#patches_items")
+
+    // 공용 패치 숨기기
+    const hide_public_patches = document.querySelector(".hide_public_patches")
+
     let patches_chk_list = []
     let patches_items_html = ""
 
@@ -96,9 +100,15 @@ function add_patches(patches_data) {
             }
 
         } else {
-            // Chk List Push
-            patches_chk_list.push(packages_use)
-            patches_items_html += patches_items_html_create(patches_name, patches_description, "ALL Packages", packages_versions)
+            // 공용 패치 숨기기 조건문
+            if ((hide_public_patches.getAttribute("hide-status") === "true") ? false : true) {
+                // Chk List Push
+                patches_chk_list.push(packages_use)
+                patches_items_html += patches_items_html_create(patches_name, patches_description, "ALL Packages", packages_versions)
+            } else {
+                console.log("공용 패치 숨겨짐")
+                
+            }
 
         }
     }
