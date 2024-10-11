@@ -133,17 +133,6 @@ function app_menu() {
         option.style.fontWeight = "bold"; // 텍스트 굵게
         option.style.color = "black";
 
-        // 마우스 호버 이벤트 추가
-        option.addEventListener("mouseover", () => {
-            option.style.backgroundColor = "gray"; // 마우스 오버 시 배경색 변경
-            option.style.color = "white"; // 텍스트 색상 변경
-        });
-
-        option.addEventListener("mouseout", () => {
-            option.style.backgroundColor = ""; // 기본 배경색으로 초기화
-            option.style.color = ""; // 기본 텍스트 색상으로 초기화
-        });
-
         select.appendChild(option);
 
     }
