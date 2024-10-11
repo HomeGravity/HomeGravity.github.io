@@ -101,7 +101,7 @@ function add_patches(patches_data) {
 
         } else {
             // 공용 패치 숨기기 조건문
-            if ((hide_public_patches.getAttribute("hide-status") === "true") ? false : true) {
+            if ((hide_public_patches.getAttribute("hide-status") === "on") ? false : true) {
                 // Chk List Push
                 patches_chk_list.push(packages_use)
                 patches_items_html += patches_items_html_create(patches_name, patches_description, "ALL Packages", packages_versions)

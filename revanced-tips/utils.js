@@ -35,7 +35,7 @@ export function element_default_style(element, font_size, color) {
     element.style.marginRight = "auto";
 
     element.style.borderRadius = "20px"; // 둥근 모서리
-    element.style.backgroundColor = "#aeb3bd"; // 배경 색상
+    element.style.backgroundColor = "#9bafc4"; // 배경 색상
     element.style.color = color; // 글자 색상
     element.style.fontWeight = "bold";
     element.style.fontSize = font_size; // 폰트 사이즈
@@ -46,11 +46,13 @@ export function element_default_style(element, font_size, color) {
 
 // 버튼 기본 스타일
 export function element_btn_default_style(btn_element) {
+    const BUTTON_B_COLOR = "#5c94cf";
+
     // 스타일 적용
     btn_element.style.borderRadius = "20px";
     btn_element.style.marginTop = "15px";
     btn_element.style.padding = "15px"
-    btn_element.style.backgroundColor = "#4798a1"; // 기본 배경색
+    btn_element.style.backgroundColor = BUTTON_B_COLOR; // 기본 배경색
     btn_element.style.color = "white"; // 텍스트 색상
     btn_element.style.border = "none"; // 기본 테두리 제거
     btn_element.style.fontSize = "16px"; // 폰트 크기
@@ -70,7 +72,7 @@ export function element_btn_default_style(btn_element) {
 
     // 마우스가 버튼을 떠날 때 원래 상태로 복원
     btn_element.addEventListener("mouseout", () => {
-        btn_element.style.backgroundColor = "#4798a1"; // 원래 배경색
+        btn_element.style.backgroundColor = BUTTON_B_COLOR; // 원래 배경색
         btn_element.style.transform = "scale(1)"; // 원래 크기로 복원
     });
 
@@ -85,7 +87,7 @@ export function scrollbar_style() {
     style.innerHTML = `
         /* Chrome, Safari, Edge */
         ::-webkit-scrollbar {
-            width: 12px; /* 스크롤바 너비 */
+            display: none; // 스크롤바 제거
         }
         ::-webkit-scrollbar-thumb {
             background-color: lightblue; /* 스크롤바 색상: 초록색 */

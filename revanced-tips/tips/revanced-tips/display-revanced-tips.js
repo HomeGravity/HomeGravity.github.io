@@ -9,12 +9,25 @@ export function tips_column_handler(category_head, access_key) {
         return; // access_key가 없으면 함수 종료
     }
 
-    // 카테고리 컨테이너 div 생성
+    // 
     const category_container = document.createElement("div");
-    category_container.className = "category_container"; // 클래스 추가
-    category_container.style.maxHeight = "700px"
-    category_container.style.overflowY = "auto";
-
+    category_container.className = "category_container"
+    category_container.style.backgroundColor = "#dbdee0";
+    category_container.style.borderRadius = "15px";
+    category_container.style.marginLeft = "auto";
+    category_container.style.marginRight = "auto";
+    apply_style_based_on_user_agent(category_container, "auto")
+    
+    
+    
+    // 카테고리 데이터 div 생성
+    const category_data = document.createElement("div");
+    category_data.className = "category_data"; // 클래스 추가
+    category_data.style.maxHeight = "700px"
+    category_data.style.overflowY = "auto";
+    category_data.style.marginLeft = "15px";
+    category_data.style.marginRight = "15px";
+    
     for (let key in category_head[access_key]) {
         const item = category_head[access_key][key];
         
@@ -39,11 +52,13 @@ export function tips_column_handler(category_head, access_key) {
 
         // 카테고리 컨테이너에 추가
         category_items.appendChild(category_title)
-        category_container.appendChild(category_items);
+        category_data.appendChild(category_items);
+        
     }
     
     // 카테고리 컨테이너를 document.body에 추가
     document.body.appendChild(category_container);
+    category_container.appendChild(category_data)
 }
 
 // 카테고리 데이터에서 요소 반복하여 HTML 생성

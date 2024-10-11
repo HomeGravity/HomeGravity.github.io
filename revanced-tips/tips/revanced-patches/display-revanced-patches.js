@@ -20,15 +20,19 @@ export function display_patches_btn() {
     const patches_selector_name = share_name("패치 선택자 이름", "selector_name", "selector_name")
 
     // 버튼 컨테이너 생성
-    const patches_btn_container = share_container()
+    const patches_btn_container = share_container("div", "inline-flex", true)
     patches_btn_container.style.marginBottom = "15px";
+    
 
     // 옵션
     const patches_btn_options_name = share_name("패치 옵션", "options_name", "options_name")
+    const patches_select_options_name = share_name("패치 앱 선택 옵션", "options_app_name", "options_app_name")
 
 
     // 버튼 컨테이너 생성
-    const patches_btn_options_container = share_container()
+    const patches_btn_options_container = share_container("div", "block", true)
+    const patches_select_app_options_container = share_container("div", "block", false)
+    
 
     // 부모 태그에 추가
     document.body.appendChild(patches_container);
@@ -36,22 +40,27 @@ export function display_patches_btn() {
     patches_container.appendChild(patches_btn_container)
     patches_container.appendChild(patches_btn_options_name)
     patches_container.appendChild(patches_btn_options_container)
+    patches_container.appendChild(patches_select_options_name)
+    patches_container.appendChild(patches_select_app_options_container)
 
     //  버튼 추가
     patches_btn_container.appendChild(patches_selection_button("anddea", "revanced-patches"))
     patches_btn_container.appendChild(patches_selection_button("inotia00", "revanced-patches"))
 
     // 옵션 버튼 추가
-    patches_btn_options_container.appendChild(toggle_public_patches_button("공용 패치 숨기기: ON", "hide_public_patches", "hide_public_patches", "hide-status", true))
+    patches_btn_options_container.appendChild(toggle_public_patches_button("공용 패치 숨기기: ON", "hide_public_patches", "hide_public_patches", "hide-status", "on"))
+
+    // 옵션 패치 앱 메뉴 추가 (로직 없음)
+    patches_select_app_options_container.appendChild(app_menu())
     
 
 }
 
 // 공용 컨테이너
-function share_container() {
+function share_container(create_tag, display_type, is_margin_b) {
     // 버튼 컨테이너 생성
-    const container = document.createElement("div");
-    container.style.display = "inline-flex"; // 디스플레이 변경
+    const container = document.createElement(create_tag);
+    container.style.display = display_type; // 디스플레이 변경
     container.style.borderRadius = "20px"; // 모서리 둥글게
     container.style.whiteSpace = "nowrap"; // 한 줄에 표시되도록 설정
     container.style.alignItems = "center"; // 중앙 정렬
@@ -60,9 +69,11 @@ function share_container() {
     
     container.style.marginLeft = "4px";
     container.style.marginRight = "4px";
-    // container.style.marginBottom = "15px";
 
-    
+    if (is_margin_b) {
+        container.style.marginBottom = "15px";
+        
+    }
 
     return container;
 }
@@ -91,12 +102,13 @@ function toggle_public_patches_button(text, class_name, id, setAt_name, setAt_va
 
     // 스타일
     element_btn_default_style(btn);
+    btn.style.display = "block"
 
     // 버튼 클릭 시 텍스트 변경
     btn.addEventListener("click", () => {
         if (btn.textContent === "공용 패치 숨기기: ON") {
             btn.textContent = "공용 패치 숨기기: OFF";
-            btn.setAttribute(setAt_name, false)
+            btn.setAttribute(setAt_name, "off")
         } else {
             btn.textContent = "공용 패치 숨기기: ON";
             btn.setAttribute(setAt_name, setAt_value)
@@ -105,6 +117,55 @@ function toggle_public_patches_button(text, class_name, id, setAt_name, setAt_va
 
     return btn;
 }
+
+// 여러앱의 패치 옵션 표시 드롭다운 메뉴
+function app_menu() {
+    const select = document.createElement("select");
+    select.className = "app-select";
+
+    for (const element of ["com.google.android.youtube", "com.google.android.apps.youtube.music"]) {
+        const option = document.createElement("option");
+        option.className = "select";
+        option.textContent = element;
+
+        // style
+        option.style.textAlign = "center"; // 텍스트 정렬
+        option.style.fontWeight = "bold"; // 텍스트 굵게
+        option.style.color = "black";
+
+        // 마우스 호버 이벤트 추가
+        option.addEventListener("mouseover", () => {
+            option.style.backgroundColor = "gray"; // 마우스 오버 시 배경색 변경
+            option.style.color = "white"; // 텍스트 색상 변경
+        });
+
+        option.addEventListener("mouseout", () => {
+            option.style.backgroundColor = ""; // 기본 배경색으로 초기화
+            option.style.color = ""; // 기본 텍스트 색상으로 초기화
+        });
+
+        select.appendChild(option);
+
+    }
+
+    if (select) {
+        // 스타일 변경
+        select.style.marginTop = "15px";
+        select.style.color = "#007BFF"; // 텍스트 색상 변경
+        select.style.fontWeight = "bold"; // 텍스트 굵게
+        select.style.border = "1px solid #007BFF"; // 테두리 추가
+        select.style.padding = "10px"; // 패딩 추가
+        select.style.paddingLeft = "15px";
+        select.style.paddingRight = "15px";
+        select.style.backgroundColor = "#f0f8ff"; // 배경색 추가
+        select.style.borderRadius = "10px"; // 모서리 둥글게
+        select.style.maxWidth = "450px"; // 드롭다운 폭 설정
+        select.style.cursor = "pointer"; // 커서 스타일 변경
+    }
+    
+    return select;
+}
+
 
 
 // 패치 목록 표시
